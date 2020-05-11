@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Reflection" representedClassName="Reflection" syncable="YES" codeGenerationType="class">
+        <attribute name="firstAnswer" optional="YES" attributeType="String"/>
+        <attribute name="firstQuestion" optional="YES" attributeType="String"/>
+        <attribute name="mood" optional="YES" attributeType="String"/>
+        <attribute name="moodImage" optional="YES" attributeType="String"/>
+        <attribute name="secondAnswer" optional="YES" attributeType="String"/>
+        <attribute name="secondQuestion" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Reflection" positionX="-9" positionY="36" width="128" height="133"/>
+    </elements>
+</model>
