@@ -9,47 +9,45 @@
 import UIKit
 import UserNotifications
 
-//    Start my personal Notification
-func scheduleNotifications() {
-    let morningIndex = Int.random(in: 0 ..< morningQuotes.count)
-    let morningQuote = morningQuotes[morningIndex]
-    
-    let compatibleQuotes = morningQuote.compatible ? eveningQuotes.filter({ $0.morningId == morningQuote.id }) : eveningQuotes.filter({ $0.morningId == nil })
-    
-    let eveningIndex = Int.random(in: 0 ..< compatibleQuotes.count)
-    let eveningQuote = compatibleQuotes[eveningIndex]
-            
-    schedule(title: "Buongiorno utente!", body: morningQuote.text, at: 12, 15)
-    schedule(title: "Buonasera utente!", body: eveningQuote.text, at: 12, 16)
-    
-    //    Saving First Question (Evening) - PLIST method
-    
-//1  Create a new plist File
-    let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-    let archiveURL = documentsDirectory.appendingPathComponent("first_question").appendingPathExtension("plist")
-    
-//2  Create Encoder to encode my eveningQuote
-    let propertyListEncoder = PropertyListEncoder()
-    let encodedEveningQuote = try? propertyListEncoder.encode(eveningQuote)
-    
-//3  Write my eveningQuote to the file I've created before
-//    .noFileProtection allow the file to be overwritten in the future if my quote change
-    try? encodedEveningQuote?.write(to: archiveURL, options: .noFileProtection)
-//4   To retrieve the saved file I'm creating a Decoder
-    let propertyListDecoder = PropertyListDecoder()
-    
-    if let retrievedData = try? Data(contentsOf: archiveURL),
-        let decodedEveningQuoteData = try? propertyListDecoder.decode(Evening.self, from: retrievedData) {
-        print(decodedEveningQuoteData)
-    }
-     
+struct FirstQuestion: Codable {
+    let question: Evening
+    let scheduledAt: Date
 }
 
+extension Date {
+    var day: Int {
+        let calendar = Calendar(identifier: .gregorian)
+        return calendar.component(.day, from: self)
+    }
+}
 
+/*
+ MARK: Notification scheduler
+ */
 
+func scheduleNotifications() {
+    let scheduledQuestion = getData(for: "first_question") ?? nil
+    
+    if (scheduledQuestion == nil) || scheduledQuestion!.scheduledAt.day != Date().day {
+        // Randomizing content
+        let morningIndex = Int.random(in: 0 ..< morningQuotes.count)
+        let morningQuote = morningQuotes[morningIndex]
+        
+        let compatibleQuotes = morningQuote.compatible ? eveningQuotes.filter({ $0.morningId == morningQuote.id }) : eveningQuotes.filter({ $0.morningId == nil })
+        
+        let eveningIndex = Int.random(in: 0 ..< compatibleQuotes.count)
+        let eveningQuote = compatibleQuotes[eveningIndex]
+        
+        let firstQuestion: FirstQuestion = FirstQuestion(question: eveningQuote, scheduledAt: Date())
+        write(firstQuestion: firstQuestion, in: "first_question")
+        
+        schedule(title: "Buongiorno utente!", body: morningQuote.text, at: 15, 03)
+        schedule(title: "Buonasera utente!", body: eveningQuote.text, at: 15, 03)
+    }
+}
 
 func schedule(title: String, body: String, at hour: Int, _ minute: Int) {
-    //        Content of my Notification
+    // Content of my Notification
     let content = UNMutableNotificationContent()
     content.title = title
     content.body = body
@@ -60,8 +58,35 @@ func schedule(title: String, body: String, at hour: Int, _ minute: Int) {
     dateComponents.minute = minute
     
     let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-    
     let request = UNNotificationRequest(identifier: title, content: content, trigger: trigger)
     
     UNUserNotificationCenter.current().add(request)
+}
+
+/*
+ MARK: PList handler (for FirstQuestion)
+ */
+
+func getUrl(for filename: String) -> URL {
+    let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    print(documentsDirectory)
+    return documentsDirectory.appendingPathComponent(filename).appendingPathExtension("plist")
+}
+
+func write(firstQuestion: FirstQuestion, in filename: String) {
+    let propertyListEncoder = PropertyListEncoder()
+    let encodedEveningQuote = try? propertyListEncoder.encode(firstQuestion)
+    
+    try? encodedEveningQuote?.write(to: getUrl(for: filename), options: .noFileProtection)
+}
+
+func getData(for filename: String) -> FirstQuestion? {
+    let propertyListDecoder = PropertyListDecoder()
+    
+    if let retrievedData = try? Data(contentsOf: getUrl(for: filename)),
+        let decodedFirstQuestion = try? propertyListDecoder.decode(FirstQuestion.self, from: retrievedData) {
+        return decodedFirstQuestion
+    }
+    
+    return nil
 }
