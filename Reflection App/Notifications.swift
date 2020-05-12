@@ -50,8 +50,8 @@ func scheduleNotifications() {
         scheduledQuestions!.append(newFirstQuestion)
         write(firstQuestion: scheduledQuestions!, in: "first_question")
         
-        schedule(title: "Buongiorno utente!", body: morningQuote.text, at: 15, 03, for: today.day+1)
-        schedule(title: "Buonasera utente!", body: eveningQuote.text, at: 15, 03, for: today.day+1)
+        schedule(title: "Buongiorno utente!", body: morningQuote.text, at: 9, 30, for: today.day+1)
+        schedule(title: "Buonasera utente!", body: eveningQuote.text, at: 19, 30, for: today.day+1)
     }
 }
 

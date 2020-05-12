@@ -15,26 +15,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyz-9I-Xem">
-                                <rect key="frame" x="185" y="433" width="44" height="30"/>
-                                <state key="normal" title="Rifletti"/>
-                                <connections>
-                                    <action selector="reflectButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zeK-Uh-PNK"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ2-Yv-6NI">
-                                <rect key="frame" x="185" y="136" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="297" translatesAutoresizingMaskIntoConstraints="NO" id="bNc-Ai-LOV">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ2-Yv-6NI">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyz-9I-Xem">
+                                        <rect key="frame" x="0.0" y="347" width="44" height="431"/>
+                                        <state key="normal" title="Rifletti"/>
+                                        <connections>
+                                            <action selector="reflectButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zeK-Uh-PNK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Vyz-9I-Xem" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ABF-9s-NVD"/>
-                            <constraint firstItem="Vyz-9I-Xem" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KCJ-Kd-gIO"/>
-                            <constraint firstItem="SJ2-Yv-6NI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="uYg-gl-rV5"/>
-                            <constraint firstItem="SJ2-Yv-6NI" firstAttribute="leading" secondItem="Vyz-9I-Xem" secondAttribute="leading" id="xkG-A4-pyp"/>
+                            <constraint firstItem="bNc-Ai-LOV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="16g-i1-Jne"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bNc-Ai-LOV" secondAttribute="bottom" constant="20" id="KKa-FK-gGe"/>
+                            <constraint firstItem="bNc-Ai-LOV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="mzb-du-XsL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bNc-Ai-LOV" secondAttribute="trailing" constant="20" id="qH8-9A-NEX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
