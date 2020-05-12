@@ -26,6 +26,8 @@ class ViewController: UIViewController {
             scheduleNotifications()
         }
     }
+    
+    
         
     //    Nel caso di Notifiche disattivate viene presentato un alert che informa l'utente
     func accessDeniedAlert() {

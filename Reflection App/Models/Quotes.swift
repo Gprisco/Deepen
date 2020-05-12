@@ -14,7 +14,7 @@ struct Morning {
     let compatible: Bool
 }
 
-struct Evening {
+struct Evening: Codable {
     let morningId: Int?
     let text: String
 }

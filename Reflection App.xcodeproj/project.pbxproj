@@ -66,8 +66,8 @@
 				01D667D124699A060024634C /* Supporting Files */,
 				01D667CE246994FE0024634C /* Models */,
 				01D667B52465A59B0024634C /* AppDelegate.swift */,
-				01D667B72465A59B0024634C /* SceneDelegate.swift */,
 				01D667CC24697D6B0024634C /* Notifications.swift */,
+				01D667B72465A59B0024634C /* SceneDelegate.swift */,
 				01D667D324699A330024634C /* Controllers */,
 				01D667C62465A59F0024634C /* Info.plist */,
 			);
