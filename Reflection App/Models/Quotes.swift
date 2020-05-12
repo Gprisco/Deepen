@@ -20,14 +20,17 @@ struct Evening: Codable {
 }
 
 let morningQuotes: [Morning] = [
-    Morning(id: 1, text: "Frase A", compatible: true),
-    Morning(id: 2, text: "Frase B", compatible: true),
-    Morning(id: 3, text: "Frase C", compatible: false)
+    Morning(id: 1, text: "Fai il letto e sarai un eroe!", compatible: false),
+    Morning(id: 2, text: "Oggi mangiamo un po’ di frutta?", compatible: false),
+    Morning(id: 3, text: "Trascorri un po' di tempo all’aperto, ti va una boccata d’aria?", compatible: false),
+    Morning(id: 4, text: "Metti in ordine il tuo spazio, oggi voglio una bella scrivania pulita", compatible: false),
+    Morning(id: 5, text: "Splendi ogni giorno di più ed è fantastico, non mollare mai!", compatible: false)
 ]
 
 let eveningQuotes: [Evening] = [
-    Evening(morningId: 1, text: "Frase collegata ad A"),
-    Evening(morningId: 1, text: "Frase 2 collegata ad A"),
-    Evening(morningId: 2, text: "Frase collegata a B"),
-    Evening(morningId: nil, text: "Frase scollegata")
+    Evening(morningId: nil, text: "Come è andata questa giornata?"),
+    Evening(morningId: nil, text: "Tutto molto bello ma in parole?"),
+    Evening(morningId: nil, text: "Ti va di fare due chiacchiere?"),
+    Evening(morningId: nil, text: "Scrivi 3 cose che ti piacciono di te"),
+    Evening(morningId: nil, text: "Scommetto che hai grandi piani per domani, inizia a scrivere quelli che hai completato oggi")
 ]

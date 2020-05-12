@@ -12,7 +12,10 @@ import UserNotifications
 struct FirstQuestion: Codable {
     let question: Evening
     let scheduledAt: Date
+    let scheduledFor: Date
 }
+
+typealias FirstQuestions = [FirstQuestion]
 
 extension Date {
     var day: Int {
@@ -26,9 +29,11 @@ extension Date {
  */
 
 func scheduleNotifications() {
-    let scheduledQuestion = getData(for: "first_question") ?? nil
+    var scheduledQuestions = getData(for: "first_question") ?? nil
     
-    if (scheduledQuestion == nil) || scheduledQuestion!.scheduledAt.day != Date().day {
+    if (scheduledQuestions == nil) || scheduledQuestions!.last!.scheduledAt.day != Date().day {
+        let today = Date()
+        
         // Randomizing content
         let morningIndex = Int.random(in: 0 ..< morningQuotes.count)
         let morningQuote = morningQuotes[morningIndex]
@@ -38,15 +43,19 @@ func scheduleNotifications() {
         let eveningIndex = Int.random(in: 0 ..< compatibleQuotes.count)
         let eveningQuote = compatibleQuotes[eveningIndex]
         
-        let firstQuestion: FirstQuestion = FirstQuestion(question: eveningQuote, scheduledAt: Date())
-        write(firstQuestion: firstQuestion, in: "first_question")
+        let newFirstQuestion: FirstQuestion = FirstQuestion(question: eveningQuote, scheduledAt: today, scheduledFor: today.advanced(by: TimeInterval(3600*24)))
         
-        schedule(title: "Buongiorno utente!", body: morningQuote.text, at: 15, 03)
-        schedule(title: "Buonasera utente!", body: eveningQuote.text, at: 15, 03)
+        scheduledQuestions = scheduledQuestions == nil ? [] : scheduledQuestions!
+        
+        scheduledQuestions!.append(newFirstQuestion)
+        write(firstQuestion: scheduledQuestions!, in: "first_question")
+        
+        schedule(title: "Buongiorno utente!", body: morningQuote.text, at: 15, 03, for: today.day+1)
+        schedule(title: "Buonasera utente!", body: eveningQuote.text, at: 15, 03, for: today.day+1)
     }
 }
 
-func schedule(title: String, body: String, at hour: Int, _ minute: Int) {
+func schedule(title: String, body: String, at hour: Int, _ minute: Int, for day: Int) {
     // Content of my Notification
     let content = UNMutableNotificationContent()
     content.title = title
@@ -54,6 +63,7 @@ func schedule(title: String, body: String, at hour: Int, _ minute: Int) {
     content.sound = UNNotificationSound.default
     
     var dateComponents = DateComponents()
+    dateComponents.day = day
     dateComponents.hour = hour
     dateComponents.minute = minute
     
@@ -69,23 +79,26 @@ func schedule(title: String, body: String, at hour: Int, _ minute: Int) {
 
 func getUrl(for filename: String) -> URL {
     let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-    print(documentsDirectory)
     return documentsDirectory.appendingPathComponent(filename).appendingPathExtension("plist")
 }
 
-func write(firstQuestion: FirstQuestion, in filename: String) {
+func write(firstQuestion: FirstQuestions, in filename: String) {
     let propertyListEncoder = PropertyListEncoder()
     let encodedEveningQuote = try? propertyListEncoder.encode(firstQuestion)
     
     try? encodedEveningQuote?.write(to: getUrl(for: filename), options: .noFileProtection)
 }
 
-func getData(for filename: String) -> FirstQuestion? {
+func getData(for filename: String) -> FirstQuestions? {
     let propertyListDecoder = PropertyListDecoder()
     
     if let retrievedData = try? Data(contentsOf: getUrl(for: filename)),
-        let decodedFirstQuestion = try? propertyListDecoder.decode(FirstQuestion.self, from: retrievedData) {
-        return decodedFirstQuestion
+        let decodedFirstQuestions = try? propertyListDecoder.decode(FirstQuestions.self, from: retrievedData) {
+        for i in decodedFirstQuestions {
+            print(i.question.text)
+        }
+        
+        return decodedFirstQuestions
     }
     
     return nil
