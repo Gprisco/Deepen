@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SfQ-AD-sOH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,11 +10,14 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reflection_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="first" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Reflection_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ND2-Xa-V9k">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="297" translatesAutoresizingMaskIntoConstraints="NO" id="bNc-Ai-LOV">
                                 <rect key="frame" x="20" y="64" width="374" height="778"/>
                                 <subviews>
@@ -37,7 +40,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="bNc-Ai-LOV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="16g-i1-Jne"/>
+                            <constraint firstAttribute="bottom" secondItem="ND2-Xa-V9k" secondAttribute="bottom" id="30x-fV-zy4"/>
+                            <constraint firstItem="ND2-Xa-V9k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="63O-La-fJO"/>
+                            <constraint firstItem="ND2-Xa-V9k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="B2I-bX-6WV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bNc-Ai-LOV" secondAttribute="bottom" constant="20" id="KKa-FK-gGe"/>
+                            <constraint firstItem="ND2-Xa-V9k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bny-Mn-UEG"/>
                             <constraint firstItem="bNc-Ai-LOV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="mzb-du-XsL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bNc-Ai-LOV" secondAttribute="trailing" constant="20" id="qH8-9A-NEX"/>
                         </constraints>
@@ -49,30 +56,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399" y="94"/>
+            <point key="canvasLocation" x="376.81159420289856" y="768.75"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="eux-R0-1uc">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="SfQ-AD-sOH" customClass="PageViewController" customModule="Reflection_App" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="vertical" spineLocation="none" id="SfQ-AD-sOH" customClass="PageViewController" customModule="Reflection_App" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dt1-0U-6zj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2213" y="94"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="JJp-Lz-PqD">
-            <objects>
-                <viewController storyboardIdentifier="first" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Leq-OM-HBk" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GV6-gF-eMQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="wmq-L3-SyI"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bRB-uS-Cfw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="568" y="769"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Vul-4q-sWp">
@@ -81,13 +73,24 @@
                     <view key="view" contentMode="scaleToFill" id="G1B-63-jat">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uNt-xX-013">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="uNt-xX-013" secondAttribute="bottom" id="88C-Bl-yZl"/>
+                            <constraint firstItem="uNt-xX-013" firstAttribute="trailing" secondItem="avU-pJ-lfG" secondAttribute="trailing" id="G0U-EJ-6e6"/>
+                            <constraint firstItem="uNt-xX-013" firstAttribute="leading" secondItem="avU-pJ-lfG" secondAttribute="leading" id="ogd-ud-5iM"/>
+                            <constraint firstItem="uNt-xX-013" firstAttribute="top" secondItem="G1B-63-jat" secondAttribute="top" id="qLy-5e-ZF3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="avU-pJ-lfG"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69M-mY-ICt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1374" y="771"/>
+            <point key="canvasLocation" x="1373.913043478261" y="770.75892857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7yZ-w0-QYJ">
@@ -96,13 +99,24 @@
                     <view key="view" contentMode="scaleToFill" id="Gjq-B8-7Up">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fJj-Ii-j2P">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fJj-Ii-j2P" secondAttribute="bottom" id="1XP-FP-AUh"/>
+                            <constraint firstItem="fJj-Ii-j2P" firstAttribute="trailing" secondItem="US6-FG-88M" secondAttribute="trailing" id="PiE-fp-GX1"/>
+                            <constraint firstItem="fJj-Ii-j2P" firstAttribute="top" secondItem="Gjq-B8-7Up" secondAttribute="top" id="ntK-Si-rkp"/>
+                            <constraint firstItem="fJj-Ii-j2P" firstAttribute="leading" secondItem="US6-FG-88M" secondAttribute="leading" id="zfI-va-0S8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="US6-FG-88M"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFR-jl-kGp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2214" y="771"/>
+            <point key="canvasLocation" x="2213.04347826087" y="770.75892857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ppV-w3-eiV">
@@ -111,13 +125,24 @@
                     <view key="view" contentMode="scaleToFill" id="Nbf-NU-Wsq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S4G-Mn-pZl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="S4G-Mn-pZl" firstAttribute="top" secondItem="Nbf-NU-Wsq" secondAttribute="top" id="CJW-VG-EfX"/>
+                            <constraint firstAttribute="bottom" secondItem="S4G-Mn-pZl" secondAttribute="bottom" id="M9o-Xs-8Ri"/>
+                            <constraint firstItem="S4G-Mn-pZl" firstAttribute="leading" secondItem="cDY-qz-cnf" secondAttribute="leading" id="p3r-cn-Giw"/>
+                            <constraint firstItem="S4G-Mn-pZl" firstAttribute="trailing" secondItem="cDY-qz-cnf" secondAttribute="trailing" id="tQE-TZ-zN5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cDY-qz-cnf"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IlY-29-OcB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3096" y="769"/>
+            <point key="canvasLocation" x="3095.6521739130435" y="768.75"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pnR-iN-6xW">
@@ -126,13 +151,24 @@
                     <view key="view" contentMode="scaleToFill" id="rpt-10-xFE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X4l-hp-pyl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="X4l-hp-pyl" firstAttribute="trailing" secondItem="EJW-fv-2fF" secondAttribute="trailing" id="6OD-ox-vCA"/>
+                            <constraint firstAttribute="bottom" secondItem="X4l-hp-pyl" secondAttribute="bottom" id="8of-Pp-4Fx"/>
+                            <constraint firstItem="X4l-hp-pyl" firstAttribute="top" secondItem="rpt-10-xFE" secondAttribute="top" id="LME-3S-rc6"/>
+                            <constraint firstItem="X4l-hp-pyl" firstAttribute="leading" secondItem="EJW-fv-2fF" secondAttribute="leading" id="hSM-Qx-oUf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EJW-fv-2fF"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1g-9W-JSd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3919" y="769"/>
+            <point key="canvasLocation" x="3918.8405797101454" y="768.75"/>
         </scene>
     </scenes>
 </document>
