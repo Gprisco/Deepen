@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "sfondo_deepen3-comp.pdf",
       "idiom" : "universal"
     },
     {
@@ -10,6 +11,7 @@
           "value" : "light"
         }
       ],
+      "filename" : "sfondo_deepen3-comp-1.pdf",
       "idiom" : "universal"
     },
     {
@@ -19,6 +21,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "sfondo_deepen_dark3_compressed.pdf",
       "idiom" : "universal"
     }
   ],
