@@ -8,6 +8,10 @@
 
 import UIKit
 
-class Page: UIViewController {
-    @IBOutlet weak var backgroundImage: UIImageView!
+class QuestionController: UIViewController {
+    @IBOutlet var backgroundImage: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }

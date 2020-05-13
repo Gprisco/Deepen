@@ -11,8 +11,8 @@ import UserNotifications
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet weak var firstQuestionLabel: UILabel!
+    @IBOutlet var backgroundImage: UIImageView!
+    @IBOutlet var firstQuestionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
