@@ -88,7 +88,7 @@
                         <viewLayoutGuide key="safeArea" id="avU-pJ-lfG"/>
                     </view>
                     <connections>
-                        <outlet property="backgroundImage" destination="uNt-xX-013" id="9ci-6S-5xz"/>
+                        <outlet property="backgroundImage" destination="uNt-xX-013" id="eR3-LA-akX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69M-mY-ICt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -117,7 +117,7 @@
                         <viewLayoutGuide key="safeArea" id="OFZ-qH-bMs"/>
                     </view>
                     <connections>
-                        <outlet property="backgroundImage" destination="Ey2-hH-W3Y" id="5KS-aV-EbH"/>
+                        <outlet property="backgroundImage" destination="Ey2-hH-W3Y" id="4cc-1U-bMe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yys-1j-wve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

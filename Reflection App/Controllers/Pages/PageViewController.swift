@@ -12,9 +12,10 @@ func getViewController<T>(_ identifier: String) -> T {
     return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: identifier) as! T
 }
 
-class PageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
-    var pages: [UIViewController]!
+    var pages = [UIViewController]()
+    var pageBackgrounds = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,20 +26,20 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         let secondQuestionPage: QuestionController = getViewController("question")
         let reward: RewardController = getViewController("reward")
         
-        DispatchQueue.main.async(execute: {
-            reflect.backgroundImage.image = UIImage(named: "FirstBackground")
-            moodQuestionPage.backgroundImage.image = UIImage(named: "SecondBackground")
-            firstQuestionPage.backgroundImage.image = UIImage(named: "ThirdBackground")
-            secondQuestionPage.backgroundImage.image = UIImage(named: "FourthBackground")
-            reward.backgroundImage.image = UIImage(named: "FifthBackground")
-        })
-                
         //    Sorgente
         pages = [reflect, moodQuestionPage, firstQuestionPage, secondQuestionPage, reward]
+        pageBackgrounds = ["FirstBackground", "SecondBackground", "ThirdBackground", "FourthBackground", "FifthBackground"]
         
         //        Assegno DataSource
         self.dataSource = self
-        self.delegate = self
+        
+        DispatchQueue.main.async {
+            reflect.backgroundImage.image = UIImage(named: self.pageBackgrounds[0])
+            moodQuestionPage.imageName = self.pageBackgrounds[1]
+            firstQuestionPage.imageName = self.pageBackgrounds[2]
+            secondQuestionPage.imageName = self.pageBackgrounds[3]
+            reward.imageName = self.pageBackgrounds[4]
+        }
         
         self.setViewControllers([pages[0]], direction: .forward, animated: true, completion: nil)
     }

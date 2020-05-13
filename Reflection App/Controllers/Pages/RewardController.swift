@@ -10,6 +10,13 @@ import UIKit
 
 class RewardController: UIViewController {
     @IBOutlet var backgroundImage: UIImageView!
+    var imageName: String!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.backgroundImage.image = UIImage(named: self.imageName)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

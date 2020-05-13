@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var firstQuestionLabel: UILabel!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,10 +26,10 @@ class ViewController: UIViewController {
                 return
             }
         }
-        
+                
         let firstQuestions: FirstQuestions = getData(for: "first_question") ?? []
         let firstQuestion = firstQuestions.last(where: { $0.scheduledAt.day == Date().day })
-        
+                
         firstQuestionLabel.text = firstQuestion?.question.text ?? eveningQuotes[Int.random(in: 0 ..< eveningQuotes.count)].text
         firstQuestionLabel.isHidden = true
     }
