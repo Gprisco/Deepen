@@ -90,6 +90,7 @@
 		01D667CE246994FE0024634C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				01D667E3246D7AE80024634C /* CoreData */,
 				01D667CF2469955D0024634C /* Quotes.swift */,
 			);
 			path = Models;
@@ -132,6 +133,15 @@
 				881DD7BD246D748500DB895F /* BubbleEmitter.swift */,
 			);
 			path = Pages;
+			sourceTree = "<group>";
+		};
+		01D667E3246D7AE80024634C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				01D667DD246D7A1D0024634C /* Reflection.swift */,
+				01D667DE246D7A1D0024634C /* ReflectionProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +226,7 @@
 				01D667B62465A59B0024634C /* AppDelegate.swift in Sources */,
 				01D667C02465A59B0024634C /* Reflection_App.xcdatamodeld in Sources */,
 				01D667B82465A59B0024634C /* SceneDelegate.swift in Sources */,
+				01D667DF246D7A1D0024634C /* Reflection.swift in Sources */,
 				01D667DA246C45A70024634C /* RewardController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
