@@ -8,7 +8,9 @@
 
 import UIKit
 
-class QuestionController: UIViewController {
+class QuestionController: UIViewController{
+
+    
     @IBOutlet var backgroundImage: UIImageView!
     var imageName: String!
     
@@ -20,5 +22,9 @@ class QuestionController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
+    
+    
+
 }

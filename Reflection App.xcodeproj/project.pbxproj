@@ -18,6 +18,9 @@
 		01D667D02469955D0024634C /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D667CF2469955D0024634C /* Quotes.swift */; };
 		01D667D5246C2D2A0024634C /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D667D4246C2D2A0024634C /* QuestionController.swift */; };
 		01D667DA246C45A70024634C /* RewardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D667D9246C45A70024634C /* RewardController.swift */; };
+		881DD7BE246D748500DB895F /* BubbleEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DD7BD246D748500DB895F /* BubbleEmitter.swift */; };
+		881DD7C0246D764300DB895F /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DD7BF246D764300DB895F /* MusicPlayer.swift */; };
+		881DD7C2246D788500DB895F /* relax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 881DD7C1246D788500DB895F /* relax.mp3 */; };
 		88D9EE74246BF354008B1DFA /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D9EE73246BF354008B1DFA /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,9 @@
 		01D667CF2469955D0024634C /* Quotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
 		01D667D4246C2D2A0024634C /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		01D667D9246C45A70024634C /* RewardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardController.swift; sourceTree = "<group>"; };
+		881DD7BD246D748500DB895F /* BubbleEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleEmitter.swift; sourceTree = "<group>"; };
+		881DD7BF246D764300DB895F /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		881DD7C1246D788500DB895F /* relax.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = relax.mp3; sourceTree = "<group>"; };
 		88D9EE73246BF354008B1DFA /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +82,7 @@
 				01D667B72465A59B0024634C /* SceneDelegate.swift */,
 				01D667D324699A330024634C /* Controllers */,
 				01D667C62465A59F0024634C /* Info.plist */,
+				881DD7C1246D788500DB895F /* relax.mp3 */,
 			);
 			path = "Reflection App";
 			sourceTree = "<group>";
@@ -118,9 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				01D667D4246C2D2A0024634C /* QuestionController.swift */,
+				881DD7BF246D764300DB895F /* MusicPlayer.swift */,
 				88D9EE73246BF354008B1DFA /* PageViewController.swift */,
 				01D667B92465A59B0024634C /* ViewController.swift */,
 				01D667D9246C45A70024634C /* RewardController.swift */,
+				881DD7BD246D748500DB895F /* BubbleEmitter.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -186,6 +195,7 @@
 				01D667C52465A59F0024634C /* LaunchScreen.storyboard in Resources */,
 				01D667C22465A59F0024634C /* Assets.xcassets in Resources */,
 				01D667BD2465A59B0024634C /* Main.storyboard in Resources */,
+				881DD7C2246D788500DB895F /* relax.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,10 +206,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881DD7C0246D764300DB895F /* MusicPlayer.swift in Sources */,
 				01D667CD24697D6B0024634C /* Notifications.swift in Sources */,
 				88D9EE74246BF354008B1DFA /* PageViewController.swift in Sources */,
 				01D667D5246C2D2A0024634C /* QuestionController.swift in Sources */,
 				01D667BA2465A59B0024634C /* ViewController.swift in Sources */,
+				881DD7BE246D748500DB895F /* BubbleEmitter.swift in Sources */,
 				01D667D02469955D0024634C /* Quotes.swift in Sources */,
 				01D667B62465A59B0024634C /* AppDelegate.swift in Sources */,
 				01D667C02465A59B0024634C /* Reflection_App.xcdatamodeld in Sources */,
