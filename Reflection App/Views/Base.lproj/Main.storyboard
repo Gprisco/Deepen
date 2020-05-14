@@ -12,40 +12,45 @@
             <objects>
                 <viewController storyboardIdentifier="reflect" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Reflection_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ND2-Xa-V9k" userLabel="backgroundImage">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="297" translatesAutoresizingMaskIntoConstraints="NO" id="bNc-Ai-LOV">
-                                <rect key="frame" x="20" y="64" width="374" height="778"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ2-Yv-6NI">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyz-9I-Xem">
-                                        <rect key="frame" x="0.0" y="297" width="44" height="481"/>
-                                        <state key="normal" title="Rifletti"/>
-                                        <connections>
-                                            <action selector="reflectButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zeK-Uh-PNK"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sfondo-onde" translatesAutoresizingMaskIntoConstraints="NO" id="LRR-TR-mPa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyz-9I-Xem">
+                                <rect key="frame" x="62.5" y="304.5" width="289" height="287"/>
+                                <state key="normal" image="ReflectButton"/>
+                                <connections>
+                                    <action selector="reflectButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zeK-Uh-PNK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciao" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ2-Yv-6NI">
+                                <rect key="frame" x="20" y="84" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="bNc-Ai-LOV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="16g-i1-Jne"/>
                             <constraint firstAttribute="bottom" secondItem="ND2-Xa-V9k" secondAttribute="bottom" id="30x-fV-zy4"/>
                             <constraint firstItem="ND2-Xa-V9k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="63O-La-fJO"/>
                             <constraint firstItem="ND2-Xa-V9k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="B2I-bX-6WV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bNc-Ai-LOV" secondAttribute="bottom" constant="20" id="KKa-FK-gGe"/>
+                            <constraint firstItem="LRR-TR-mPa" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="D6U-fh-6xS"/>
+                            <constraint firstItem="LRR-TR-mPa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Gf3-xb-SSP"/>
+                            <constraint firstItem="Vyz-9I-Xem" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IBC-fz-EcM"/>
+                            <constraint firstItem="Vyz-9I-Xem" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nlb-ho-L9j"/>
+                            <constraint firstItem="LRR-TR-mPa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NpM-J5-Nig"/>
+                            <constraint firstItem="SJ2-Yv-6NI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="OgX-WA-H0Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SJ2-Yv-6NI" secondAttribute="trailing" constant="20" id="Vk1-pN-SRi"/>
+                            <constraint firstItem="SJ2-Yv-6NI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bil-f4-jCi"/>
                             <constraint firstItem="ND2-Xa-V9k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bny-Mn-UEG"/>
-                            <constraint firstItem="bNc-Ai-LOV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="mzb-du-XsL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bNc-Ai-LOV" secondAttribute="trailing" constant="20" id="qH8-9A-NEX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LRR-TR-mPa" secondAttribute="trailing" id="gvT-Ia-aqv"/>
+                            <constraint firstItem="Vyz-9I-Xem" firstAttribute="top" secondItem="SJ2-Yv-6NI" secondAttribute="bottom" constant="200" id="nJ4-0a-KGy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -56,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2212" y="885"/>
+            <point key="canvasLocation" x="2211.594202898551" y="884.59821428571422"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="eux-R0-1uc">
@@ -125,4 +130,8 @@
             <point key="canvasLocation" x="3987" y="94"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ReflectButton" width="289" height="106"/>
+        <image name="sfondo-onde" width="828" height="1792"/>
+    </resources>
 </document>
