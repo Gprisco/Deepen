@@ -23,6 +23,8 @@
 		881DD7BE246D748500DB895F /* BubbleEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DD7BD246D748500DB895F /* BubbleEmitter.swift */; };
 		881DD7C0246D764300DB895F /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DD7BF246D764300DB895F /* MusicPlayer.swift */; };
 		881DD7C2246D788500DB895F /* relax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 881DD7C1246D788500DB895F /* relax.mp3 */; };
+		88A6944B246ED3E200A64C52 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A6944A246ED3E200A64C52 /* MoodViewController.swift */; };
+		88A6944D246ED4FF00A64C52 /* MoodViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A6944C246ED4FF00A64C52 /* MoodViewCell.swift */; };
 		88D9EE74246BF354008B1DFA /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D9EE73246BF354008B1DFA /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		881DD7BD246D748500DB895F /* BubbleEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleEmitter.swift; sourceTree = "<group>"; };
 		881DD7BF246D764300DB895F /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		881DD7C1246D788500DB895F /* relax.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = relax.mp3; sourceTree = "<group>"; };
+		88A6944A246ED3E200A64C52 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
+		88A6944C246ED4FF00A64C52 /* MoodViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewCell.swift; sourceTree = "<group>"; };
 		88D9EE73246BF354008B1DFA /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +133,9 @@
 		01D667D6246C2D320024634C /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				88A6944C246ED4FF00A64C52 /* MoodViewCell.swift */,
 				01D667D4246C2D2A0024634C /* QuestionController.swift */,
+				88A6944A246ED3E200A64C52 /* MoodViewController.swift */,
 				881DD7BF246D764300DB895F /* MusicPlayer.swift */,
 				88D9EE73246BF354008B1DFA /* PageViewController.swift */,
 				01D667B92465A59B0024634C /* ViewController.swift */,
@@ -220,9 +226,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A6944D246ED4FF00A64C52 /* MoodViewCell.swift in Sources */,
 				01D667E7246D99C30024634C /* Reflection.swift in Sources */,
 				881DD7C0246D764300DB895F /* MusicPlayer.swift in Sources */,
 				01D667CD24697D6B0024634C /* Notifications.swift in Sources */,
+				88A6944B246ED3E200A64C52 /* MoodViewController.swift in Sources */,
 				88D9EE74246BF354008B1DFA /* PageViewController.swift in Sources */,
 				01D667D5246C2D2A0024634C /* QuestionController.swift in Sources */,
 				01D667BA2465A59B0024634C /* ViewController.swift in Sources */,
