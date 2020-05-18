@@ -14,64 +14,81 @@ class MoodViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
-
+        
     var imageName: String!
     
     var moods = ["Felice", "Triste", "Arrabbiato", "Voglioso di Cazzo"]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
         collectionView.backgroundColor = .none
-        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
         self.backgroundImage.image = UIImage(named: self.imageName)
     }
-
+    
     // MARK: UICollectionViewDataSource
-
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.moods.count
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MoodViewCell
-    
-        // Configure the cell
-        cell.moodImage.image = UIImage(named: "bubble")
-        cell.moodLabel.text = moods[indexPath.row]
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? MoodViewCell {
         
-        cell.frame.size.width = collectionView.frame.size.width / 3
+            // Configure the cell
+            cell.moodImage.image = UIImage(named: "Bollicine1")
+            cell.moodLabel.text = self.moods[indexPath.item]
+            
+//            if indexPath.item == 1 {
+//              cell.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+//            }
+            
+            return cell
+        }
+        
+        return MoodViewCell()
+    }
     
-        return cell
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let collectionWidth = collectionView.bounds.width
+        
+        let width: CGFloat = collectionWidth / 3
+        let height: CGFloat = collectionWidth / 2
+        return CGSize(width: width, height: height)
     }
+}
 
-    // MARK: UICollectionViewDelegate
-
-    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
+extension MoodViewController : UIScrollViewDelegate {
+    // perform scaling whenever the collection view is being scrolled
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        // center X of collection View
+        let centerX = self.collectionView.center.x
+        
+        // only perform the scaling on cells that are visible on screen
+        for cell in self.collectionView.visibleCells {
+            
+            // coordinate of the cell in the viewcontroller's root view coordinate space
+            let basePosition = cell.convert(CGPoint.zero, to: self.view)
+            let cellCenterX = basePosition.x + self.collectionView.frame.size.height / 2.0
+            
+            let distance = abs(cellCenterX - centerX)
+            
+            let tolerance : CGFloat = 0.02
+            var scale = 1.00 + tolerance - (( distance / centerX ) * 0.17)
+            if(scale > 1.0) {
+                scale = 1.0
+            }
+            
+            if(scale < 0.80) {
+                scale = 0.80
+            }
+            
+            cell.transform = CGAffineTransform(scaleX: scale, y: scale)
+        }
     }
-
-    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }

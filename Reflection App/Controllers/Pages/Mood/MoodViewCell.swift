@@ -9,6 +9,6 @@
 import UIKit
 
 class MoodViewCell: UICollectionViewCell {
-    @IBOutlet var moodImage: UIImageView!
+    @IBOutlet weak var moodImage: UIImageView!
     @IBOutlet weak var moodLabel: UILabel!
 }
