@@ -10,7 +10,6 @@ import UIKit
 
 class QuestionController: UIViewController{
 
-    
     @IBOutlet var backgroundImage: UIImageView!
     var imageName: String!
     

@@ -17,7 +17,6 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
     var pages = [UIViewController]()
     var pageBackgrounds = [String]()
     
-    
     //    MUSIC BUTTON
     let musicButton = UIButton()
     
@@ -52,7 +51,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
         
         let reflect: ViewController = getViewController("reflect")
-        let moodQuestionPage: QuestionController = getViewController("question")
+        let moodQuestionPage: MoodViewController = getViewController("mood")
         let firstQuestionPage: QuestionController = getViewController("question")
         let secondQuestionPage: QuestionController = getViewController("question")
         let reward: RewardController = getViewController("reward")
