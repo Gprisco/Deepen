@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SfQ-AD-sOH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RNn-Tx-xC9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -19,22 +19,24 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ND2-Xa-V9k" userLabel="backgroundImage">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sfondo-onde" translatesAutoresizingMaskIntoConstraints="NO" id="LRR-TR-mPa">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sfondo-onde" translatesAutoresizingMaskIntoConstraints="NO" id="LRR-TR-mPa">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyz-9I-Xem">
-                                <rect key="frame" x="62.5" y="304.5" width="289" height="287"/>
+                                <rect key="frame" x="62.5" y="395.5" width="289" height="105.5"/>
                                 <state key="normal" image="ReflectButton"/>
                                 <connections>
                                     <action selector="reflectButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zeK-Uh-PNK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciao" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ2-Yv-6NI">
-                                <rect key="frame" x="20" y="84" width="374" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSN-75-mQH">
+                                <rect key="frame" x="19" y="44" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Storico"/>
+                                <connections>
+                                    <action selector="historicalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FaV-Ni-14z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -46,31 +48,58 @@
                             <constraint firstItem="Vyz-9I-Xem" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IBC-fz-EcM"/>
                             <constraint firstItem="Vyz-9I-Xem" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nlb-ho-L9j"/>
                             <constraint firstItem="LRR-TR-mPa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NpM-J5-Nig"/>
-                            <constraint firstItem="SJ2-Yv-6NI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="OgX-WA-H0Y"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SJ2-Yv-6NI" secondAttribute="trailing" constant="20" id="Vk1-pN-SRi"/>
-                            <constraint firstItem="SJ2-Yv-6NI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bil-f4-jCi"/>
                             <constraint firstItem="ND2-Xa-V9k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bny-Mn-UEG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LRR-TR-mPa" secondAttribute="trailing" id="gvT-Ia-aqv"/>
-                            <constraint firstItem="Vyz-9I-Xem" firstAttribute="top" secondItem="SJ2-Yv-6NI" secondAttribute="bottom" constant="200" id="nJ4-0a-KGy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="ND2-Xa-V9k" id="EoF-gL-dLl"/>
-                        <outlet property="firstQuestionLabel" destination="SJ2-Yv-6NI" id="R4v-To-8Ok"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2211.594202898551" y="884.59821428571422"/>
+            <point key="canvasLocation" x="1938" y="752"/>
         </scene>
-        <!--Page View Controller-->
+        <!--View Controller-->
+        <scene sceneID="Hz4-L3-86g">
+            <objects>
+                <viewController storyboardIdentifier="historical" id="F9h-dg-H7K" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6aQ-IK-quV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Historical page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51a-Wl-9mW">
+                                <rect key="frame" x="150" y="438" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="05t-Tf-cGm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iu7-Oo-gpY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2852" y="61"/>
+        </scene>
+        <!--Historical Page View Controller-->
+        <scene sceneID="iGM-Ch-j9Y">
+            <objects>
+                <pageViewController storyboardIdentifier="historicalPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="RNn-Tx-xC9" customClass="HistoricalPageViewController" customModule="Reflection_App" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fo1-jz-szp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1025" y="61"/>
+        </scene>
+        <!--Reflection Page View Controller-->
         <scene sceneID="eux-R0-1uc">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="vertical" spineLocation="none" id="SfQ-AD-sOH" customClass="PageViewController" customModule="Reflection_App" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="reflectionPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="vertical" spineLocation="none" id="SfQ-AD-sOH" customClass="ReflectionPageViewController" customModule="Reflection_App" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dt1-0U-6zj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2213" y="94"/>
+            <point key="canvasLocation" x="1939" y="61"/>
         </scene>
         <!--Question Controller-->
         <scene sceneID="Vul-4q-sWp">
@@ -99,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69M-mY-ICt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3171" y="94"/>
+            <point key="canvasLocation" x="1938" y="2243"/>
         </scene>
         <!--Reward Controller-->
         <scene sceneID="ES1-I5-Xmh">
@@ -150,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yys-1j-wve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3986.25" y="92.5"/>
+            <point key="canvasLocation" x="1938" y="2975"/>
         </scene>
         <!--Mood View Controller-->
         <scene sceneID="zbP-1F-lSK">
@@ -225,13 +254,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23i-p8-8AV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3140.579710144928" y="884.59821428571422"/>
+            <point key="canvasLocation" x="1938" y="1509"/>
         </scene>
     </scenes>
     <resources>
         <image name="FifthBackground" width="828" height="1792"/>
         <image name="Perla" width="330" height="360"/>
         <image name="ReflectButton" width="289" height="106"/>
-        <image name="sfondo-onde" width="828" height="1792"/>
+        <image name="Sfondo-onde" width="828" height="1792"/>
     </resources>
 </document>

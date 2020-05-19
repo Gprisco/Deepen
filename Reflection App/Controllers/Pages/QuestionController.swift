@@ -21,9 +21,5 @@ class QuestionController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-    
-    
-
 }

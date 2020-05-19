@@ -12,8 +12,11 @@ import UserNotifications
 class ViewController: UIViewController {
     
     @IBOutlet var backgroundImage: UIImageView!
-    @IBOutlet var firstQuestionLabel: UILabel!
-        
+    var imageString: String = "FirstBackground"
+    
+    var historicalDelegate: HistoricalDelegate!
+    var reflectionDelegate: ReflectionDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,18 +29,24 @@ class ViewController: UIViewController {
                 return
             }
         }
-                
-        let firstQuestions: FirstQuestions = getData(for: "first_question") ?? []
-        let firstQuestion = firstQuestions.last(where: { $0.scheduledAt.day == Date().day })
-                
-        firstQuestionLabel.text = firstQuestion?.question.text ?? eveningQuotes[Int.random(in: 0 ..< eveningQuotes.count)].text
-        firstQuestionLabel.isHidden = true
+        
+        backgroundImage.image = UIImage(named: imageString)
+        
+//        let firstQuestions: FirstQuestions = getData(for: "first_question") ?? []
+//        let firstQuestion = firstQuestions.last(where: { $0.scheduledAt.day == Date().day })
+//
+//        firstQuestionLabel.text = firstQuestion?.question.text ?? eveningQuotes[Int.random(in: 0 ..< eveningQuotes.count)].text
+//        firstQuestionLabel.isHidden = true
     }
     
     @IBAction func reflectButtonPressed(_ sender: UIButton) {
-        firstQuestionLabel.isHidden.toggle()
+        reflectionDelegate.nextStep()
     }
-        
+    
+    @IBAction func historicalButtonPressed(_ sender: UIButton) {
+        historicalDelegate.onHistoricalPress()
+    }
+    
     //    Nel caso di Notifiche disattivate viene presentato un alert che informa l'utente
     func accessDeniedAlert() {
         let alert = UIAlertController(title: "ReflectApp", message: "Reflect APP ha bisogno delle notifiche per funzionare al meglio. Attivale nelle impostazioni.", preferredStyle: .alert)

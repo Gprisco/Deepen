@@ -12,6 +12,8 @@ private let reuseIdentifier = "moodCell"
 
 class MoodViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    var reflectionDelegate: ReflectionDelegate!
+    
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -27,9 +29,6 @@ class MoodViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         collectionView.backgroundColor = .none
         self.backgroundImage.image = UIImage(named: self.imageName)
-        
-        
-        
     }
     
     // MARK: UICollectionViewDataSource
@@ -53,6 +52,10 @@ class MoodViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
         
         return MoodViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        reflectionDelegate.nextStep()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

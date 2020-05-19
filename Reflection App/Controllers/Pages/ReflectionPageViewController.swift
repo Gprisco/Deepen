@@ -8,11 +8,12 @@
 
 import UIKit
 
-func getViewController<T>(_ identifier: String) -> T {
-    return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: identifier) as! T
-}
-
-class PageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDelegate {
+    
+    var historicalDelegate: HistoricalDelegate!
+    
+    var currentPage: Int = 0
+    var maxPage: Int = 3
     
     var pages = [UIViewController]()
     var pageBackgrounds = [String]()
@@ -47,7 +48,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         createButton(xFrame: self.view.frame.size.width, myView: self.view)
         MusicPlayer.sharedPlayer.playMusic()
         
-//        Add BubbleEmitter
+        //        Add BubbleEmitter
         addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
         
         let reflect: ViewController = getViewController("reflect")
@@ -60,13 +61,13 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         pages = [reflect, moodQuestionPage, firstQuestionPage, secondQuestionPage, reward]
         pageBackgrounds = ["FirstBackground", "SecondBackground", "ThirdBackground", "FourthBackground", "FifthBackground"]
         
-        //        Assegno DataSource
-        self.dataSource = self
-        self.delegate = self
-        
         DispatchQueue.main.async {
-            reflect.backgroundImage.image = UIImage(named: self.pageBackgrounds[0])
+            reflect.reflectionDelegate = self
+            reflect.historicalDelegate = self.historicalDelegate
+
             moodQuestionPage.imageName = self.pageBackgrounds[1]
+            moodQuestionPage.reflectionDelegate = self
+            
             firstQuestionPage.imageName = self.pageBackgrounds[2]
             secondQuestionPage.imageName = self.pageBackgrounds[3]
             reward.imageName = self.pageBackgrounds[4]
@@ -74,42 +75,6 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         
         self.setViewControllers([pages[0]], direction: .forward, animated: true, completion: nil)
     }
-    
-    //    ViewController Precedente
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        
-        guard let currentIndex = pages.firstIndex(of: viewController) else {
-            return nil
-        }
-        
-        let nextIndex = currentIndex - 1
-        
-        guard nextIndex >= 0 else {
-            return nil
-        }
-        
-        return pages[nextIndex]
-    }
-    
-    //       ViewController successivo
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        
-        guard let currentIndex = pages.firstIndex(of: viewController) else {
-            return nil
-        }
-        
-        let nextIndex = currentIndex + 1
-        let maxPage = pages.count
-        
-        guard nextIndex != maxPage else {
-            return nil
-        }
-        
-        return pages[nextIndex]
-        
-    }
-    
-    
     
     //    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
     //
@@ -126,6 +91,18 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
     //    @objc func enableUseInteraction() {
     //       self.view.isUserInteractionEnabled = true
     //    }
+}
+
+extension ReflectionPageViewController: ReflectionDelegate {
+    func nextStep() {
+        currentPage = currentPage < maxPage ? currentPage + 1 : currentPage
+        
+        self.setViewControllers([pages[currentPage]], direction: .forward, animated: true)
+    }
     
-    
+    func prevStep() {
+        currentPage = currentPage > 0 ? currentPage - 1 : currentPage
+        
+        self.setViewControllers([pages[currentPage]], direction: .forward, animated: true)
+    }
 }
