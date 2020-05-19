@@ -14,10 +14,10 @@ class MoodViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
-        
+    
     var imageName: String!
     
-    var moods = ["Felice", "Triste", "Arrabbiato", "Voglioso di Cazzo"]
+    var moods = ["Felice", "Triste", "Arrabbiato", "Voglioso di Cazzo","Felice", "Triste", "Arrabbiato", "Voglioso di Cazzo"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,9 @@ class MoodViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         collectionView.backgroundColor = .none
         self.backgroundImage.image = UIImage(named: self.imageName)
+        
+        
+        
     }
     
     // MARK: UICollectionViewDataSource
@@ -37,14 +40,14 @@ class MoodViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? MoodViewCell {
-        
+            
             // Configure the cell
             cell.moodImage.image = UIImage(named: "Bollicine1")
             cell.moodLabel.text = self.moods[indexPath.item]
             
-//            if indexPath.item == 1 {
-//              cell.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-//            }
+            //            if indexPath.item == 1 {
+            //              cell.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            //            }
             
             return cell
         }
@@ -63,7 +66,27 @@ class MoodViewController: UIViewController, UICollectionViewDelegate, UICollecti
 }
 
 extension MoodViewController : UIScrollViewDelegate {
-    // perform scaling whenever the collection view is being scrolled
+    
+//    MARK: MUNNEZZA
+    /*
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        for cell in collectionView.visibleCells {
+            //              if let row = collectionView.indexPath(for: cell)?.item {
+            //                   print(row)
+            //              }
+            let myIndex = collectionView.indexPath(for: cell)
+            let myItem = collectionView.selectItem(at: myIndex, animated: true, scrollPosition: [])
+            print(myItem)
+            
+        }
+        
+//        for index in collectionView.indexPathsForVisibleItems {
+//            print(index.item)
+//        }
+     
+    }
+ */
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         // center X of collection View

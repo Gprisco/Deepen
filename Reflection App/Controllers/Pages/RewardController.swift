@@ -10,6 +10,8 @@ import UIKit
 
 class RewardController: UIViewController {
     @IBOutlet var backgroundImage: UIImageView!
+    @IBOutlet weak var perlaImage: UIImageView!
+    
     var imageName: String!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -20,5 +22,7 @@ class RewardController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
 }

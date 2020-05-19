@@ -19,7 +19,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ND2-Xa-V9k" userLabel="backgroundImage">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sfondo-onde" translatesAutoresizingMaskIntoConstraints="NO" id="LRR-TR-mPa">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sfondo-onde" translatesAutoresizingMaskIntoConstraints="NO" id="LRR-TR-mPa">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyz-9I-Xem">
@@ -109,26 +109,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ey2-hH-W3Y" userLabel="backgroundImage">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FifthBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Ey2-hH-W3Y" userLabel="backgroundImage">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Perla" translatesAutoresizingMaskIntoConstraints="NO" id="E9Z-uD-KVv">
+                                <rect key="frame" x="107" y="490" width="200" height="313.5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="OFZ-qH-bMs" firstAttribute="trailing" secondItem="E9Z-uD-KVv" secondAttribute="trailing" constant="122" id="GMc-NA-Ihw">
+                                <variation key="widthClass=compact" constant="86"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="107"/>
+                            </constraint>
+                            <constraint firstItem="E9Z-uD-KVv" firstAttribute="height" secondItem="Hno-rm-hsX" secondAttribute="height" multiplier="0.35" id="Gu0-Ag-OH8"/>
                             <constraint firstAttribute="bottom" secondItem="Ey2-hH-W3Y" secondAttribute="bottom" id="K7y-yM-Kgb"/>
+                            <constraint firstItem="E9Z-uD-KVv" firstAttribute="leading" secondItem="OFZ-qH-bMs" secondAttribute="leading" constant="151" id="PBW-ql-FRh">
+                                <variation key="widthClass=compact" constant="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="107"/>
+                            </constraint>
                             <constraint firstItem="Ey2-hH-W3Y" firstAttribute="leading" secondItem="OFZ-qH-bMs" secondAttribute="leading" id="b72-bS-RyJ"/>
+                            <constraint firstItem="E9Z-uD-KVv" firstAttribute="centerY" secondItem="Hno-rm-hsX" secondAttribute="centerY" constant="211" id="dVe-mT-Q29">
+                                <variation key="widthClass=compact" constant="132.5"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="198.75"/>
+                            </constraint>
                             <constraint firstItem="Ey2-hH-W3Y" firstAttribute="top" secondItem="Hno-rm-hsX" secondAttribute="top" id="tAX-OE-Iia"/>
                             <constraint firstItem="Ey2-hH-W3Y" firstAttribute="trailing" secondItem="OFZ-qH-bMs" secondAttribute="trailing" id="vPr-JG-Ncl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OFZ-qH-bMs"/>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="E9Z-uD-KVv"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="Ey2-hH-W3Y" id="4cc-1U-bMe"/>
+                        <outlet property="perlaImage" destination="E9Z-uD-KVv" id="OWT-6P-Kt2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yys-1j-wve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3987" y="94"/>
+            <point key="canvasLocation" x="3986.25" y="92.5"/>
         </scene>
         <!--Mood View Controller-->
         <scene sceneID="zbP-1F-lSK">
@@ -207,7 +229,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FifthBackground" width="828" height="1792"/>
+        <image name="Perla" width="330" height="360"/>
         <image name="ReflectButton" width="289" height="106"/>
-        <image name="Sfondo-onde" width="828" height="1792"/>
+        <image name="sfondo-onde" width="828" height="1792"/>
     </resources>
 </document>

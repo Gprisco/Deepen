@@ -26,6 +26,7 @@
 		881DD7C2246D788500DB895F /* relax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 881DD7C1246D788500DB895F /* relax.mp3 */; };
 		88A6944B246ED3E200A64C52 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A6944A246ED3E200A64C52 /* MoodViewController.swift */; };
 		88A6944D246ED4FF00A64C52 /* MoodViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A6944C246ED4FF00A64C52 /* MoodViewCell.swift */; };
+		88C75E342472F56E00A8E46C /* Perla.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 88C75E332472F56E00A8E46C /* Perla.pdf */; };
 		88D9EE74246BF354008B1DFA /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D9EE73246BF354008B1DFA /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		881DD7C1246D788500DB895F /* relax.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = relax.mp3; sourceTree = "<group>"; };
 		88A6944A246ED3E200A64C52 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
 		88A6944C246ED4FF00A64C52 /* MoodViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewCell.swift; sourceTree = "<group>"; };
+		88C75E332472F56E00A8E46C /* Perla.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Perla.pdf; sourceTree = "<group>"; };
 		88D9EE73246BF354008B1DFA /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 				01D667D324699A330024634C /* Controllers */,
 				01D667C62465A59F0024634C /* Info.plist */,
 				881DD7C1246D788500DB895F /* relax.mp3 */,
+				88C75E332472F56E00A8E46C /* Perla.pdf */,
 			);
 			path = "Reflection App";
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				01D667C22465A59F0024634C /* Assets.xcassets in Resources */,
 				01D667BD2465A59B0024634C /* Main.storyboard in Resources */,
 				881DD7C2246D788500DB895F /* relax.mp3 in Resources */,
+				88C75E342472F56E00A8E46C /* Perla.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
