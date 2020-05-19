@@ -27,6 +27,8 @@
 		881DD7C2246D788500DB895F /* relax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 881DD7C1246D788500DB895F /* relax.mp3 */; };
 		88A6944B246ED3E200A64C52 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A6944A246ED3E200A64C52 /* MoodViewController.swift */; };
 		88A6944D246ED4FF00A64C52 /* MoodViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A6944C246ED4FF00A64C52 /* MoodViewCell.swift */; };
+		88C75E3A24741BCD00A8E46C /* Piuma.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 88C75E3924741BCD00A8E46C /* Piuma.pdf */; };
+		88D9EE74246BF354008B1DFA /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D9EE73246BF354008B1DFA /* PageViewController.swift */; };
 		88C75E342472F56E00A8E46C /* Perla.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 88C75E332472F56E00A8E46C /* Perla.pdf */; };
 		88D9EE74246BF354008B1DFA /* ReflectionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D9EE73246BF354008B1DFA /* ReflectionPageViewController.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		881DD7C1246D788500DB895F /* relax.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = relax.mp3; sourceTree = "<group>"; };
 		88A6944A246ED3E200A64C52 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
 		88A6944C246ED4FF00A64C52 /* MoodViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewCell.swift; sourceTree = "<group>"; };
+		88C75E3924741BCD00A8E46C /* Piuma.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Piuma.pdf; sourceTree = "<group>"; };
+		88D9EE73246BF354008B1DFA /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		88C75E332472F56E00A8E46C /* Perla.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Perla.pdf; sourceTree = "<group>"; };
 		88D9EE73246BF354008B1DFA /* ReflectionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,7 +101,7 @@
 				01D667D324699A330024634C /* Controllers */,
 				01D667C62465A59F0024634C /* Info.plist */,
 				881DD7C1246D788500DB895F /* relax.mp3 */,
-				88C75E332472F56E00A8E46C /* Perla.pdf */,
+				88C75E3924741BCD00A8E46C /* Piuma.pdf */,
 			);
 			path = "Reflection App";
 			sourceTree = "<group>";
@@ -140,13 +144,17 @@
 		01D667D6246C2D320024634C /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				88D9EE73246BF354008B1DFA /* PageViewController.swift */,
 				01D667E8246ED8F10024634C /* Mood */,
 				01D667D4246C2D2A0024634C /* QuestionController.swift */,
 				881DD7BF246D764300DB895F /* MusicPlayer.swift */,
 				88D9EE73246BF354008B1DFA /* ReflectionPageViewController.swift */,
 				01D667EB247419A30024634C /* HistoricalPageViewController.swift */,
 				01D667B92465A59B0024634C /* ViewController.swift */,
-				01D667D9246C45A70024634C /* RewardController.swift */,
+				01D667E8246ED8F10024634C /* Mood */,
+				88318BDD24741E0A004B3AFA /* Questions */,
+				88318BDC24741DED004B3AFA /* Reward */,
+				881DD7BF246D764300DB895F /* MusicPlayer.swift */,
 				881DD7BD246D748500DB895F /* BubbleEmitter.swift */,
 			);
 			path = Pages;
@@ -169,6 +177,22 @@
 				01D667E9246ED9B80024634C /* SnappingCollectionViewLayout.swift */,
 			);
 			path = Mood;
+			sourceTree = "<group>";
+		};
+		88318BDC24741DED004B3AFA /* Reward */ = {
+			isa = PBXGroup;
+			children = (
+				01D667D9246C45A70024634C /* RewardController.swift */,
+			);
+			path = Reward;
+			sourceTree = "<group>";
+		};
+		88318BDD24741E0A004B3AFA /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				01D667D4246C2D2A0024634C /* QuestionController.swift */,
+			);
+			path = Questions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +255,8 @@
 			files = (
 				01D667C52465A59F0024634C /* LaunchScreen.storyboard in Resources */,
 				01D667C22465A59F0024634C /* Assets.xcassets in Resources */,
+				88C75E3A24741BCD00A8E46C /* Piuma.pdf in Resources */,
 				881DD7C2246D788500DB895F /* relax.mp3 in Resources */,
-				88C75E342472F56E00A8E46C /* Perla.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
