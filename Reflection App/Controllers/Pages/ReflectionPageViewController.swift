@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDelegate {
+class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
     var historicalDelegate: HistoricalDelegate!
     
@@ -44,6 +44,8 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.dataSource = self
+        
         //      Create MusicButton
         createButton(xFrame: self.view.frame.size.width, myView: self.view)
         MusicPlayer.sharedPlayer.playMusic()
@@ -64,7 +66,7 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
         DispatchQueue.main.async {
             reflect.reflectionDelegate = self
             reflect.historicalDelegate = self.historicalDelegate
-
+            
             moodQuestionPage.imageName = self.pageBackgrounds[1]
             moodQuestionPage.reflectionDelegate = self
             
@@ -75,6 +77,38 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
         
         self.setViewControllers([pages[0]], direction: .forward, animated: true, completion: nil)
     }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let currentIndex = pages.firstIndex(of: viewController) else {
+            return nil
+        }
+        
+        let nextIndex = currentIndex - 1
+        
+        guard nextIndex >= 0 else {
+            return nil
+        }
+        
+        return pages[nextIndex]
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let currentIndex = pages.firstIndex(of: viewController) else {
+            return nil
+        }
+        
+        let nextIndex = currentIndex + 1
+        let maxPage = pages.count
+        
+        guard nextIndex != maxPage else {
+            return nil
+        }
+        
+        return pages[nextIndex]
+        
+    }
+    
+    
     
     //    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
     //

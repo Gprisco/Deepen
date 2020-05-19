@@ -16,14 +16,14 @@ class HistoricalPageViewController: UIPageViewController, UIPageViewControllerDe
         super.viewDidLoad()
         
         self.dataSource = self
-
+        
         let reflectView: ReflectionPageViewController = getViewController("reflectionPageViewController")
         let historicalView: UIViewController = getViewController("historical")
         
         DispatchQueue.main.async {
             reflectView.historicalDelegate = self
         }
-                
+        
         pages = [historicalView, reflectView]
         self.setViewControllers([pages[1]], direction: .forward, animated: true)
     }
@@ -55,7 +55,6 @@ class HistoricalPageViewController: UIPageViewController, UIPageViewControllerDe
         }
         
         return pages[nextIndex]
-
     }
 }
 
