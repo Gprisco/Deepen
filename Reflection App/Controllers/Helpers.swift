@@ -10,6 +10,7 @@ import UIKit
 
 protocol HistoricalDelegate {
     func onHistoricalPress()
+    func onReflectPress()
 }
 
 protocol ReflectionDelegate {

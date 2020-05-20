@@ -53,7 +53,7 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
         //        Add BubbleEmitter
         addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
         
-        let reflect: ViewController = getViewController("reflect")
+        let reflect: ReflectController = getViewController("reflect")
         let moodQuestionPage: MoodViewController = getViewController("mood")
         let firstQuestionPage: QuestionController = getViewController("question")
         let secondQuestionPage: QuestionController = getViewController("question")
@@ -67,7 +67,7 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
             reflect.reflectionDelegate = self
             reflect.historicalDelegate = self.historicalDelegate
             
-            moodQuestionPage.imageName = self.pageBackgrounds[1]
+            moodQuestionPage.backgroundImageName = self.pageBackgrounds[1]
             moodQuestionPage.reflectionDelegate = self
             
             firstQuestionPage.imageName = self.pageBackgrounds[2]
@@ -89,6 +89,8 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
             return nil
         }
         
+        currentPage = nextIndex
+        
         return pages[nextIndex]
     }
     
@@ -98,11 +100,12 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
         }
         
         let nextIndex = currentIndex + 1
-        let maxPage = pages.count
         
-        guard nextIndex != maxPage else {
+        guard nextIndex != pages.count else {
             return nil
         }
+        
+        currentPage = nextIndex
         
         return pages[nextIndex]
         

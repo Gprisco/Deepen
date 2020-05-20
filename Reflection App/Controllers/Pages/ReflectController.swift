@@ -9,7 +9,7 @@
 import UIKit
 import UserNotifications
 
-class ViewController: UIViewController {
+class ReflectController: UIViewController {
     
     @IBOutlet var backgroundImage: UIImageView!
     var imageString: String = "FirstBackground"

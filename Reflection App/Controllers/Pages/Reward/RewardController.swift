@@ -15,9 +15,7 @@ class RewardController: UIViewController {
     @IBOutlet weak var labelReward: UILabel!
     @IBOutlet weak var plumeImage: UIImageView!
     
-    
     var imageName: String!
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
