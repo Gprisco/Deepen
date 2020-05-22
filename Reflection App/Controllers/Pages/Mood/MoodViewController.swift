@@ -30,7 +30,7 @@ class MoodViewController: UIViewController {
         self.backgroundImage.image = UIImage(named: self.backgroundImageName)
         
         let width = scalingCarousel.bounds.width
-        scalingCarousel.inset = 105
+        scalingCarousel.inset = 103
         print(width / 4 )
         
     }

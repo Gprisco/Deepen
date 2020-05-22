@@ -21,9 +21,9 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     //    MUSIC BUTTON
     let musicButton = UIButton()
     
-    func createButton(xFrame: CGFloat, myView: UIView) {
-        musicButton.frame = CGRect(x: xFrame - 60, y: 50, width: 50, height: 50)
-        musicButton.setImage(UIImage(systemName: "music.note")?.withTintColor(.yellow, renderingMode: .alwaysOriginal)
+    func createButton(xFrame: CGFloat, myView: UIView) {        
+        musicButton.frame = CGRect(x: xFrame - 50, y: 60, width: 50, height: 50)
+        musicButton.setImage(UIImage(systemName: "music.note")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal)
             , for: UIControl.State.normal)
         musicButton.addTarget(self, action: #selector(musicButtonPressed), for: .touchUpInside)
         myView.addSubview(musicButton)

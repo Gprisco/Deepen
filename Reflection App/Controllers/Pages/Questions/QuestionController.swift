@@ -15,6 +15,9 @@ class QuestionController: UIViewController{
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerTextView: UITextView!
+    @IBOutlet weak var lineWriting: UIView!
+    
+    @IBOutlet weak var buttonStackView: UIStackView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,6 +32,8 @@ class QuestionController: UIViewController{
     
     @IBAction func onWriteTap(_ sender: UIButton) {
         answerTextView.isHidden = false
+        lineWriting.isHidden = false
+        buttonStackView.isHidden = true
     }
     
     @IBAction func onSpeakTap(_ sender: UIButton) {
