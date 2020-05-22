@@ -12,7 +12,8 @@ import UserNotifications
 class ReflectController: UIViewController {
     
     @IBOutlet var backgroundImage: UIImageView!
-    var imageString: String = "FirstBackground"
+    
+    var move : [UIImage] = []
     
     var historicalDelegate: HistoricalDelegate!
     var reflectionDelegate: ReflectionDelegate!
@@ -30,7 +31,17 @@ class ReflectController: UIViewController {
             }
         }
         
-        backgroundImage.image = UIImage(named: imageString)
+        backgroundImage.image = UIImage(named: "animazione-onde1")
+        
+        move = [UIImage(named: "animazione-onde1")!, UIImage(named: "animazione-onde2")!, UIImage(named: "animazione-onde3")!, UIImage(named: "animazione-onde4")!, UIImage(named: "animazione-onde5")!, UIImage(named: "animazione-onde6")!, UIImage(named: "animazione-onde7")!, UIImage(named: "animazione-onde8")!, UIImage(named: "animazione-onde9")!, UIImage(named: "animazione-onde10")!, UIImage(named: "animazione-onde11")!, UIImage(named: "animazione-onde12")!, UIImage(named: "animazione-onde11")!, UIImage(named: "animazione-onde10")!, UIImage(named: "animazione-onde9")!, UIImage(named: "animazione-onde8")!, UIImage(named: "animazione-onde7")!, UIImage(named: "animazione-onde6")!, UIImage(named: "animazione-onde5")!, UIImage(named: "animazione-onde4")!, UIImage(named: "animazione-onde3")!, UIImage(named: "animazione-onde2")!]
+                
+            backgroundImage.animationImages = move
+            backgroundImage.animationDuration = 4
+                
+        DispatchQueue.main.asyncAfter(deadline:DispatchTime.now()+0.5){
+                    self.backgroundImage.startAnimating()
+            }
+       
         
 //        let firstQuestions: FirstQuestions = getData(for: "first_question") ?? []
 //        let firstQuestion = firstQuestions.last(where: { $0.scheduledAt.day == Date().day })
