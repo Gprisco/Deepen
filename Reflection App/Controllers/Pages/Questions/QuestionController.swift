@@ -13,13 +13,29 @@ class QuestionController: UIViewController{
     @IBOutlet var backgroundImage: UIImageView!
     var imageName: String!
     
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var answerTextView: UITextView!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.backgroundImage.image = UIImage(named: self.imageName)
+        answerTextView.isHidden = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func onWriteTap(_ sender: UIButton) {
+        answerTextView.isHidden = false
+    }
+    
+    @IBAction func onSpeakTap(_ sender: UIButton) {
+        answerTextView.isHidden = false
+    }
+    
+    @IBAction func onSkipTap(_ sender: UIButton) {
+        answerTextView.isHidden = false
     }
 }
