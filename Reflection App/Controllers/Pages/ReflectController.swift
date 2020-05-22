@@ -12,8 +12,10 @@ import UserNotifications
 class ReflectController: UIViewController {
     
     @IBOutlet var backgroundImage: UIImageView!
+    @IBOutlet weak var buttonToPress: UIButton!
     
     var move : [UIImage] = []
+    var moveB : [UIImage] = []
     
     var historicalDelegate: HistoricalDelegate!
     var reflectionDelegate: ReflectionDelegate!
@@ -37,10 +39,18 @@ class ReflectController: UIViewController {
                 
             backgroundImage.animationImages = move
             backgroundImage.animationDuration = 4
-                
+        
+        buttonToPress.setImage(UIImage(named: "Animazione-piuma1"), for: .normal)
+        
+        moveB = [UIImage(named: "Animazione-piuma1")!, UIImage(named: "Animazione-piuma2")!, UIImage(named: "Animazione-piuma3")!, UIImage(named: "Animazione-piuma4")!, UIImage(named: "Animazione-piuma5")!, UIImage(named: "Animazione-piuma6")!]
+        
+        buttonToPress.imageView?.animationDuration = 1.5
+        buttonToPress.imageView?.animationImages = moveB
+        
         DispatchQueue.main.asyncAfter(deadline:DispatchTime.now()+0.5){
-                    self.backgroundImage.startAnimating()
-            }
+                self.backgroundImage.startAnimating()
+            self.buttonToPress.imageView?.startAnimating()
+        }
        
         
 //        let firstQuestions: FirstQuestions = getData(for: "first_question") ?? []
@@ -51,6 +61,8 @@ class ReflectController: UIViewController {
     }
     
     @IBAction func reflectButtonPressed(_ sender: UIButton) {
+//        backgroundImage.stopAnimating()
+//        buttonToPress.imageView?.stopAnimating()
         reflectionDelegate.nextStep()
     }
     

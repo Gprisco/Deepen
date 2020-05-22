@@ -23,8 +23,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyz-9I-Xem">
-                                <rect key="frame" x="62.5" y="395" width="289" height="106"/>
-                                <state key="normal" image="ReflectButton"/>
+                                <rect key="frame" x="192" y="431" width="30" height="34"/>
                                 <connections>
                                     <action selector="reflectButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zeK-Uh-PNK"/>
                                 </connections>
@@ -55,6 +54,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="ND2-Xa-V9k" id="EoF-gL-dLl"/>
+                        <outlet property="buttonToPress" destination="Vyz-9I-Xem" id="oRh-SI-nAM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -423,7 +423,6 @@
         <image name="FifthBackground" width="828" height="1792"/>
         <image name="Perla" width="330" height="360"/>
         <image name="Piuma" width="228" height="103"/>
-        <image name="ReflectButton" width="289" height="106"/>
         <image name="Sfondo-onde" width="828" height="1792"/>
         <image name="microphone.fill" width="7" height="18"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
