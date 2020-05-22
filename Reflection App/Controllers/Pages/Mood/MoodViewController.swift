@@ -22,13 +22,17 @@ class MoodViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         scalingCarousel.dataSource = self
         scalingCarousel.delegate = self
         
         scalingCarousel.backgroundColor = .none
         
         self.backgroundImage.image = UIImage(named: self.backgroundImageName)
+        
+        let width = scalingCarousel.bounds.width
+        scalingCarousel.inset = 105
+        print(width / 4 )
+        
     }
 }
 
@@ -37,11 +41,12 @@ extension MoodViewController: UICollectionViewDataSource, UICollectionViewDelega
         return moods.count
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "moodCell", for: indexPath)
         
         if let scalingCell = cell as? MoodCell {
-            scalingCell.moodLabel.text = moods[indexPath.item]
+//            scalingCell.moodLabel.text = moods[indexPath.item]
         }
         
         DispatchQueue.main.async {

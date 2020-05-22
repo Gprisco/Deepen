@@ -215,70 +215,68 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hgc-ui-4NV" customClass="ScalingCarouselView" customModule="ScalingCarousel">
-                                <rect key="frame" x="0.0" y="274" width="414" height="358"/>
+                                <rect key="frame" x="0.0" y="274" width="414" height="358.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eTb-N6-zBn">
-                                    <size key="itemSize" width="238" height="238"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="eTb-N6-zBn">
+                                    <size key="itemSize" width="200" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="moodCell" id="daG-f7-Dng" customClass="MoodCell" customModule="Reflection_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="60" width="238" height="238"/>
+                                        <rect key="frame" x="0.0" y="79.5" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="C1q-06-k4T">
-                                            <rect key="frame" x="0.0" y="0.0" width="238" height="238"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ciao" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bly-6G-Vfw">
-                                                    <rect key="frame" x="16" y="167" width="207" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FZ8-gr-9Ue">
+                                                    <rect key="frame" x="0.0" y="175" width="200" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Perla" translatesAutoresizingMaskIntoConstraints="NO" id="6gN-yx-pIi">
-                                                    <rect key="frame" x="39" y="18" width="160" height="141"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.up.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6gN-yx-pIi">
+                                                    <rect key="frame" x="45" y="-1" width="110" height="187"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="238" height="238"/>
+                                        <size key="customSize" width="200" height="200"/>
                                         <connections>
                                             <outlet property="mainView" destination="C1q-06-k4T" id="MNz-tZ-7fa"/>
                                             <outlet property="moodImage" destination="6gN-yx-pIi" id="MzE-hC-Ksc"/>
-                                            <outlet property="moodLabel" destination="Bly-6G-Vfw" id="RRb-wp-zds"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="inset">
-                                        <real key="value" value="100"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Come ti senti oggi?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCe-Bx-5h0">
-                                <rect key="frame" x="20" y="98" width="374" height="34"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="20" y="98" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Hgc-ui-4NV" firstAttribute="centerY" secondItem="gEq-W9-cJG" secondAttribute="centerY" id="IWW-Mq-yUe"/>
+                            <constraint firstItem="Hgc-ui-4NV" firstAttribute="leading" secondItem="JOW-uF-FLR" secondAttribute="leading" id="Ek7-H9-KGA"/>
                             <constraint firstItem="vCe-Bx-5h0" firstAttribute="top" secondItem="gEq-W9-cJG" secondAttribute="top" constant="54" id="MUZ-ZR-yKn"/>
                             <constraint firstItem="gEq-W9-cJG" firstAttribute="trailing" secondItem="vCe-Bx-5h0" secondAttribute="trailing" constant="20" id="ON6-vm-EX4"/>
+                            <constraint firstItem="gEq-W9-cJG" firstAttribute="bottom" secondItem="Hgc-ui-4NV" secondAttribute="bottom" constant="229.5" id="Qu4-HQ-bKu"/>
+                            <constraint firstItem="Hgc-ui-4NV" firstAttribute="width" secondItem="RIw-zx-dts" secondAttribute="width" id="TkA-Iz-Ico"/>
                             <constraint firstItem="JOW-uF-FLR" firstAttribute="trailing" secondItem="gEq-W9-cJG" secondAttribute="trailing" id="WIo-fY-iuf"/>
                             <constraint firstItem="JOW-uF-FLR" firstAttribute="top" secondItem="RIw-zx-dts" secondAttribute="top" id="d3G-Rd-eZS"/>
-                            <constraint firstItem="Hgc-ui-4NV" firstAttribute="centerX" secondItem="gEq-W9-cJG" secondAttribute="centerX" id="duG-V4-UDu"/>
+                            <constraint firstItem="Hgc-ui-4NV" firstAttribute="height" secondItem="RIw-zx-dts" secondAttribute="height" multiplier="0.4" id="gk8-PT-cbH"/>
                             <constraint firstAttribute="bottom" secondItem="JOW-uF-FLR" secondAttribute="bottom" id="kNA-sS-wFL"/>
-                            <constraint firstItem="Hgc-ui-4NV" firstAttribute="leading" secondItem="gEq-W9-cJG" secondAttribute="leading" id="kOn-CW-fvh"/>
-                            <constraint firstItem="Hgc-ui-4NV" firstAttribute="top" secondItem="gEq-W9-cJG" secondAttribute="top" constant="230" id="mfr-Uw-Ey9"/>
                             <constraint firstItem="vCe-Bx-5h0" firstAttribute="leading" secondItem="gEq-W9-cJG" secondAttribute="leading" constant="20" id="mxG-O3-BZV"/>
                             <constraint firstItem="JOW-uF-FLR" firstAttribute="leading" secondItem="gEq-W9-cJG" secondAttribute="leading" id="ray-i9-P5y"/>
-                            <constraint firstItem="gEq-W9-cJG" firstAttribute="trailing" secondItem="Hgc-ui-4NV" secondAttribute="trailing" id="uep-bF-D1W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gEq-W9-cJG"/>
                     </view>
@@ -387,5 +385,6 @@
         <image name="ReflectButton" width="289" height="106"/>
         <image name="Sfondo-onde" width="828" height="1792"/>
         <image name="microphone.fill" width="7" height="18"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
     </resources>
 </document>

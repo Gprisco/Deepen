@@ -147,12 +147,12 @@
 				88D9EE73246BF354008B1DFA /* ReflectionPageViewController.swift */,
 				01D667EB247419A30024634C /* HistoricalPageViewController.swift */,
 				01D667B92465A59B0024634C /* ReflectController.swift */,
+				01D667FB247579480024634C /* Historical */,
 				01D667E8246ED8F10024634C /* Mood */,
 				88318BDD24741E0A004B3AFA /* Questions */,
 				88318BDC24741DED004B3AFA /* Reward */,
 				881DD7BF246D764300DB895F /* MusicPlayer.swift */,
 				881DD7BD246D748500DB895F /* BubbleEmitter.swift */,
-				01D667FB247579480024634C /* Historical */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
