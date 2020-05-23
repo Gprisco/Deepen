@@ -33,9 +33,9 @@ class RewardController: UIViewController {
         
         perlaImage.image = UIImage (named: "Animazione-conchiglia1")
         
-    moveC = [UIImage (named: "Animazione-conchiglia1")!, UIImage (named: "Animazione-conchiglia2")!, UIImage (named: "Animazione-conchiglia3")!, UIImage (named: "Animazione-conchiglia4")!, UIImage (named: "Animazione-conchiglia5")!, UIImage (named: "Animazione-conchiglia4")!, UIImage (named: "Animazione-conchiglia3")!, UIImage (named: "Animazione-conchiglia2")!]
+    moveC = [UIImage (named: "Animazione-conchiglia1")!, UIImage (named: "Animazione-conchiglia2")!, UIImage (named: "Animazione-conchiglia3")!, UIImage (named: "Animazione-conchiglia4")!, UIImage (named: "Animazione-conchiglia5")!, UIImage (named: "Animazione-conchiglia5")!, UIImage (named: "Animazione-conchiglia4")!, UIImage (named: "Animazione-conchiglia3")!, UIImage (named: "Animazione-conchiglia2")!, UIImage (named: "Animazione-conchiglia1")!]
         
-        perlaImage.animationDuration = 1.5
+        perlaImage.animationDuration = 2.6
         perlaImage.animationImages = moveC
   
     }
