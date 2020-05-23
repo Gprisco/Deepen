@@ -13,7 +13,7 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     var historicalDelegate: HistoricalDelegate!
     
     var currentPage: Int = 0
-    var maxPage: Int = 3
+    var maxPage: Int = 5
     
     var pages = [UIViewController]()
     var pageBackgrounds = [String]()
@@ -71,7 +71,11 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
             moodQuestionPage.reflectionDelegate = self
             
             firstQuestionPage.imageName = self.pageBackgrounds[2]
+            firstQuestionPage.reflectionDelegate = self
+            
             secondQuestionPage.imageName = self.pageBackgrounds[3]
+            secondQuestionPage.reflectionDelegate = self
+            
             reward.imageName = self.pageBackgrounds[4]
         }
         
