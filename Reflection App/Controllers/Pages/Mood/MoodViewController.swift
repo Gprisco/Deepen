@@ -58,6 +58,7 @@ extension MoodViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        reflectionDelegate.onMoodChoice(mood: moods[indexPath.item])
         reflectionDelegate.nextStep()
     }
     

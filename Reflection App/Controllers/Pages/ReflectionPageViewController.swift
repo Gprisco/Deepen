@@ -18,6 +18,10 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     var pages = [UIViewController]()
     var pageBackgrounds = [String]()
     
+    var mood: String?
+    var firstAnswer: String?
+    var secondAnswer: String?
+    
     //    MUSIC BUTTON
     let musicButton = UIButton()
     
@@ -72,9 +76,11 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
             
             firstQuestionPage.imageName = self.pageBackgrounds[2]
             firstQuestionPage.reflectionDelegate = self
+            firstQuestionPage.step = 1
             
             secondQuestionPage.imageName = self.pageBackgrounds[3]
             secondQuestionPage.reflectionDelegate = self
+            secondQuestionPage.step = 2
             
             reward.imageName = self.pageBackgrounds[4]
         }
@@ -145,5 +151,21 @@ extension ReflectionPageViewController: ReflectionDelegate {
         currentPage = currentPage > 0 ? currentPage - 1 : currentPage
         
         self.setViewControllers([pages[currentPage]], direction: .forward, animated: true)
+    }
+    
+    func onMoodChoice(mood: String) {
+        self.mood = mood
+    }
+    
+    func onFirstAnswer(_ answer: String) {
+        self.firstAnswer = answer
+    }
+    
+    func onSecondAnswer(_ answer: String) {
+        self.secondAnswer = answer
+    }
+    
+    func onReflectionFinished() {
+        print(mood, firstAnswer, secondAnswer)
     }
 }

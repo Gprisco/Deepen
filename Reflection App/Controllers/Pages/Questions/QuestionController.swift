@@ -11,6 +11,7 @@ import UIKit
 class QuestionController: UIViewController, UITextViewDelegate {
     
     var reflectionDelegate: ReflectionDelegate!
+    var step: Int!
 
     @IBOutlet var backgroundImage: UIImageView!
     var imageName: String!
@@ -36,6 +37,14 @@ class QuestionController: UIViewController, UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
             self.view.endEditing(true)
+            
+            if step == 1 {
+                reflectionDelegate.onFirstAnswer(answerTextView.text)
+            } else if step == 2 {
+                reflectionDelegate.onSecondAnswer(answerTextView.text)
+                reflectionDelegate.onReflectionFinished()
+            }
+            
             reflectionDelegate.nextStep()
         }
         
@@ -62,6 +71,14 @@ class QuestionController: UIViewController, UITextViewDelegate {
     
     @objc func doneButtonAction() {
         self.view.endEditing(true)
+        
+        if step == 1 {
+            reflectionDelegate.onFirstAnswer(answerTextView.text)
+        } else if step == 2 {
+            reflectionDelegate.onSecondAnswer(answerTextView.text)
+            reflectionDelegate.onReflectionFinished()
+        }
+        
         reflectionDelegate.nextStep()
     }
     

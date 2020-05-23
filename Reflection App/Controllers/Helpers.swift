@@ -16,6 +16,10 @@ protocol HistoricalDelegate {
 protocol ReflectionDelegate {
     func nextStep()
     func prevStep()
+    func onMoodChoice(mood: String)
+    func onFirstAnswer(_ answer: String)
+    func onSecondAnswer(_ answer: String)
+    func onReflectionFinished()
 }
 
 func getViewController<T>(_ identifier: String) -> T {
