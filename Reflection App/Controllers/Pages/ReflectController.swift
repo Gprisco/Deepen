@@ -12,8 +12,10 @@ import UserNotifications
 class ReflectController: UIViewController {
     
     @IBOutlet var backgroundImage: UIImageView!
+    @IBOutlet weak var buttonToPress: UIButton!
     
     var move : [UIImage] = []
+    var moveB : [UIImage] = []
     
     var historicalDelegate: HistoricalDelegate!
     var reflectionDelegate: ReflectionDelegate!
@@ -36,11 +38,19 @@ class ReflectController: UIViewController {
         move = [UIImage(named: "animazione-onde1")!, UIImage(named: "animazione-onde2")!, UIImage(named: "animazione-onde3")!, UIImage(named: "animazione-onde4")!, UIImage(named: "animazione-onde5")!, UIImage(named: "animazione-onde6")!, UIImage(named: "animazione-onde7")!, UIImage(named: "animazione-onde8")!, UIImage(named: "animazione-onde9")!, UIImage(named: "animazione-onde10")!, UIImage(named: "animazione-onde11")!, UIImage(named: "animazione-onde12")!, UIImage(named: "animazione-onde11")!, UIImage(named: "animazione-onde10")!, UIImage(named: "animazione-onde9")!, UIImage(named: "animazione-onde8")!, UIImage(named: "animazione-onde7")!, UIImage(named: "animazione-onde6")!, UIImage(named: "animazione-onde5")!, UIImage(named: "animazione-onde4")!, UIImage(named: "animazione-onde3")!, UIImage(named: "animazione-onde2")!]
                 
             backgroundImage.animationImages = move
-            backgroundImage.animationDuration = 4
-                
+            backgroundImage.animationDuration = 6
+        
+        buttonToPress.setImage(UIImage(named: "Animazione-piuma1"), for: .normal)
+        
+        moveB = [UIImage(named: "Animazione-piuma1")!, UIImage(named: "Animazione-piuma2")!, UIImage(named: "Animazione-piuma3")!, UIImage(named: "Animazione-piuma4")!, UIImage(named: "Animazione-piuma5")!, UIImage(named: "Animazione-piuma6")!]
+        
+        buttonToPress.imageView?.animationDuration = 1
+        buttonToPress.imageView?.animationImages = moveB
+        
         DispatchQueue.main.asyncAfter(deadline:DispatchTime.now()+0.5){
-                    self.backgroundImage.startAnimating()
-            }
+                self.backgroundImage.startAnimating()
+            self.buttonToPress.imageView?.startAnimating()
+        }
        
         
 //        let firstQuestions: FirstQuestions = getData(for: "first_question") ?? []
@@ -51,6 +61,8 @@ class ReflectController: UIViewController {
     }
     
     @IBAction func reflectButtonPressed(_ sender: UIButton) {
+//        backgroundImage.stopAnimating()
+//        buttonToPress.imageView?.stopAnimating()
         reflectionDelegate.nextStep()
     }
     
