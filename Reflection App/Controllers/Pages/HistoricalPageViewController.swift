@@ -29,6 +29,11 @@ class HistoricalPageViewController: UIPageViewController, UIPageViewControllerDe
         self.setViewControllers([pages[1]], direction: .forward, animated: true)
     }
     
+    //    Hide Status-Bar
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let currentIndex = pages.firstIndex(of: viewController) else {
             return nil

@@ -35,16 +35,17 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     
     @objc func musicButtonPressed(sender: UIButton!) {
         if sender.tag == 0 {
-            sender.setImage(UIImage(systemName: "speaker.slash.fill")?.withTintColor(.yellow, renderingMode: .alwaysOriginal), for: UIControl.State.normal)
+            sender.setImage(UIImage(systemName: "speaker.slash.fill")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal), for: UIControl.State.normal)
             MusicPlayer.sharedPlayer.stopMusic()
             sender.tag = 1
         } else {
             MusicPlayer.sharedPlayer.playMusic()
-            sender.setImage(UIImage(systemName: "music.note")?.withTintColor(.yellow, renderingMode: .alwaysOriginal), for: UIControl.State.normal)
+            sender.setImage(UIImage(systemName: "music.note")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal), for: UIControl.State.normal)
             sender.tag = 0
         }
     }
     
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,6 +54,14 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
         //      Create MusicButton
         createButton(xFrame: self.view.frame.size.width, myView: self.view)
         MusicPlayer.sharedPlayer.playMusic()
+        
+        //        Constraint MusicButton
+        musicButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint(item: musicButton, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1, constant: 20).isActive = true
+        NSLayoutConstraint(item: musicButton, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: musicButton, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 100).isActive = true
+        NSLayoutConstraint(item: musicButton, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 100).isActive = true
+        
         
         //        Add BubbleEmitter
         addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
@@ -121,23 +130,6 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
         
     }
     
-    
-    
-    //    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-    //
-    //
-    //
-    //        if completed {
-    //            pageViewController.view.isUserInteractionEnabled = false
-    //            perform(#selector(enableUseInteraction), with: nil, afterDelay: 0.3)
-    //        }
-    //
-    //
-    //    }
-    //
-    //    @objc func enableUseInteraction() {
-    //       self.view.isUserInteractionEnabled = true
-    //    }
 }
 
 extension ReflectionPageViewController: ReflectionDelegate {

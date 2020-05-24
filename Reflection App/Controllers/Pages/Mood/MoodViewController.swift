@@ -16,7 +16,8 @@ class MoodViewController: UIViewController {
     @IBOutlet var backgroundImage: UIImageView!
     var backgroundImageName: String!
     
-    var moods = ["Felice", "Triste", "Arrabbiato", "Voglioso di Cazzo", "Felice", "Triste", "Arrabbiato", "Voglioso di Cazzo"]
+    var moods = ["Felice", "Triste", "Arrabbiato", "Solare", "Energico", "Sognatore"]
+    var imageMoods = [UIImage(systemName: "gamecontroller" ),UIImage(systemName: "smoke" ), UIImage(systemName: "tornado" ),UIImage(systemName: "sun.max" ), UIImage(systemName: "flame" ), UIImage(systemName: "sparkles" )]
     
     @IBOutlet weak var scalingCarousel: ScalingCarouselView!
     
@@ -29,9 +30,8 @@ class MoodViewController: UIViewController {
         
         self.backgroundImage.image = UIImage(named: self.backgroundImageName)
         
-        let width = scalingCarousel.bounds.width
+//        let width = scalingCarousel.bounds.width
         scalingCarousel.inset = 103
-        print(width / 4 )
         
     }
 }
@@ -46,7 +46,9 @@ extension MoodViewController: UICollectionViewDataSource, UICollectionViewDelega
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "moodCell", for: indexPath)
         
         if let scalingCell = cell as? MoodCell {
-//            scalingCell.moodLabel.text = moods[indexPath.item]
+            scalingCell.moodLabel.text = moods[indexPath.item]
+            scalingCell.moodImage.image = imageMoods[indexPath.item]
+        
         }
         
         DispatchQueue.main.async {

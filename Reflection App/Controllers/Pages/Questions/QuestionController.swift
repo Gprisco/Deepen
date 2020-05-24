@@ -19,6 +19,7 @@ class QuestionController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerTextView: UITextView!
     @IBOutlet weak var lineWriting: UIView!
+    @IBOutlet weak var writeButtonOutlet: UIButton!
     
     @IBOutlet weak var buttonStackView: UIStackView!
     
@@ -32,6 +33,9 @@ class QuestionController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        writeButtonOutlet.backgroundColor = .none
+        writeButtonOutlet.layer.cornerRadius = 10
+        
     }
         
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
