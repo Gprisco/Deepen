@@ -60,7 +60,6 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
         NSLayoutConstraint(item: musicButton, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 100).isActive = true
         NSLayoutConstraint(item: musicButton, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 100).isActive = true
         
-        
         //        Add BubbleEmitter
         addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
         
@@ -83,10 +82,12 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
             
             firstQuestionPage.imageName = self.pageBackgrounds[2]
             firstQuestionPage.reflectionDelegate = self
+            firstQuestionPage.question = "How did it go today?"
             firstQuestionPage.step = 1
             
             secondQuestionPage.imageName = self.pageBackgrounds[3]
             secondQuestionPage.reflectionDelegate = self
+            secondQuestionPage.question = "What would you have changed?"
             secondQuestionPage.step = 2
             
             reward.imageName = self.pageBackgrounds[4]

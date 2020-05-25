@@ -17,6 +17,8 @@ class QuestionController: UIViewController, UITextViewDelegate {
     var imageName: String!
     
     @IBOutlet weak var questionLabel: UILabel!
+    var question: String = "Question"
+    
     @IBOutlet weak var answerTextView: UITextView!
     @IBOutlet weak var lineWriting: UIView!
     @IBOutlet weak var writeButtonOutlet: UIButton!
@@ -33,6 +35,9 @@ class QuestionController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        questionLabel.text = question
+        
         writeButtonOutlet.backgroundColor = .none
         writeButtonOutlet.layer.cornerRadius = 10
     }
