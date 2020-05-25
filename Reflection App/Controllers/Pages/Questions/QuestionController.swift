@@ -35,7 +35,6 @@ class QuestionController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         writeButtonOutlet.backgroundColor = .none
         writeButtonOutlet.layer.cornerRadius = 10
-        
     }
         
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -46,7 +45,6 @@ class QuestionController: UIViewController, UITextViewDelegate {
                 reflectionDelegate.onFirstAnswer(answerTextView.text)
             } else if step == 2 {
                 reflectionDelegate.onSecondAnswer(answerTextView.text)
-                reflectionDelegate.onReflectionFinished()
             }
             
             reflectionDelegate.nextStep()
@@ -80,9 +78,11 @@ class QuestionController: UIViewController, UITextViewDelegate {
             reflectionDelegate.onFirstAnswer(answerTextView.text)
         } else if step == 2 {
             reflectionDelegate.onSecondAnswer(answerTextView.text)
-            reflectionDelegate.onReflectionFinished()
         }
         
+        answerTextView.isHidden = true
+        lineWriting.isHidden = true
+        buttonStackView.isHidden = false
         reflectionDelegate.nextStep()
     }
     
@@ -90,13 +90,14 @@ class QuestionController: UIViewController, UITextViewDelegate {
         answerTextView.isHidden = false
         lineWriting.isHidden = false
         buttonStackView.isHidden = true
+        answerTextView.becomeFirstResponder()
     }
     
     @IBAction func onSpeakTap(_ sender: UIButton) {
-        answerTextView.isHidden = false
+        //answerTextView.isHidden = false
     }
     
     @IBAction func onSkipTap(_ sender: UIButton) {
-        answerTextView.isHidden = false
+        //answerTextView.isHidden = false
     }
 }

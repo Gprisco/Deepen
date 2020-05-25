@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDelegate {
     
     var historicalDelegate: HistoricalDelegate!
     
@@ -48,9 +48,7 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.dataSource = self
-        
+                
         //      Create MusicButton
         createButton(xFrame: self.view.frame.size.width, myView: self.view)
         MusicPlayer.sharedPlayer.playMusic()
@@ -92,43 +90,48 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
             secondQuestionPage.step = 2
             
             reward.imageName = self.pageBackgrounds[4]
+            reward.reflectionDelegate = self
         }
         
         self.setViewControllers([pages[0]], direction: .forward, animated: true, completion: nil)
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let currentIndex = pages.firstIndex(of: viewController) else {
-            return nil
-        }
-        
-        let nextIndex = currentIndex - 1
-        
-        guard nextIndex >= 0 else {
-            return nil
-        }
-        
-        currentPage = nextIndex
-        
-        return pages[nextIndex]
-    }
-    
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let currentIndex = pages.firstIndex(of: viewController) else {
-            return nil
-        }
-        
-        let nextIndex = currentIndex + 1
-        
-        guard nextIndex != pages.count else {
-            return nil
-        }
-        
-        currentPage = nextIndex
-        
-        return pages[nextIndex]
-        
-    }
+//    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+////        guard let currentIndex = pages.firstIndex(of: viewController) else {
+////            return nil
+////        }
+////
+////        let nextIndex = currentIndex - 1
+////
+////        guard nextIndex >= 0 else {
+////            return nil
+////        }
+////
+////        currentPage = nextIndex
+//
+//        return nil
+//
+////        return pages[nextIndex]
+//    }
+//
+//    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+////        guard let currentIndex = pages.firstIndex(of: viewController) else {
+////            return nil
+////        }
+////
+////        let nextIndex = currentIndex + 1
+////
+////        guard nextIndex != pages.count else {
+////            return nil
+////        }
+////
+////        currentPage = nextIndex
+//
+//        return nil
+//
+////        return pages[nextIndex]
+//
+//    }
     
 }
 
@@ -158,6 +161,8 @@ extension ReflectionPageViewController: ReflectionDelegate {
     }
     
     func onReflectionFinished() {
+        currentPage = 0
+        self.setViewControllers([pages[0]], direction: .reverse, animated: true, completion: nil)
         print(mood, firstAnswer, secondAnswer)
     }
 }
