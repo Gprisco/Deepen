@@ -140,7 +140,11 @@ extension ReflectionPageViewController: ReflectionDelegate {
     func nextStep() {
         currentPage = currentPage < maxPage ? currentPage + 1 : currentPage
         
-        self.setViewControllers([pages[currentPage]], direction: .forward, animated: true)
+        self.setViewControllers([pages[currentPage]], direction: .forward, animated: true, completion: { success in
+            if let transiton = self.transitionCoordinator {
+                print(transiton.transitionDuration)
+            }
+        })
     }
     
     func prevStep() {

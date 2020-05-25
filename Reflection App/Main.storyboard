@@ -19,9 +19,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ND2-Xa-V9k" userLabel="backgroundImage">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sfondo-onde" translatesAutoresizingMaskIntoConstraints="NO" id="LRR-TR-mPa">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyz-9I-Xem">
                                 <rect key="frame" x="20" y="358.5" width="374" height="179"/>
                                 <connections>
@@ -45,16 +42,12 @@
                             <constraint firstAttribute="bottom" secondItem="ND2-Xa-V9k" secondAttribute="bottom" id="30x-fV-zy4"/>
                             <constraint firstItem="ND2-Xa-V9k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="63O-La-fJO"/>
                             <constraint firstItem="ND2-Xa-V9k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="B2I-bX-6WV"/>
-                            <constraint firstItem="LRR-TR-mPa" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="D6U-fh-6xS"/>
-                            <constraint firstItem="LRR-TR-mPa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Gf3-xb-SSP"/>
                             <constraint firstItem="Vyz-9I-Xem" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IBC-fz-EcM"/>
                             <constraint firstItem="Vyz-9I-Xem" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nlb-ho-L9j"/>
-                            <constraint firstItem="LRR-TR-mPa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NpM-J5-Nig"/>
                             <constraint firstItem="Vyz-9I-Xem" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Q8a-31-8Ur"/>
                             <constraint firstItem="ND2-Xa-V9k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bny-Mn-UEG"/>
                             <constraint firstItem="fSN-75-mQH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="eHW-8c-qLn"/>
                             <constraint firstItem="fSN-75-mQH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fux-yI-Gi3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LRR-TR-mPa" secondAttribute="trailing" id="gvT-Ia-aqv"/>
                             <constraint firstItem="Vyz-9I-Xem" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="y2Q-nj-H8M"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vyz-9I-Xem" secondAttribute="trailing" constant="20" id="ybz-OO-JDu"/>
                         </constraints>
@@ -457,7 +450,6 @@
         <image name="FifthBackground" width="828" height="1792"/>
         <image name="FirstBackground" width="828" height="1792"/>
         <image name="Piuma" width="228" height="103"/>
-        <image name="Sfondo-onde" width="828" height="1792"/>
         <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
         <image name="book.fill" catalog="system" width="128" height="100"/>
         <image name="flame" catalog="system" width="109" height="128"/>
