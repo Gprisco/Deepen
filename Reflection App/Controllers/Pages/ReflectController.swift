@@ -21,10 +21,6 @@ class ReflectController: UIViewController {
     var reflectionDelegate: ReflectionDelegate!
     @IBOutlet weak var historicalButtonOutlet: UIButton!
     
-
-      
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -65,7 +61,7 @@ class ReflectController: UIViewController {
         
         moveB = [UIImage(named: "Animazione-piuma1")!, UIImage(named: "Animazione-piuma2")!, UIImage(named: "Animazione-piuma3")!, UIImage(named: "Animazione-piuma4")!, UIImage(named: "Animazione-piuma5")!, UIImage(named: "Animazione-piuma6")!]
         
-        buttonToPress.imageView?.animationDuration = 1
+        buttonToPress.imageView?.animationDuration = 1.8
         buttonToPress.imageView?.animationImages = moveB
         
         DispatchQueue.main.asyncAfter(deadline:DispatchTime.now()+0.5){

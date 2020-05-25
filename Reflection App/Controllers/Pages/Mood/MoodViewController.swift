@@ -16,8 +16,8 @@ class MoodViewController: UIViewController {
     @IBOutlet var backgroundImage: UIImageView!
     var backgroundImageName: String!
     
-    var moods = ["Felice", "Triste", "Arrabbiato", "Solare", "Energico", "Sognatore"]
-    var imageMoods = [UIImage(systemName: "gamecontroller" ),UIImage(systemName: "smoke" ), UIImage(systemName: "tornado" ),UIImage(systemName: "sun.max" ), UIImage(systemName: "flame" ), UIImage(systemName: "sparkles" )]
+    var moods = ["Stressed", "Scared", "Lucky", "Happy", "Energic", "Depressed", "Confused", "Blessed", "Angry"]
+    var imageMoods = [UIImage(named: "stressato"), UIImage(named: "impaurito"), UIImage(named: "fortunato"), UIImage(named: "felice"), UIImage(named: "energico"), UIImage(named: "depresso"), UIImage(named: "confuso"), UIImage(named: "benedetto"), UIImage(named: "arrabbiato")]
     
     @IBOutlet weak var scalingCarousel: ScalingCarouselView!
     

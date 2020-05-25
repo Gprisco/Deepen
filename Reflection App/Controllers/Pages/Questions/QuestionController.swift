@@ -103,6 +103,6 @@ class QuestionController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func onSkipTap(_ sender: UIButton) {
-        //answerTextView.isHidden = false
+        reflectionDelegate.nextStep()
     }
 }
