@@ -16,8 +16,9 @@ class MoodViewController: UIViewController {
     @IBOutlet var backgroundImage: UIImageView!
     var backgroundImageName: String!
     
+    var moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confuso", "benedetto", "arrabbiato"]
     var moods = ["Stressed", "Scared", "Lucky", "Happy", "Energic", "Depressed", "Confused", "Blessed", "Angry"]
-    var imageMoods = [UIImage(named: "stressato"), UIImage(named: "impaurito"), UIImage(named: "fortunato"), UIImage(named: "felice"), UIImage(named: "energico"), UIImage(named: "depresso"), UIImage(named: "confuso"), UIImage(named: "benedetto"), UIImage(named: "arrabbiato")]
+    var icons = [UIImage]()
     
     @IBOutlet weak var scalingCarousel: ScalingCarouselView!
     
@@ -33,6 +34,9 @@ class MoodViewController: UIViewController {
 //        let width = scalingCarousel.bounds.width
         scalingCarousel.inset = 103
         
+        moodImages.forEach({ moodImage in
+            icons.append(UIImage(named: moodImage)!)
+        })
     }
 }
 
@@ -47,7 +51,7 @@ extension MoodViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         if let scalingCell = cell as? MoodCell {
             scalingCell.moodLabel.text = moods[indexPath.item]
-            scalingCell.moodImage.image = imageMoods[indexPath.item]
+            scalingCell.moodImage.image = icons[indexPath.item]
         
         }
         
@@ -60,7 +64,7 @@ extension MoodViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        reflectionDelegate.onMoodChoice(mood: moods[indexPath.item])
+        reflectionDelegate.onMoodChoice(mood: moods[indexPath.item], moodImage: moodImages[indexPath.item])
         reflectionDelegate.nextStep()
     }
     

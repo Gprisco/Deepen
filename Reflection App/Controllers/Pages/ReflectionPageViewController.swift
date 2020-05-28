@@ -19,6 +19,7 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     var pageBackgrounds = [String]()
     
     var mood: String?
+    var moodImage: String?
     var firstAnswer: String?
     var secondAnswer: String?
     
@@ -153,8 +154,9 @@ extension ReflectionPageViewController: ReflectionDelegate {
         self.setViewControllers([pages[currentPage]], direction: .forward, animated: true)
     }
     
-    func onMoodChoice(mood: String) {
+    func onMoodChoice(mood: String, moodImage: String) {
         self.mood = mood
+        self.moodImage = moodImage
     }
     
     func onFirstAnswer(_ answer: String) {
@@ -168,6 +170,7 @@ extension ReflectionPageViewController: ReflectionDelegate {
     func onReflectionFinished() {
         currentPage = 0
         self.setViewControllers([pages[0]], direction: .reverse, animated: true, completion: nil)
-        print(mood, firstAnswer, secondAnswer)
+        
+        Reflection.shared.addReflection(mood: mood!, moodImage: moodImage!, firstQuestion: "How did it go today?", firstAnswer: firstAnswer ?? "", secondQuestion: "What would you have changed?", secondAnswer: secondAnswer ?? "")
     }
 }
