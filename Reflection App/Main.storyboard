@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RNn-Tx-xC9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RNn-Tx-xC9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -103,17 +103,68 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming soon ;)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrU-MS-ET0">
-                                <rect key="frame" x="115.5" y="431.5" width="183" height="33.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f2U-MO-9OH" customClass="ScalingCarouselView" customModule="ScalingCarousel">
+                                <rect key="frame" x="0.0" y="335" width="414" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vyw-xa-fSy">
+                                    <size key="itemSize" width="211" height="202"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="historicalCell" id="UVz-KB-iNH" customClass="HistoricalCell" customModule="Deepen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="12.5" width="211" height="202"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dPX-hu-G2i">
+                                            <rect key="frame" x="0.0" y="0.0" width="211" height="202"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4VQ-Wg-PXC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="211" height="202"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="211" height="202"/>
+                                        <connections>
+                                            <outlet property="historicalImage" destination="4VQ-Wg-PXC" id="Hwx-gO-mv7"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h84-Re-yFc">
+                                <rect key="frame" x="20" y="254" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="ciao" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rq0-NB-eY0">
+                                <rect key="frame" x="20" y="642" width="374" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvb-AA-uWZ">
+                                <rect key="frame" x="186" y="590" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="05t-Tf-cGm" firstAttribute="trailing" secondItem="RXM-NP-GsR" secondAttribute="trailing" constant="20" id="8pV-1c-70S"/>
-                            <constraint firstItem="yrU-MS-ET0" firstAttribute="centerY" secondItem="6aQ-IK-quV" secondAttribute="centerY" id="Eh2-gO-BHe"/>
                             <constraint firstItem="5oK-in-o2Y" firstAttribute="leading" secondItem="05t-Tf-cGm" secondAttribute="leading" constant="26" id="Fy2-w6-5B1"/>
                             <constraint firstItem="Nja-Ob-qzv" firstAttribute="leading" secondItem="6aQ-IK-quV" secondAttribute="leading" id="KbI-3v-3bk"/>
                             <constraint firstItem="05t-Tf-cGm" firstAttribute="trailing" secondItem="5oK-in-o2Y" secondAttribute="trailing" constant="20" id="Kn6-1H-KqG"/>
@@ -121,7 +172,6 @@
                             <constraint firstItem="Nja-Ob-qzv" firstAttribute="bottom" secondItem="6aQ-IK-quV" secondAttribute="bottom" id="m4o-bW-Ub3"/>
                             <constraint firstItem="RXM-NP-GsR" firstAttribute="top" secondItem="05t-Tf-cGm" secondAttribute="top" constant="20" id="tdx-Gu-azx"/>
                             <constraint firstItem="RXM-NP-GsR" firstAttribute="leading" secondItem="05t-Tf-cGm" secondAttribute="leading" constant="20" id="ugw-l8-aqZ"/>
-                            <constraint firstItem="yrU-MS-ET0" firstAttribute="centerX" secondItem="6aQ-IK-quV" secondAttribute="centerX" id="vOw-D5-7kS"/>
                             <constraint firstAttribute="trailing" secondItem="Nja-Ob-qzv" secondAttribute="trailing" id="zHs-G7-TdW"/>
                             <constraint firstItem="5oK-in-o2Y" firstAttribute="top" secondItem="RXM-NP-GsR" secondAttribute="bottom" constant="48" id="zze-1T-QN1"/>
                         </constraints>
@@ -129,7 +179,10 @@
                     </view>
                     <connections>
                         <outlet property="filterButton" destination="D8h-rJ-B3W" id="ygQ-XX-t9b"/>
+                        <outlet property="historicalCarousel" destination="f2U-MO-9OH" id="nDs-MR-Mv0"/>
                         <outlet property="reflectButton" destination="c15-l1-APu" id="lmA-7x-fPu"/>
+                        <outlet property="reflectionDate" destination="h84-Re-yFc" id="2bE-ZC-Xm8"/>
+                        <outlet property="reflectionReward" destination="rq0-NB-eY0" id="ljS-5A-UgK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iu7-Oo-gpY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -374,7 +427,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Be hungry, be foolish!  -Steve Jobs" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9v-h1-mfB">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="&quot;Stay hungry, stay foolish!&quot;  -Steve Jobs" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9v-h1-mfB">
                                         <rect key="frame" x="0.0" y="175" width="374" height="128"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>

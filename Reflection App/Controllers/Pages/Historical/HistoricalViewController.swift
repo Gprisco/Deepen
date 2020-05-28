@@ -11,9 +11,12 @@ import ScalingCarousel
 
 class HistoricalViewController: UIViewController {
     var historicalDelegate: HistoricalDelegate!
-        
+    
     @IBOutlet weak var reflectButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
+    @IBOutlet weak var historicalCarousel: ScalingCarouselView!
+    @IBOutlet weak var reflectionDate: UILabel!
+    @IBOutlet weak var reflectionReward: UITextView!
     
     @IBAction func onFilter(_ sender: UIButton) {
     }

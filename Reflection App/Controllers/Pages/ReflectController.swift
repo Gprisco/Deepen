@@ -33,8 +33,7 @@ class ReflectController: UIViewController {
                 return
             }
             
-            //        Constraint Historical Button
-            
+            //  Constraint Historical Button
             DispatchQueue.main.async {
                 self.historicalButtonOutlet.translatesAutoresizingMaskIntoConstraints = false
                 
@@ -45,9 +44,7 @@ class ReflectController: UIViewController {
                 NSLayoutConstraint(item: self.historicalButtonOutlet!, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 100).isActive = true
                 
                 NSLayoutConstraint(item: self.historicalButtonOutlet!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 100).isActive = true
-                
             }
-            
         }
         
         backgroundImage.image = UIImage(named: "animazione-onde1")
