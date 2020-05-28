@@ -17,6 +17,8 @@ class RewardController: UIViewController {
     @IBOutlet weak var labelReward: UILabel!
     @IBOutlet weak var plumeImage: UIImageView!
     
+    var rewardText: String!
+    
     var moveC : [UIImage] = []
     
     var imageName: String!
@@ -28,6 +30,7 @@ class RewardController: UIViewController {
         
         plumeAnimation()
         self.perlaImage.startAnimating()
+        self.textViewReward.text = rewardText
     }
     
     override func viewDidLoad() {

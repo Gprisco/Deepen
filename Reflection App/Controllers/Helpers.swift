@@ -25,3 +25,19 @@ protocol ReflectionDelegate {
 func getViewController<T>(_ identifier: String) -> T {
     return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: identifier) as! T
 }
+
+func getMediumItem(_ items: [Int]) -> Int {
+    let max = items.max()
+    let min = items.min()
+
+    return (items[0] != min && items[0] != max) ? items[0] : ((items[1] != min && items[1] != max) ? items[1] : items[2])
+}
+
+extension Date {
+    var text: String {
+        let df = DateFormatter()
+        df.dateFormat = "dd MMM YYYY"
+        
+        return df.string(from: self)
+    }
+}

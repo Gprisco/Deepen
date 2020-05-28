@@ -11,4 +11,5 @@ import ScalingCarousel
 
 class HistoricalCell: ScalingCarouselCell {
     @IBOutlet weak var historicalImage: UIImageView!
+    
 }

@@ -24,13 +24,15 @@ extension Reflection {
     @NSManaged public var moodImage: String?
     @NSManaged public var secondAnswer: String?
     @NSManaged public var secondQuestion: String?
+    @NSManaged public var date: Date?
+    @NSManaged public var reward: String?
     
     /*
      MARK: CRUD operations on Reflections
      */
     
     // Create
-    func addReflection(mood: String, moodImage: String, firstQuestion: String, firstAnswer: String, secondQuestion: String, secondAnswer: String) {
+    func addReflection(mood: String, moodImage: String, firstQuestion: String, firstAnswer: String, secondQuestion: String, secondAnswer: String, reward: String) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let context = appDelegate.persistentContainer.viewContext
         
@@ -42,6 +44,8 @@ extension Reflection {
         reflection.firstAnswer = firstAnswer
         reflection.secondQuestion = secondQuestion
         reflection.secondAnswer = secondAnswer
+        reflection.date = Date()
+        reflection.reward = reward
         
         do {
             try context.save()
@@ -95,6 +99,12 @@ extension Reflection {
         let context = appDelegate.persistentContainer.viewContext
         
         context.delete(reflection)
+        
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
 

@@ -9,7 +9,6 @@
 import UIKit
 
 class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDelegate {
-    
     var historicalDelegate: HistoricalDelegate!
     
     var currentPage: Int = 0
@@ -22,6 +21,7 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     var moodImage: String?
     var firstAnswer: String?
     var secondAnswer: String?
+    var reward: String?
     
     //    MUSIC BUTTON
     let musicButton = UIButton()
@@ -46,10 +46,9 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
         }
     }
     
-  
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         //      Create MusicButton
         createButton(xFrame: self.view.frame.size.width, myView: self.view)
         MusicPlayer.sharedPlayer.playMusic()
@@ -74,6 +73,8 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
         pages = [reflect, moodQuestionPage, firstQuestionPage, secondQuestionPage, reward]
         pageBackgrounds = ["FirstBackground", "SecondBackground", "ThirdBackground", "FourthBackground", "FifthBackground"]
         
+        self.reward = "Stay hungry, stay foolish.\n- Steve Jobs"
+        
         DispatchQueue.main.async {
             reflect.reflectionDelegate = self
             reflect.historicalDelegate = self.historicalDelegate
@@ -93,6 +94,7 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
             
             reward.imageName = self.pageBackgrounds[4]
             reward.reflectionDelegate = self
+            reward.rewardText = self.reward!
         }
         
         self.setViewControllers([pages[0]], direction: .forward, animated: true, completion: nil)
@@ -171,6 +173,6 @@ extension ReflectionPageViewController: ReflectionDelegate {
         currentPage = 0
         self.setViewControllers([pages[0]], direction: .reverse, animated: true, completion: nil)
         
-        Reflection.shared.addReflection(mood: mood!, moodImage: moodImage!, firstQuestion: "How did it go today?", firstAnswer: firstAnswer ?? "", secondQuestion: "What would you have changed?", secondAnswer: secondAnswer ?? "")
+        Reflection.shared.addReflection(mood: mood!, moodImage: moodImage!, firstQuestion: "How did it go today?", firstAnswer: firstAnswer ?? "", secondQuestion: "What would you have changed?", secondAnswer: secondAnswer ?? "", reward: reward!)
     }
 }

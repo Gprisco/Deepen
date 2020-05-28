@@ -32,7 +32,7 @@ class MoodViewController: UIViewController {
         self.backgroundImage.image = UIImage(named: self.backgroundImageName)
         
 //        let width = scalingCarousel.bounds.width
-        scalingCarousel.inset = 103
+        scalingCarousel.inset = self.view.bounds.width / 4
         
         moodImages.forEach({ moodImage in
             icons.append(UIImage(named: moodImage)!)
@@ -52,7 +52,6 @@ extension MoodViewController: UICollectionViewDataSource, UICollectionViewDelega
         if let scalingCell = cell as? MoodCell {
             scalingCell.moodLabel.text = moods[indexPath.item]
             scalingCell.moodImage.image = icons[indexPath.item]
-        
         }
         
         DispatchQueue.main.async {

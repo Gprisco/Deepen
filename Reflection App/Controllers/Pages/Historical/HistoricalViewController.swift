@@ -18,6 +18,8 @@ class HistoricalViewController: UIViewController {
     @IBOutlet weak var reflectionDate: UILabel!
     @IBOutlet weak var reflectionReward: UITextView!
     
+    var selectedItem: Int = 0
+    
     var reflections = Reflections()
     
     @IBAction func onFilter(_ sender: UIButton) {
@@ -33,12 +35,12 @@ class HistoricalViewController: UIViewController {
         
         historicalCarousel.backgroundColor = .none
         
-        reflections = Reflection.shared.getReflections() ?? []
+        reflections = (Reflection.shared.getReflections() ?? []).reversed()
         
-        reflections.forEach({ r in
-            print(r.moodImage)
-        })
-        print(reflections.count)
+        reflectionDate.text = "\(reflections[0].date!.text)"
+        reflectionReward.text = reflections[0].reward ?? ""
+        
+        historicalCarousel.inset = self.view.bounds.width / 4
         
         historicalCarousel.reloadData()
     }
@@ -53,7 +55,12 @@ extension HistoricalViewController: UICollectionViewDelegate, UICollectionViewDa
         let cell = historicalCarousel.dequeueReusableCell(withReuseIdentifier: "historicalCell", for: indexPath)
         
         if let historicalCell = cell as? HistoricalCell {
-            historicalCell.historicalImage.image = UIImage(named: reflections[indexPath.item].moodImage ?? "")
+            historicalCell.historicalImage.image = UIImage(named: reflections[indexPath.item].moodImage!)
+            
+            DispatchQueue.main.async {
+                historicalCell.setNeedsLayout()
+                historicalCell.layoutIfNeeded()
+            }
             
             return historicalCell
         }
@@ -62,5 +69,22 @@ extension HistoricalViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let visibleCells = historicalCarousel.visibleCells
+        var items = [Int]()
+        
+        for cell in visibleCells {
+            items.append(historicalCarousel.indexPath(for: cell)!.item)
+        }
+        
+        if items.count == 2 && items.min() == 0 {
+            selectedItem = 0
+        } else if items.count == 3 {
+            selectedItem = getMediumItem(items)
+        } else if items.count == 2 && items.max() == reflections.count-1 {
+            selectedItem = reflections.count-1
+        }
+        
+        self.reflectionDate.text = "\(reflections[selectedItem].date!.text)"
+        self.reflectionReward.text = reflections[selectedItem].reward ?? ""
     }
 }
