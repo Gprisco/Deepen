@@ -37,12 +37,18 @@ class HistoricalViewController: UIViewController {
         
         reflections = (Reflection.shared.getReflections() ?? []).reversed()
         
-        reflectionDate.text = "\(reflections[0].date!.text)"
-        reflectionReward.text = reflections[0].reward ?? ""
-        
-        historicalCarousel.inset = self.view.bounds.width / 4
-        
-        historicalCarousel.reloadData()
+        if reflections.count > 0 {
+            reflectionDate.text = "\(reflections[0].date!.text)"
+            reflectionReward.text = reflections[0].reward ?? ""
+            
+            historicalCarousel.inset = self.view.bounds.width / 4
+            
+            historicalCarousel.reloadData()
+        } else {
+            reflectionDate.isHidden = true
+            reflectionReward.isHidden = true
+            historicalCarousel.isHidden = true
+        }
     }
 }
 
