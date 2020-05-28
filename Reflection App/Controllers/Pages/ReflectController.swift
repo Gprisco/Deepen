@@ -56,9 +56,9 @@ class ReflectController: UIViewController {
         
         buttonToPress.setImage(UIImage(named: "Animazione-piuma1"), for: .normal)
         
-        moveB = [UIImage(named: "Animazione-piuma1")!, UIImage(named: "Animazione-piuma2")!, UIImage(named: "Animazione-piuma3")!, UIImage(named: "Animazione-piuma4")!, UIImage(named: "Animazione-piuma5")!, UIImage(named: "Animazione-piuma6")!]
+        moveB = [UIImage(named: "Animazione-piuma1")!, UIImage(named: "Animazione-piuma2")!, UIImage(named: "Animazione-piuma3")!, UIImage(named: "Animazione-piuma4")!, UIImage(named: "Animazione-piuma5")!, UIImage(named: "Animazione-piuma6")!, UIImage(named: "Animazione-piuma7")!, UIImage(named: "Animazione-piuma8")!, UIImage(named: "Animazione-piuma9")!, UIImage(named: "Animazione-piuma10")!, UIImage(named: "Animazione-piuma11")!]
         
-        buttonToPress.imageView?.animationDuration = 1.8
+        buttonToPress.imageView?.animationDuration = 2.2
         buttonToPress.imageView?.animationImages = moveB
         
         DispatchQueue.main.asyncAfter(deadline:DispatchTime.now()+0.5){
