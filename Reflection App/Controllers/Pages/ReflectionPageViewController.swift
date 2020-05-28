@@ -60,8 +60,7 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
         NSLayoutConstraint(item: musicButton, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 100).isActive = true
         NSLayoutConstraint(item: musicButton, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 100).isActive = true
         
-        //        Add BubbleEmitter
-        addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
+        
         
         let reflect: ReflectController = getViewController("reflect")
         let moodQuestionPage: MoodViewController = getViewController("mood")

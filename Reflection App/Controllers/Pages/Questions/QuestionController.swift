@@ -40,6 +40,9 @@ class QuestionController: UIViewController, UITextViewDelegate {
         
         writeButtonOutlet.backgroundColor = .none
         writeButtonOutlet.layer.cornerRadius = 10
+        
+        //        Add BubbleEmitter
+        addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
     }
         
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
