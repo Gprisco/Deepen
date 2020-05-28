@@ -43,6 +43,9 @@ class RewardController: UIViewController {
         perlaImage.animationDuration = 2
         perlaImage.animationImages = moveC
         
+        //        Add BubbleEmitter
+        addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
+        
     }
     
     func plumeAnimation()  {

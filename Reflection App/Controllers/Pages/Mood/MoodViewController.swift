@@ -37,6 +37,9 @@ class MoodViewController: UIViewController {
         moodImages.forEach({ moodImage in
             icons.append(UIImage(named: moodImage)!)
         })
+        
+        //        Add BubbleEmitter
+        addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
     }
 }
 
