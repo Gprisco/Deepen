@@ -36,7 +36,7 @@ class MoodViewController: UIViewController {
         self.sectionTitle.text = sectionTitleString
         self.backgroundImage.image = UIImage(named: self.backgroundImageName)
         
-//        let width = scalingCarousel.bounds.width
+        //        let width = scalingCarousel.bounds.width
         scalingCarousel.inset = self.view.bounds.width / 4
         
         moodImages.forEach({ moodImage in
@@ -53,18 +53,17 @@ extension MoodViewController: UICollectionViewDataSource, UICollectionViewDelega
         return moods.count
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "moodCell", for: indexPath)
         
         if let scalingCell = cell as? MoodCell {
             scalingCell.moodLabel.text = moods[indexPath.item]
             scalingCell.moodImage.image = icons[indexPath.item]
-        }
-        
-        DispatchQueue.main.async {
-            cell.setNeedsLayout()
-            cell.layoutIfNeeded()
+            
+            DispatchQueue.main.async {
+                cell.setNeedsLayout()
+                cell.layoutIfNeeded()
+            }
         }
         
         return cell

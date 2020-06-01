@@ -43,3 +43,17 @@ extension Date {
         return df.string(from: self)
     }
 }
+
+func getImageNames(for initialName: String, frames: Int, loop: Bool) -> [UIImage] {
+    var images = [UIImage]()
+    
+    for i in 1...frames {
+        images.append(UIImage(named: "\(initialName)\(i)")!)
+    }
+    
+    if loop {
+        images.append(contentsOf: images.reversed())
+    }
+    
+    return images
+}

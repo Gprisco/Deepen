@@ -36,9 +36,10 @@ class HistoricalViewController: UIViewController {
         historicalCarousel.dataSource = self
         
         historicalCarousel.backgroundColor = .none
-        
+        historicalCarousel.inset = self.view.bounds.width / 4.3
+
         if reflections.count > 7 {
-            reflections = Array(self.reflections[0..<7])
+            reflections = Array(self.reflections[0..<7]).reversed()
         }
         
         if reflections.count > 0 {
@@ -76,9 +77,7 @@ extension HistoricalViewController: UICollectionViewDelegate, UICollectionViewDa
             DispatchQueue.main.async {
                 historicalCell.setNeedsLayout()
                 historicalCell.layoutIfNeeded()
-            }
-            
-            return historicalCell
+            }            
         }
         
         return cell

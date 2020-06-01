@@ -49,14 +49,14 @@ class ReflectController: UIViewController {
         
         backgroundImage.image = UIImage(named: "animazione-onde1")
         
-        move = [UIImage(named: "animazione-onde1")!, UIImage(named: "animazione-onde2")!, UIImage(named: "animazione-onde3")!, UIImage(named: "animazione-onde4")!, UIImage(named: "animazione-onde5")!, UIImage(named: "animazione-onde6")!, UIImage(named: "animazione-onde7")!, UIImage(named: "animazione-onde8")!, UIImage(named: "animazione-onde9")!, UIImage(named: "animazione-onde10")!, UIImage(named: "animazione-onde11")!, UIImage(named: "animazione-onde12")!, UIImage(named: "animazione-onde11")!, UIImage(named: "animazione-onde10")!, UIImage(named: "animazione-onde9")!, UIImage(named: "animazione-onde8")!, UIImage(named: "animazione-onde7")!, UIImage(named: "animazione-onde6")!, UIImage(named: "animazione-onde5")!, UIImage(named: "animazione-onde4")!, UIImage(named: "animazione-onde3")!, UIImage(named: "animazione-onde2")!]
+        move = getImageNames(for: "animazione-onde", frames: 12, loop: true)
         
         backgroundImage.animationImages = move
         backgroundImage.animationDuration = 6
         
         buttonToPress.setImage(UIImage(named: "Animazione-piuma1"), for: .normal)
         
-        moveB = [UIImage(named: "Animazione-piuma1")!, UIImage(named: "Animazione-piuma2")!, UIImage(named: "Animazione-piuma3")!, UIImage(named: "Animazione-piuma4")!, UIImage(named: "Animazione-piuma5")!, UIImage(named: "Animazione-piuma6")!, UIImage(named: "Animazione-piuma7")!, UIImage(named: "Animazione-piuma8")!, UIImage(named: "Animazione-piuma9")!, UIImage(named: "Animazione-piuma10")!, UIImage(named: "Animazione-piuma11")!]
+        moveB = getImageNames(for: "Animazione-piuma", frames: 11, loop: false)
         
         buttonToPress.imageView?.animationDuration = 2.2
         buttonToPress.imageView?.animationImages = moveB
