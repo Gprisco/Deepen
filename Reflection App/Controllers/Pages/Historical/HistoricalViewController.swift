@@ -20,7 +20,7 @@ class HistoricalViewController: UIViewController {
     
     var selectedItem: Int = 0
     
-    var reflections = Reflections()
+    var reflections: Reflections!
     
     @IBAction func onFilter(_ sender: UIButton) {
     }
@@ -30,12 +30,16 @@ class HistoricalViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         historicalCarousel.delegate = self
         historicalCarousel.dataSource = self
         
         historicalCarousel.backgroundColor = .none
         
-        reflections = (Reflection.shared.getReflections() ?? []).reversed()
+        if reflections.count > 7 {
+            reflections = Array(self.reflections[0..<7])
+        }
         
         if reflections.count > 0 {
             reflectionDate.text = "\(reflections[0].date!.text)"
@@ -49,6 +53,12 @@ class HistoricalViewController: UIViewController {
             reflectionReward.isHidden = true
             historicalCarousel.isHidden = true
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        historicalCarousel.reloadData()
     }
 }
 

@@ -13,12 +13,16 @@ class MoodViewController: UIViewController {
     
     var reflectionDelegate: ReflectionDelegate!
     
+    @IBOutlet weak var sectionTitle: UILabel!
+    var sectionTitleString: String!
+    
     @IBOutlet var backgroundImage: UIImageView!
     var backgroundImageName: String!
     
-    var moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confuso", "benedetto", "arrabbiato"]
-    var moods = ["Stressed", "Scared", "Lucky", "Happy", "Energic", "Depressed", "Confused", "Blessed", "Angry"]
+    var moodImages: [String]!
+    var moods: [String]!
     var icons = [UIImage]()
+    var type: String!
     
     @IBOutlet weak var scalingCarousel: ScalingCarouselView!
     
@@ -29,6 +33,7 @@ class MoodViewController: UIViewController {
         
         scalingCarousel.backgroundColor = .none
         
+        self.sectionTitle.text = sectionTitleString
         self.backgroundImage.image = UIImage(named: self.backgroundImageName)
         
 //        let width = scalingCarousel.bounds.width
@@ -66,7 +71,11 @@ extension MoodViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        reflectionDelegate.onMoodChoice(mood: moods[indexPath.item], moodImage: moodImages[indexPath.item])
+        if type == "mood" {
+            reflectionDelegate.onMoodChoice(mood: moods[indexPath.item], moodImage: moodImages[indexPath.item])
+        } else if type == "category" {
+            reflectionDelegate.onCategoryChoice(category: moods[indexPath.item], categoryImage: moodImages[indexPath.item])
+        }
         reflectionDelegate.nextStep()
     }
     

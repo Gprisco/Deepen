@@ -11,16 +11,21 @@ import UIKit
 class HistoricalPageViewController: UIPageViewController, UIPageViewControllerDelegate {
     
     var pages = [UIViewController]()
+    var reflections = Reflections()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         let reflectView: ReflectionPageViewController = getViewController("reflectionPageViewController")
         let historicalView: HistoricalViewController = getViewController("historical")
         
+        reflections = Reflection.shared.getReflections()!
+        
         DispatchQueue.main.async {
             reflectView.historicalDelegate = self
+            
             historicalView.historicalDelegate = self
+            historicalView.reflections = self.reflections
         }
         
         pages = [historicalView, reflectView]
@@ -35,10 +40,19 @@ class HistoricalPageViewController: UIPageViewController, UIPageViewControllerDe
 
 extension HistoricalPageViewController: HistoricalDelegate {
     func onHistoricalPress() {
-        self.setViewControllers([pages[0]], direction: .reverse, animated: true)
+        let historicalPage = pages[0] as! HistoricalViewController
+        historicalPage.reflections = self.reflections
+        
+        self.setViewControllers([historicalPage], direction: .reverse, animated: true)
     }
     
     func onReflectPress() {
         self.setViewControllers([pages[1]], direction: .forward, animated: true)
+    }
+    
+    func saveReflection(_ reflection: Reflection?) {
+        if reflection != nil {
+            self.reflections.insert(reflection!, at: reflections.count)
+        }
     }
 }

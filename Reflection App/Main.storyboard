@@ -381,8 +381,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you feel today?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCe-Bx-5h0">
-                                <rect key="frame" x="20" y="98" width="374" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you feel today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCe-Bx-5h0">
+                                <rect key="frame" x="20" y="98" width="374" height="33.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -407,6 +407,7 @@
                     <connections>
                         <outlet property="backgroundImage" destination="JOW-uF-FLR" id="XAo-R4-vct"/>
                         <outlet property="scalingCarousel" destination="Hgc-ui-4NV" id="d37-tI-prV"/>
+                        <outlet property="sectionTitle" destination="vCe-Bx-5h0" id="Lvw-um-LeL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23i-p8-8AV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

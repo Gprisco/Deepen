@@ -11,12 +11,14 @@ import UIKit
 protocol HistoricalDelegate {
     func onHistoricalPress()
     func onReflectPress()
+    func saveReflection(_ reflection: Reflection?)
 }
 
 protocol ReflectionDelegate {
     func nextStep()
     func prevStep()
     func onMoodChoice(mood: String, moodImage: String)
+    func onCategoryChoice(category: String, categoryImage: String)
     func onFirstAnswer(_ answer: String)
     func onSecondAnswer(_ answer: String)
     func onReflectionFinished()

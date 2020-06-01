@@ -45,16 +45,13 @@ class RewardController: UIViewController {
         
         //        Add BubbleEmitter
         addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
-        
     }
     
     func plumeAnimation()  {
-        
         UIView.animate(withDuration: 4.0, delay: 0.2, options: [.curveEaseInOut], animations: {
             self.plumeImage.frame = CGRect(x: self.view.frame.width / 2 , y: self.perlaImage.frame.origin.y , width: 100, height: 200)
             self.plumeImage.alpha = 0
         })
-        
     }
     
     @IBAction func onReflectionFinished(_ sender: UIButton) {

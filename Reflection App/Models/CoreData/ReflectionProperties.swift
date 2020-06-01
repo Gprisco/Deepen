@@ -22,6 +22,8 @@ extension Reflection {
     @NSManaged public var firstQuestion: String?
     @NSManaged public var mood: String?
     @NSManaged public var moodImage: String?
+    @NSManaged public var category: String?
+    @NSManaged public var categoryImage: String?
     @NSManaged public var secondAnswer: String?
     @NSManaged public var secondQuestion: String?
     @NSManaged public var date: Date?
@@ -32,14 +34,16 @@ extension Reflection {
      */
     
     // Create
-    func addReflection(mood: String, moodImage: String, firstQuestion: String, firstAnswer: String, secondQuestion: String, secondAnswer: String, reward: String) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+    func addReflection(mood: String, moodImage: String, category: String, categoryImage: String, firstQuestion: String, firstAnswer: String, secondQuestion: String, secondAnswer: String, reward: String) -> Reflection? {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
         let context = appDelegate.persistentContainer.viewContext
         
         let reflection = Reflection(context: context)
         
         reflection.mood = mood
         reflection.moodImage = moodImage
+        reflection.category = category
+        reflection.categoryImage = categoryImage
         reflection.firstQuestion = firstQuestion
         reflection.firstAnswer = firstAnswer
         reflection.secondQuestion = secondQuestion
@@ -49,9 +53,12 @@ extension Reflection {
         
         do {
             try context.save()
+            return reflection
         } catch {
             print(error.localizedDescription)
         }
+        
+        return nil
     }
 
     // Read
@@ -79,6 +86,8 @@ extension Reflection {
         
         reflection.mood = mood
         reflection.moodImage = moodImage
+        reflection.category = category
+        reflection.categoryImage = categoryImage
         reflection.firstQuestion = firstQuestion
         reflection.firstAnswer = firstAnswer
         reflection.secondQuestion = secondQuestion

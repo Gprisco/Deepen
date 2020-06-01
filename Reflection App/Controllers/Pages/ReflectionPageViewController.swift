@@ -17,9 +17,11 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     var pages = [UIViewController]()
     var pageBackgrounds = [String]()
     
+    var firstAnswer: String?
     var mood: String?
     var moodImage: String?
-    var firstAnswer: String?
+    var category: String?
+    var categoryImage: String?
     var secondAnswer: String?
     var reward: String?
     
@@ -60,16 +62,15 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
         NSLayoutConstraint(item: musicButton, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 100).isActive = true
         NSLayoutConstraint(item: musicButton, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 100).isActive = true
         
-        
-        
         let reflect: ReflectController = getViewController("reflect")
-        let moodQuestionPage: MoodViewController = getViewController("mood")
         let firstQuestionPage: QuestionController = getViewController("question")
+        let moodQuestionPage: MoodViewController = getViewController("mood")
+        let categoryQuestionPage: MoodViewController = getViewController("mood")
         let secondQuestionPage: QuestionController = getViewController("question")
         let reward: RewardController = getViewController("reward")
         
         //    Sorgente
-        pages = [reflect, moodQuestionPage, firstQuestionPage, secondQuestionPage, reward]
+        pages = [reflect, firstQuestionPage, moodQuestionPage, categoryQuestionPage, secondQuestionPage, reward]
         pageBackgrounds = ["FirstBackground", "SecondBackground", "ThirdBackground", "FourthBackground", "FifthBackground"]
         
         self.reward = "Stay hungry, stay foolish.\n- Steve Jobs"
@@ -78,14 +79,25 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
             reflect.reflectionDelegate = self
             reflect.historicalDelegate = self.historicalDelegate
             
-            moodQuestionPage.backgroundImageName = self.pageBackgrounds[1]
-            moodQuestionPage.reflectionDelegate = self
-            
-            firstQuestionPage.imageName = self.pageBackgrounds[2]
+            firstQuestionPage.imageName = self.pageBackgrounds[1]
             firstQuestionPage.reflectionDelegate = self
             firstQuestionPage.question = "How did it go today?"
             firstQuestionPage.step = 1
             
+            moodQuestionPage.backgroundImageName = self.pageBackgrounds[2]
+            moodQuestionPage.moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confuso", "benedetto", "arrabbiato"]
+            moodQuestionPage.moods = ["Stressed", "Scared", "Lucky", "Happy", "Energic", "Depressed", "Confused", "Blessed", "Angry"]
+            moodQuestionPage.type = "mood"
+            moodQuestionPage.sectionTitleString = "How do you feel today?"
+            moodQuestionPage.reflectionDelegate = self
+            
+            categoryQuestionPage.backgroundImageName = self.pageBackgrounds[2]
+            categoryQuestionPage.moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confuso", "benedetto", "arrabbiato"]
+            categoryQuestionPage.moods = ["Stressed", "Scared", "Lucky", "Happy", "Energic", "Depressed", "Confused", "Blessed", "Angry"]
+            categoryQuestionPage.type = "category"
+            categoryQuestionPage.sectionTitleString = "What do you want to talk about?"
+            categoryQuestionPage.reflectionDelegate = self
+
             secondQuestionPage.imageName = self.pageBackgrounds[3]
             secondQuestionPage.reflectionDelegate = self
             secondQuestionPage.question = "What would you have changed?"
@@ -151,13 +163,17 @@ extension ReflectionPageViewController: ReflectionDelegate {
     
     func prevStep() {
         currentPage = currentPage > 0 ? currentPage - 1 : currentPage
-        
         self.setViewControllers([pages[currentPage]], direction: .forward, animated: true)
     }
     
     func onMoodChoice(mood: String, moodImage: String) {
         self.mood = mood
         self.moodImage = moodImage
+    }
+    
+    func onCategoryChoice(category: String, categoryImage: String) {
+        self.category = category
+        self.categoryImage = categoryImage
     }
     
     func onFirstAnswer(_ answer: String) {
@@ -172,6 +188,8 @@ extension ReflectionPageViewController: ReflectionDelegate {
         currentPage = 0
         self.setViewControllers([pages[0]], direction: .reverse, animated: true, completion: nil)
         
-        Reflection.shared.addReflection(mood: mood!, moodImage: moodImage!, firstQuestion: "How did it go today?", firstAnswer: firstAnswer ?? "", secondQuestion: "What would you have changed?", secondAnswer: secondAnswer ?? "", reward: reward!)
+        let reflection = Reflection.shared.addReflection(mood: mood!, moodImage: moodImage!, category: category!, categoryImage: categoryImage!, firstQuestion: "How did it go today?", firstAnswer: firstAnswer ?? "", secondQuestion: "What would you have changed?", secondAnswer: secondAnswer ?? "", reward: reward!)
+        
+        historicalDelegate.saveReflection(reflection ?? nil)
     }
 }

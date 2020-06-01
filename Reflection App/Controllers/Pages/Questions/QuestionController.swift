@@ -13,7 +13,7 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
     
     var reflectionDelegate: ReflectionDelegate!
     var step: Int!
-
+    
     @IBOutlet var backgroundImage: UIImageView!
     var imageName: String!
     
@@ -26,14 +26,12 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
     
     @IBOutlet weak var buttonStackView: UIStackView!
     
-//    speech variable
+    //    speech variable
     let audioEngine = AVAudioEngine()
-//    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer() questo in generale, identifica la zona geografica dal telefono
+    //    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer() questo in generale, identifica la zona geografica dal telefono
     let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
     let request = SFSpeechAudioBufferRecognitionRequest()
     var recognitionTask: SFSpeechRecognitionTask?
-    
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -54,7 +52,7 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         //        Add BubbleEmitter
         addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
     }
-        
+    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
             self.view.endEditing(true)
@@ -123,32 +121,32 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
     }
     
     func recordAndRecognizeSpeech() {
-//        setup
+        //        setup
         let node = audioEngine.inputNode
         let recordingFormat = node.outputFormat (forBus: 0)
         node.installTap (onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
             self.request.append(buffer)
         }
-//        check start
+        //        check start
         audioEngine.prepare()
         do {
             try audioEngine.start()
         } catch {
             return print (error)
         }
-//       controllo viabilità sul device
+        //       controllo viabilità sul device
         guard let myRecognizer = SFSpeechRecognizer() else {
             return
         }
         if !myRecognizer.isAvailable {
             return
         }
-//        call recognitionTask method
+        //        call recognitionTask method
         recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { result, error in
             if let result = result {
                 let bestString = result.bestTranscription.formattedString
-//                qua va collegato il risultato al testo
-                    self.answerTextView.text = bestString
+                //                qua va collegato il risultato al testo
+                self.answerTextView.text = bestString
             } else if let error = error {
                 print (error)
             }
