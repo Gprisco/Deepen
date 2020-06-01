@@ -27,7 +27,7 @@
 		881DD7BE246D748500DB895F /* BubbleEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DD7BD246D748500DB895F /* BubbleEmitter.swift */; };
 		881DD7C0246D764300DB895F /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DD7BF246D764300DB895F /* MusicPlayer.swift */; };
 		885F632B247FE83F00CE3E95 /* relax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 885F632A247FE83E00CE3E95 /* relax.mp3 */; };
-		8899FCA524853F0E0044016E /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8899FCA724853F0E0044016E /* Localization.strings */; };
+		8899FCA524853F0E0044016E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8899FCA724853F0E0044016E /* Localizable.strings */; };
 		8899FCA9248542490044016E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8899FCAB248542490044016E /* Main.storyboard */; };
 		88A6944B246ED3E200A64C52 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A6944A246ED3E200A64C52 /* MoodViewController.swift */; };
 		88C75E3A24741BCD00A8E46C /* Piuma.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 88C75E3924741BCD00A8E46C /* Piuma.pdf */; };
@@ -60,8 +60,8 @@
 		881DD7BF246D764300DB895F /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		885F632A247FE83E00CE3E95 /* relax.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = relax.mp3; sourceTree = "<group>"; };
 		8899FCA224853DDF0044016E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		8899FCA624853F0E0044016E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
-		8899FCA824853F100044016E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localization.strings; sourceTree = "<group>"; };
+		8899FCA624853F0E0044016E /* en */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; tabWidth = 2; };
+		8899FCA824853F100044016E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8899FCAA248542490044016E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8899FCAD2485424C0044016E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		88A6944A246ED3E200A64C52 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
@@ -86,7 +86,6 @@
 		01D667A92465A59B0024634C = {
 			isa = PBXGroup;
 			children = (
-				8899FCA724853F0E0044016E /* Localization.strings */,
 				01D667B42465A59B0024634C /* Reflection App */,
 				01D667B32465A59B0024634C /* Products */,
 				CA8C2DB1328298DB9FEAC9C3 /* Pods */,
@@ -105,6 +104,7 @@
 		01D667B42465A59B0024634C /* Reflection App */ = {
 			isa = PBXGroup;
 			children = (
+				8899FCA724853F0E0044016E /* Localizable.strings */,
 				8899FCAB248542490044016E /* Main.storyboard */,
 				01D667D124699A060024634C /* Supporting Files */,
 				01D667CE246994FE0024634C /* Models */,
@@ -285,7 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01D667C52465A59F0024634C /* LaunchScreen.storyboard in Resources */,
-				8899FCA524853F0E0044016E /* Localization.strings in Resources */,
+				8899FCA524853F0E0044016E /* Localizable.strings in Resources */,
 				01D667C22465A59F0024634C /* Assets.xcassets in Resources */,
 				88C75E3A24741BCD00A8E46C /* Piuma.pdf in Resources */,
 				885F632B247FE83F00CE3E95 /* relax.mp3 in Resources */,
@@ -376,13 +376,13 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		8899FCA724853F0E0044016E /* Localization.strings */ = {
+		8899FCA724853F0E0044016E /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8899FCA624853F0E0044016E /* en */,
 				8899FCA824853F100044016E /* it */,
 			);
-			name = Localization.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		8899FCAB248542490044016E /* Main.storyboard */ = {
