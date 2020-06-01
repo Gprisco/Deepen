@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "Historical"; ObjectID = "5oK-in-o2Y"; */
+"5oK-in-o2Y.text" = "Historical";
+
+/* Class = "UILabel"; text = "Nice Job!"; ObjectID = "Ava-Mo-eRR"; */
+"Ava-Mo-eRR.text" = "Nice Job!";
+
+/* Class = "UIButton"; normalTitle = "Filter"; ObjectID = "D8h-rJ-B3W"; */
+"D8h-rJ-B3W.normalTitle" = "Filter";
+
+/* Class = "UILabel"; text = "Question?"; ObjectID = "EiD-0q-Gdt"; */
+"EiD-0q-Gdt.text" = "Question?";
+
+/* Class = "UILabel"; text = "Energico"; ObjectID = "FZ8-gr-9Ue"; */
+"FZ8-gr-9Ue.text" = "Energico";
+
+/* Class = "UIButton"; normalTitle = "   Skip"; ObjectID = "U3U-bw-Dog"; */
+"U3U-bw-Dog.normalTitle" = "   Skip";
+
+/* Class = "UIButton"; normalTitle = "   Write"; ObjectID = "WlH-TB-NjK"; */
+"WlH-TB-NjK.normalTitle" = "   Write";
+
+/* Class = "UILabel"; text = "Reward"; ObjectID = "bvb-AA-uWZ"; */
+"bvb-AA-uWZ.text" = "Reward";
+
+/* Class = "UIButton"; normalTitle = "Home"; ObjectID = "c15-l1-APu"; */
+"c15-l1-APu.normalTitle" = "Home";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "h84-Re-yFc"; */
+"h84-Re-yFc.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "   Speak"; ObjectID = "igd-Dt-cOm"; */
+"igd-Dt-cOm.normalTitle" = "   Speak";
+
+/* Class = "UITextView"; text = "\"Stay hungry, stay foolish!\"  -Steve Jobs"; ObjectID = "m9v-h1-mfB"; */
+"m9v-h1-mfB.text" = "\"Stay hungry, stay foolish!\"  -Steve Jobs";
+
+/* Class = "UITextView"; text = "Ciao"; ObjectID = "rq0-NB-eY0"; */
+"rq0-NB-eY0.text" = "Ciao";
+
+/* Class = "UILabel"; text = "How do you feel today?"; ObjectID = "vCe-Bx-5h0"; */
+"vCe-Bx-5h0.text" = "How do you feel today?";

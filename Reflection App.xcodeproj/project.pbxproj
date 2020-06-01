@@ -21,13 +21,14 @@
 		01D667EC247419A30024634C /* HistoricalPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D667EB247419A30024634C /* HistoricalPageViewController.swift */; };
 		01D667EE24741ABD0024634C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D667ED24741ABD0024634C /* Helpers.swift */; };
 		01D667F224742E760024634C /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D667F124742E760024634C /* QuestionController.swift */; };
-		01D667F424742F3F0024634C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D667F324742F3F0024634C /* Main.storyboard */; };
 		01D667F6247560680024634C /* MoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D667F5247560680024634C /* MoodCell.swift */; };
 		01D667F8247576470024634C /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D667F7247576470024634C /* HistoricalViewController.swift */; };
 		01D667FA247579400024634C /* HistoricalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D667F9247579400024634C /* HistoricalCell.swift */; };
 		881DD7BE246D748500DB895F /* BubbleEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DD7BD246D748500DB895F /* BubbleEmitter.swift */; };
 		881DD7C0246D764300DB895F /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DD7BF246D764300DB895F /* MusicPlayer.swift */; };
 		885F632B247FE83F00CE3E95 /* relax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 885F632A247FE83E00CE3E95 /* relax.mp3 */; };
+		8899FCA524853F0E0044016E /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8899FCA724853F0E0044016E /* Localization.strings */; };
+		8899FCA9248542490044016E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8899FCAB248542490044016E /* Main.storyboard */; };
 		88A6944B246ED3E200A64C52 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A6944A246ED3E200A64C52 /* MoodViewController.swift */; };
 		88C75E3A24741BCD00A8E46C /* Piuma.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 88C75E3924741BCD00A8E46C /* Piuma.pdf */; };
 		88D9EE74246BF354008B1DFA /* ReflectionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D9EE73246BF354008B1DFA /* ReflectionPageViewController.swift */; };
@@ -51,7 +52,6 @@
 		01D667EB247419A30024634C /* HistoricalPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalPageViewController.swift; sourceTree = "<group>"; };
 		01D667ED24741ABD0024634C /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		01D667F124742E760024634C /* QuestionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
-		01D667F324742F3F0024634C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		01D667F5247560680024634C /* MoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCell.swift; sourceTree = "<group>"; };
 		01D667F7247576470024634C /* HistoricalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewController.swift; sourceTree = "<group>"; };
 		01D667F9247579400024634C /* HistoricalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalCell.swift; sourceTree = "<group>"; };
@@ -59,6 +59,11 @@
 		881DD7BD246D748500DB895F /* BubbleEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleEmitter.swift; sourceTree = "<group>"; };
 		881DD7BF246D764300DB895F /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		885F632A247FE83E00CE3E95 /* relax.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = relax.mp3; sourceTree = "<group>"; };
+		8899FCA224853DDF0044016E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8899FCA624853F0E0044016E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
+		8899FCA824853F100044016E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localization.strings; sourceTree = "<group>"; };
+		8899FCAA248542490044016E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8899FCAD2485424C0044016E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		88A6944A246ED3E200A64C52 /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
 		88C75E3924741BCD00A8E46C /* Piuma.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Piuma.pdf; sourceTree = "<group>"; };
 		88D9EE73246BF354008B1DFA /* ReflectionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionPageViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +86,7 @@
 		01D667A92465A59B0024634C = {
 			isa = PBXGroup;
 			children = (
+				8899FCA724853F0E0044016E /* Localization.strings */,
 				01D667B42465A59B0024634C /* Reflection App */,
 				01D667B32465A59B0024634C /* Products */,
 				CA8C2DB1328298DB9FEAC9C3 /* Pods */,
@@ -99,7 +105,7 @@
 		01D667B42465A59B0024634C /* Reflection App */ = {
 			isa = PBXGroup;
 			children = (
-				01D667F324742F3F0024634C /* Main.storyboard */,
+				8899FCAB248542490044016E /* Main.storyboard */,
 				01D667D124699A060024634C /* Supporting Files */,
 				01D667CE246994FE0024634C /* Models */,
 				01D667B52465A59B0024634C /* AppDelegate.swift */,
@@ -261,6 +267,7 @@
 			knownRegions = (
 				en,
 				Base,
+				it,
 			);
 			mainGroup = 01D667A92465A59B0024634C;
 			productRefGroup = 01D667B32465A59B0024634C /* Products */;
@@ -278,10 +285,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				01D667C52465A59F0024634C /* LaunchScreen.storyboard in Resources */,
+				8899FCA524853F0E0044016E /* Localization.strings in Resources */,
 				01D667C22465A59F0024634C /* Assets.xcassets in Resources */,
 				88C75E3A24741BCD00A8E46C /* Piuma.pdf in Resources */,
 				885F632B247FE83F00CE3E95 /* relax.mp3 in Resources */,
-				01D667F424742F3F0024634C /* Main.storyboard in Resources */,
+				8899FCA9248542490044016E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,8 +371,27 @@
 			isa = PBXVariantGroup;
 			children = (
 				01D667C42465A59F0024634C /* Base */,
+				8899FCA224853DDF0044016E /* it */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8899FCA724853F0E0044016E /* Localization.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8899FCA624853F0E0044016E /* en */,
+				8899FCA824853F100044016E /* it */,
+			);
+			name = Localization.strings;
+			sourceTree = "<group>";
+		};
+		8899FCAB248542490044016E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8899FCAA248542490044016E /* Base */,
+				8899FCAD2485424C0044016E /* it */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -374,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -434,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

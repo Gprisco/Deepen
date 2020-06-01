@@ -81,26 +81,26 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
             
             firstQuestionPage.imageName = self.pageBackgrounds[1]
             firstQuestionPage.reflectionDelegate = self
-            firstQuestionPage.question = "How did it go today?"
+            firstQuestionPage.question = NSLocalizedString("How did it go today?", comment: "First Question")
             firstQuestionPage.step = 1
             
             moodQuestionPage.backgroundImageName = self.pageBackgrounds[2]
             moodQuestionPage.moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confuso", "benedetto", "arrabbiato"]
             moodQuestionPage.moods = ["Stressed", "Scared", "Lucky", "Happy", "Energic", "Depressed", "Confused", "Blessed", "Angry"]
             moodQuestionPage.type = "mood"
-            moodQuestionPage.sectionTitleString = "How do you feel today?"
+            moodQuestionPage.sectionTitleString = NSLocalizedString("How do you feel today?", comment: "First mood")
             moodQuestionPage.reflectionDelegate = self
             
             categoryQuestionPage.backgroundImageName = self.pageBackgrounds[2]
             categoryQuestionPage.moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confuso", "benedetto", "arrabbiato"]
             categoryQuestionPage.moods = ["Stressed", "Scared", "Lucky", "Happy", "Energic", "Depressed", "Confused", "Blessed", "Angry"]
             categoryQuestionPage.type = "category"
-            categoryQuestionPage.sectionTitleString = "What do you want to talk about?"
+            categoryQuestionPage.sectionTitleString = NSLocalizedString("What do you want to talk about?", comment: "Second mood")
             categoryQuestionPage.reflectionDelegate = self
 
             secondQuestionPage.imageName = self.pageBackgrounds[3]
             secondQuestionPage.reflectionDelegate = self
-            secondQuestionPage.question = "What would you have changed?"
+            secondQuestionPage.question = NSLocalizedString("What would you have changed?", comment: "Second Question")
             secondQuestionPage.step = 2
             
             reward.imageName = self.pageBackgrounds[4]
