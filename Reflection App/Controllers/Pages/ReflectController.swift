@@ -49,7 +49,7 @@ class ReflectController: UIViewController {
         
         backgroundImage.image = UIImage(named: "animazione-onde1")
         
-        move = getImageNames(for: "animazione-onde", frames: 12, loop: true)
+        move = getImageNames(for: "animazione-onde", frames: 75, loop: false)
         
         backgroundImage.animationImages = move
         backgroundImage.animationDuration = 6
