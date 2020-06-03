@@ -166,6 +166,13 @@ extension ReflectionPageViewController: ReflectionDelegate {
         self.setViewControllers([pages[currentPage]], direction: .forward, animated: true)
     }
     
+    func clearFlow() {
+        currentPage = 0
+        firstAnswer = nil
+        secondAnswer = nil
+        self.setViewControllers([pages[0]], direction: .reverse, animated: true, completion: nil)
+    }
+    
     func onMoodChoice(mood: String, moodImage: String) {
         self.mood = mood
         self.moodImage = moodImage

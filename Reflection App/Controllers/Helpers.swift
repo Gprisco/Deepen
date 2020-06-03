@@ -15,6 +15,7 @@ protocol HistoricalDelegate {
 }
 
 protocol ReflectionDelegate {
+    func clearFlow()
     func nextStep()
     func prevStep()
     func onMoodChoice(mood: String, moodImage: String)

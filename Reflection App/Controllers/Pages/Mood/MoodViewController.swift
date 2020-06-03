@@ -46,6 +46,10 @@ class MoodViewController: UIViewController {
         //        Add BubbleEmitter
         addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
     }
+    
+    @IBAction func crossButtonPressed(_ sender: UIButton) {
+        reflectionDelegate.clearFlow()
+    }
 }
 
 extension MoodViewController: UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {

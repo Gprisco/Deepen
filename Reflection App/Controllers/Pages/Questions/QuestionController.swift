@@ -53,6 +53,10 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
     }
     
+    @IBAction func crossButtonPressed(_ sender: UIButton) {
+        reflectionDelegate.clearFlow()
+    }
+    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
             self.view.endEditing(true)
