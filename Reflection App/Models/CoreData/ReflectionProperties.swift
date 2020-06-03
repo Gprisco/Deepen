@@ -35,10 +35,7 @@ extension Reflection {
     
     // Create
     func addReflection(mood: String, moodImage: String, category: String, categoryImage: String, firstQuestion: String, firstAnswer: String, secondQuestion: String, secondAnswer: String, reward: String) -> Reflection? {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let reflection = Reflection(context: context)
+        let reflection = Reflection(context: AppDelegate.viewContext)
         
         reflection.mood = mood
         reflection.moodImage = moodImage
@@ -52,7 +49,7 @@ extension Reflection {
         reflection.reward = reward
         
         do {
-            try context.save()
+            try AppDelegate.viewContext.save()
             return reflection
         } catch {
             print(error.localizedDescription)
@@ -63,13 +60,10 @@ extension Reflection {
 
     // Read
     func getReflections() -> Reflections? {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
-        let context = appDelegate.persistentContainer.viewContext
-        
         let request = Reflection.getFetchRequest()
         
         do {
-            let fetchedResult = try context.fetch(request)
+            let fetchedResult = try AppDelegate.viewContext.fetch(request)
             print(fetchedResult)
             return fetchedResult
         } catch {
@@ -81,9 +75,6 @@ extension Reflection {
         
     // Update
     func updateReflection(_ reflection: Reflection, mood: String, moodImage: String, firstQuestion: String, firstAnswer: String, secondQuestion: String, secondAnswer: String) -> Reflection? {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
-        let context = appDelegate.persistentContainer.viewContext
-        
         reflection.mood = mood
         reflection.moodImage = moodImage
         reflection.category = category
@@ -94,7 +85,7 @@ extension Reflection {
         reflection.secondAnswer = secondAnswer
         
         do {
-            try context.save()
+            try AppDelegate.viewContext.save()
         } catch {
             print(error.localizedDescription)
         }
@@ -104,13 +95,10 @@ extension Reflection {
     
     // Delete
     func deleteReflection(_ reflection: Reflection) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let context = appDelegate.persistentContainer.viewContext
-        
-        context.delete(reflection)
+        AppDelegate.viewContext.delete(reflection)
         
         do {
-            try context.save()
+            try AppDelegate.viewContext.save()
         } catch {
             print(error.localizedDescription)
         }
