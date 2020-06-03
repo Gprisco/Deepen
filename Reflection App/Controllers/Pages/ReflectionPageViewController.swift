@@ -168,8 +168,15 @@ extension ReflectionPageViewController: ReflectionDelegate {
     
     func clearFlow() {
         currentPage = 0
+        
         firstAnswer = nil
+        mood = nil
+        moodImage = nil
+        category = nil
+        categoryImage = nil
         secondAnswer = nil
+        reward = nil
+        
         self.setViewControllers([pages[0]], direction: .reverse, animated: true, completion: nil)
     }
     
