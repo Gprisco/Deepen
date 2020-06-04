@@ -1,0 +1,16 @@
+PODS:
+  - ScalingCarousel (3.0.1)
+
+DEPENDENCIES:
+  - ScalingCarousel
+
+SPEC REPOS:
+  trunk:
+    - ScalingCarousel
+
+SPEC CHECKSUMS:
+  ScalingCarousel: da1046447c9ac2d4a0db3f778fdda81cae16de4f
+
+PODFILE CHECKSUM: a299b78f94d859abeec357bedb2f1c4c4fee4853
+
+COCOAPODS: 1.8.4

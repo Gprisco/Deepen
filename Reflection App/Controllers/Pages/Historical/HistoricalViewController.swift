@@ -60,10 +60,12 @@ class HistoricalViewController: UIViewController {
         super.viewDidAppear(animated)
         
         historicalCarousel.reloadData()
+      
     }
 }
 
 extension HistoricalViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return reflections.count
     }

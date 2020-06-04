@@ -28,6 +28,7 @@
 		881DD7BE246D748500DB895F /* BubbleEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DD7BD246D748500DB895F /* BubbleEmitter.swift */; };
 		881DD7C0246D764300DB895F /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DD7BF246D764300DB895F /* MusicPlayer.swift */; };
 		885F632B247FE83F00CE3E95 /* relax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 885F632A247FE83E00CE3E95 /* relax.mp3 */; };
+		8868580E24892D1200FABC5E /* ReflectionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8868580D24892D1200FABC5E /* ReflectionDetailsViewController.swift */; };
 		8899FCA524853F0E0044016E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8899FCA724853F0E0044016E /* Localizable.strings */; };
 		8899FCA9248542490044016E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8899FCAB248542490044016E /* Main.storyboard */; };
 		88A6944B246ED3E200A64C52 /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A6944A246ED3E200A64C52 /* MoodViewController.swift */; };
@@ -62,6 +63,7 @@
 		881DD7BD246D748500DB895F /* BubbleEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleEmitter.swift; sourceTree = "<group>"; };
 		881DD7BF246D764300DB895F /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		885F632A247FE83E00CE3E95 /* relax.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = relax.mp3; sourceTree = "<group>"; };
+		8868580D24892D1200FABC5E /* ReflectionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionDetailsViewController.swift; sourceTree = "<group>"; };
 		8899FCA224853DDF0044016E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8899FCA624853F0E0044016E /* en */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; tabWidth = 2; };
 		8899FCA824853F100044016E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				88D9EE73246BF354008B1DFA /* ReflectionPageViewController.swift */,
 				01D667EB247419A30024634C /* HistoricalPageViewController.swift */,
 				01D667B92465A59B0024634C /* ReflectController.swift */,
+				8868580F24892D2400FABC5E /* Reflection Details */,
 				01D667FB247579480024634C /* Historical */,
 				01D667E8246ED8F10024634C /* Mood */,
 				88318BDD24741E0A004B3AFA /* Questions */,
@@ -209,6 +212,14 @@
 				01D667F124742E760024634C /* QuestionController.swift */,
 			);
 			path = Questions;
+			sourceTree = "<group>";
+		};
+		8868580F24892D2400FABC5E /* Reflection Details */ = {
+			isa = PBXGroup;
+			children = (
+				8868580D24892D1200FABC5E /* ReflectionDetailsViewController.swift */,
+			);
+			path = "Reflection Details";
 			sourceTree = "<group>";
 		};
 		A0DFF044419C913FE40746CC /* Frameworks */ = {
@@ -352,6 +363,7 @@
 				01D667E7246D99C30024634C /* Reflection.swift in Sources */,
 				01D667FA247579400024634C /* HistoricalCell.swift in Sources */,
 				881DD7C0246D764300DB895F /* MusicPlayer.swift in Sources */,
+				8868580E24892D1200FABC5E /* ReflectionDetailsViewController.swift in Sources */,
 				01D667CD24697D6B0024634C /* Notifications.swift in Sources */,
 				88A6944B246ED3E200A64C52 /* MoodViewController.swift in Sources */,
 				88D9EE74246BF354008B1DFA /* ReflectionPageViewController.swift in Sources */,
