@@ -160,6 +160,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1c7-Da-WVu"/>
                     </view>
+                    <connections>
+                        <outlet property="firstAnswer" destination="8O0-eA-z4C" id="5J9-EB-VJK"/>
+                        <outlet property="firstQuestion" destination="4T9-Si-m86" id="8VF-av-ftj"/>
+                        <outlet property="secondAnswer" destination="gAI-YM-7py" id="8Hd-1L-xUd"/>
+                        <outlet property="secondQuestion" destination="zjV-9N-qKo" id="CBR-8T-9vd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YiC-pe-u2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

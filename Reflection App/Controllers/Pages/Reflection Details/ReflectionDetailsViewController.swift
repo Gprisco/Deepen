@@ -9,11 +9,17 @@
 import UIKit
 
 class ReflectionDetailsViewController: UIViewController {
-    @IBOutlet weak var firstQuestion: UITextView!
-    @IBOutlet weak var secondQuestion: UITextView!
+    var reflection: Reflection!
+    
+    @IBOutlet weak var firstQuestion: UILabel!
+    @IBOutlet weak var secondQuestion: UILabel!
+    @IBOutlet weak var firstAnswer: UITextView!
+    @IBOutlet weak var secondAnswer: UITextView!
     
     override func viewDidLoad() {
-    super.viewDidLoad()
-
+        super.viewDidLoad()
+        
+        firstAnswer.text = reflection.firstAnswer ?? ""
+        secondAnswer.text = reflection.secondAnswer ?? ""
     }
 }
