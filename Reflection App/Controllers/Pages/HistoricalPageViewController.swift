@@ -27,7 +27,7 @@ class HistoricalPageViewController: UIPageViewController, UIPageViewControllerDe
             historicalView.historicalDelegate = self
             historicalView.reflections = self.reflections
         }
-        
+                
         pages = [historicalView, reflectView]
         self.setViewControllers([pages[1]], direction: .forward, animated: true)
     }

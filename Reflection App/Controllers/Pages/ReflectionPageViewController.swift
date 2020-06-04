@@ -128,11 +128,10 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
         
         return pages[nextIndex]
     }
-    //
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         return nil
     }
-    
 }
 
 extension ReflectionPageViewController: ReflectionDelegate {
@@ -187,7 +186,7 @@ extension ReflectionPageViewController: ReflectionDelegate {
         currentPage = 0
         self.setViewControllers([pages[0]], direction: .reverse, animated: true, completion: nil)
         
-        let reflection = Reflection.shared.addReflection(mood: mood!, moodImage: moodImage!, category: category!, categoryImage: categoryImage!, firstQuestion: "How did it go today?", firstAnswer: firstAnswer ?? "", secondQuestion: "What would you have changed?", secondAnswer: secondAnswer ?? "", reward: reward!)
+        let reflection = Reflection.shared.addReflection(mood: mood ?? "", moodImage: moodImage ?? "", category: category ?? "", categoryImage: categoryImage!, firstQuestion: "How did it go today?", firstAnswer: firstAnswer ?? "", secondQuestion: "What would you have changed?", secondAnswer: secondAnswer ?? "", reward: reward ?? "")
         
         historicalDelegate.saveReflection(reflection ?? nil)
     }

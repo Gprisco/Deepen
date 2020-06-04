@@ -47,7 +47,7 @@ class HistoricalViewController: UIViewController {
             reflectionDate.text = "\(reflections[0].date!.text)"
             reflectionReward.text = reflections[0].reward ?? ""
             
-            historicalCarousel.inset = self.view.bounds.width / 4
+            historicalCarousel.inset = self.view.bounds.width / 3.8
             
             historicalCarousel.reloadData()
         } else {

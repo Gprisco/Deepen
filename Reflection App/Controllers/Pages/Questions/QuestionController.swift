@@ -30,8 +30,6 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
     @IBOutlet weak var buttonStackView: UIStackView!
     
     let audioEngine = AVAudioEngine()
-    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
-    let request = SFSpeechAudioBufferRecognitionRequest()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -130,10 +128,13 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
                 if authStatus == .authorized {
                     print("Good to go!")
                     
+                    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
+                    let request = SFSpeechAudioBufferRecognitionRequest()
+                    
                     let node = self.audioEngine.inputNode
                     let recordingFormat = node.outputFormat (forBus: 0)
                     node.installTap (onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
-                        self.request.append(buffer)
+                        request.append(buffer)
                     }
                     
                     self.audioEngine.prepare()
@@ -151,7 +152,7 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
                         return
                     }
                     
-                    self.speechRecognizer!.recognitionTask(with: self.request, resultHandler: { result, error in
+                    speechRecognizer!.recognitionTask(with: request, resultHandler: { result, error in
                         if let result = result {
                             let bestString = result.bestTranscription.formattedString
                             
