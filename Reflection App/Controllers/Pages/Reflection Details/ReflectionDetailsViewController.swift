@@ -19,7 +19,10 @@ class ReflectionDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        firstQuestion.text = reflection.firstQuestion!
         firstAnswer.text = reflection.firstAnswer ?? ""
+        
+        secondQuestion.text = reflection.secondQuestion!
         secondAnswer.text = reflection.secondAnswer ?? ""
     }
 }
