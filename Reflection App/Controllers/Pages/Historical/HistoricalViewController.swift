@@ -21,6 +21,7 @@ class HistoricalViewController: UIViewController {
     var selectedItem: Int = 0
     
     var reflections: Reflections!
+    var selectedReflection = 0
     
     @IBAction func onFilter(_ sender: UIButton) {
     }
@@ -37,7 +38,7 @@ class HistoricalViewController: UIViewController {
         
         historicalCarousel.backgroundColor = .none
         historicalCarousel.inset = self.view.bounds.width / 4.3
-
+        
         if reflections.count > 7 {
             reflections = Array(self.reflections[0..<7]).reversed()
         }
@@ -60,7 +61,6 @@ class HistoricalViewController: UIViewController {
         super.viewDidAppear(animated)
         
         historicalCarousel.reloadData()
-      
     }
 }
 
@@ -85,6 +85,11 @@ extension HistoricalViewController: UICollectionViewDelegate, UICollectionViewDa
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedReflection = indexPath.item
+        performSegue(withIdentifier: "reflectionDetails", sender: nil)
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let visibleCells = historicalCarousel.visibleCells
         var items = [Int]()
@@ -103,5 +108,14 @@ extension HistoricalViewController: UICollectionViewDelegate, UICollectionViewDa
         
         self.reflectionDate.text = "\(reflections[selectedItem].date!.text)"
         self.reflectionReward.text = reflections[selectedItem].reward ?? ""
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "reflectionDetails" {
+            if let destinationVC = segue.destination as? ReflectionDetailsViewController {
+                destinationVC.reflection = reflections[selectedReflection]
+                destinationVC.modalPresentationStyle = .fullScreen
+            }
+        }
     }
 }

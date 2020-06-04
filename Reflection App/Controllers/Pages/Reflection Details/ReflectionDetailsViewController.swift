@@ -25,4 +25,8 @@ class ReflectionDetailsViewController: UIViewController {
         secondQuestion.text = reflection.secondQuestion!
         secondAnswer.text = reflection.secondAnswer ?? ""
     }
+    
+    @IBAction func onDismiss(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
