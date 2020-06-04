@@ -9,6 +9,8 @@
 import UIKit
 
 class ReflectionDetailsViewController: UIViewController {
+    @IBOutlet weak var firstQuestion: UITextView!
+    @IBOutlet weak var secondQuestion: UITextView!
     
     override func viewDidLoad() {
     super.viewDidLoad()
