@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDelegate {
+class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     var historicalDelegate: HistoricalDelegate!
     
     var currentPage: Int = 0
@@ -97,7 +97,7 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
             categoryQuestionPage.type = "category"
             categoryQuestionPage.sectionTitleString = NSLocalizedString("What do you want to talk about?", comment: "Second mood")
             categoryQuestionPage.reflectionDelegate = self
-
+            
             secondQuestionPage.imageName = self.pageBackgrounds[3]
             secondQuestionPage.reflectionDelegate = self
             secondQuestionPage.question = NSLocalizedString("What would you have changed?", comment: "Second Question")
@@ -108,45 +108,30 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
             reward.rewardText = self.reward!
         }
         
+        self.dataSource = self
+        
         self.setViewControllers([pages[0]], direction: .forward, animated: true, completion: nil)
     }
     
-//    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-////        guard let currentIndex = pages.firstIndex(of: viewController) else {
-////            return nil
-////        }
-////
-////        let nextIndex = currentIndex - 1
-////
-////        guard nextIndex >= 0 else {
-////            return nil
-////        }
-////
-////        currentPage = nextIndex
-//
-//        return nil
-//
-////        return pages[nextIndex]
-//    }
-//
-//    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-////        guard let currentIndex = pages.firstIndex(of: viewController) else {
-////            return nil
-////        }
-////
-////        let nextIndex = currentIndex + 1
-////
-////        guard nextIndex != pages.count else {
-////            return nil
-////        }
-////
-////        currentPage = nextIndex
-//
-//        return nil
-//
-////        return pages[nextIndex]
-//
-//    }
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let currentIndex = pages.firstIndex(of: viewController) else {
+            return nil
+        }
+        
+        let nextIndex = currentIndex - 1
+        
+        guard nextIndex >= 0 else {
+            return nil
+        }
+        
+        currentPage = nextIndex
+        
+        return pages[nextIndex]
+    }
+    //
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        return nil
+    }
     
 }
 
