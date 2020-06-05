@@ -29,8 +29,8 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
     
     @IBOutlet weak var buttonStackView: UIStackView!
     
-    let audioEngine = AVAudioEngine()
-    
+    var audioEngine = AVAudioEngine()
+        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -52,7 +52,7 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         //        Add BubbleEmitter
         addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
     }
-        
+    
     override func viewWillDisappear(_ animated: Bool) {
         buttonStackView.isHidden = false
         answerTextView.isHidden = true
@@ -101,6 +101,7 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         answerTextView.isHidden = true
         lineWriting.isHidden = true
         buttonStackView.isHidden = false
+        audioEngine.stop()
         reflectionDelegate.nextStep()
     }
     
@@ -122,46 +123,63 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         reflectionDelegate.nextStep()
     }
     
+    private func configureAudioSession() {
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch { }
+    }
+    
     func recordAndRecognizeSpeech() {
-        SFSpeechRecognizer.requestAuthorization { [unowned self] authStatus in
+        SFSpeechRecognizer.requestAuthorization { authStatus in
             DispatchQueue.main.async {
                 if authStatus == .authorized {
-                    print("Good to go!")
-                    
-                    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
-                    let request = SFSpeechAudioBufferRecognitionRequest()
-                    
-                    let node = self.audioEngine.inputNode
-                    let recordingFormat = node.outputFormat (forBus: 0)
-                    node.installTap (onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
-                        request.append(buffer)
-                    }
-                    
-                    self.audioEngine.prepare()
-                    do {
-                        try self.audioEngine.start()
-                    } catch {
-                        return print (error)
-                    }
-                    
-                    guard let myRecognizer = SFSpeechRecognizer() else {
-                        return
-                    }
-                    
-                    if !myRecognizer.isAvailable {
-                        return
-                    }
-                    
-                    speechRecognizer!.recognitionTask(with: request, resultHandler: { result, error in
-                        if let result = result {
-                            let bestString = result.bestTranscription.formattedString
+                    AVAudioSession.sharedInstance().requestRecordPermission { granted in
+                        if granted {
+                            self.configureAudioSession()
+                            print("Good to go!")
                             
-                            self.answerTextView.text = bestString
-                        } else if let error = error {
-                            print (error)
+                            let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
+                            let request = SFSpeechAudioBufferRecognitionRequest()
+                            
+                            let node = self.audioEngine.inputNode
+                            let recordingFormat = node.inputFormat(forBus: 0)
+                            node.installTap (onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
+                                request.append(buffer)
+                            }
+                            
+                            self.audioEngine.prepare()
+                            do {
+                                try self.audioEngine.start()
+                            } catch {
+                                return print (error)
+                            }
+                            
+                            guard let myRecognizer = SFSpeechRecognizer() else {
+                                return
+                            }
+                            
+                            if !myRecognizer.isAvailable {
+                                return
+                            }
+                            
+                            speechRecognizer!.recognitionTask(with: request, resultHandler: { result, error in
+                                if let result = result {
+                                    let bestString = result.bestTranscription.formattedString
+                                    
+                                    self.answerTextView.text = bestString
+                                } else if let error = error {
+                                    print (error)
+                                }
+                            })
+                            
+                        } else {
+                            print("Transcription permission was declined.")
+                            self.buttonStackView.isHidden = false
+                            self.answerTextView.isHidden = true
+                            self.lineWriting.isHidden = true
                         }
-                    })
-                    
+                    }
                 } else {
                     print("Transcription permission was declined.")
                     self.buttonStackView.isHidden = false
