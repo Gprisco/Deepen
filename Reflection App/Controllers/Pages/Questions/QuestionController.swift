@@ -28,6 +28,7 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
     @IBOutlet weak var writeButtonOutlet: UIButton!
     
     @IBOutlet weak var buttonStackView: UIStackView!
+    @IBOutlet weak var speechDoneButton: UIButton!
     
     var audioEngine = AVAudioEngine()
         
@@ -36,6 +37,8 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         
         self.backgroundImage.image = UIImage(named: self.imageName)
         
+        speechDoneButton.layer.cornerRadius = 10
+        speechDoneButton.clipsToBounds = true
         setupTextView()
         registerForKeyboardNotifications()
     }
@@ -70,6 +73,11 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         
         return true
     }
+    
+    @IBAction func doneButtonPressed(_ sender: UIButton) {
+        doneButtonAction()
+    }
+    
     
     func setupTextView() {
         let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: self.view.frame.size.width, height: 30)))

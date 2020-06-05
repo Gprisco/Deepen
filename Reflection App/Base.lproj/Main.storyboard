@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RNn-Tx-xC9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RNn-Tx-xC9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -435,6 +435,18 @@
                                     <action selector="crossButtonPressed:" destination="SH9-Nm-elC" eventType="touchUpInside" id="oBR-cv-IAa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16o-tU-t5J">
+                                <rect key="frame" x="20" y="739" width="374" height="32"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="SH9-Nm-elC" eventType="touchUpInside" id="rKa-Xt-cHg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -444,15 +456,18 @@
                             <constraint firstAttribute="bottom" secondItem="uNt-xX-013" secondAttribute="bottom" id="88C-Bl-yZl"/>
                             <constraint firstItem="RSt-Jc-ern" firstAttribute="centerY" secondItem="G1B-63-jat" secondAttribute="centerY" id="C0a-Dl-1B3"/>
                             <constraint firstItem="wvI-ue-rG3" firstAttribute="leading" secondItem="avU-pJ-lfG" secondAttribute="leading" constant="20" id="DNk-dm-0xP"/>
+                            <constraint firstItem="avU-pJ-lfG" firstAttribute="trailing" secondItem="16o-tU-t5J" secondAttribute="trailing" constant="20" id="Env-2z-32J"/>
                             <constraint firstItem="uNt-xX-013" firstAttribute="trailing" secondItem="avU-pJ-lfG" secondAttribute="trailing" id="G0U-EJ-6e6"/>
                             <constraint firstItem="wvI-ue-rG3" firstAttribute="top" secondItem="G1B-63-jat" secondAttribute="top" constant="200" id="KyK-zb-STd"/>
                             <constraint firstItem="EiD-0q-Gdt" firstAttribute="leading" secondItem="avU-pJ-lfG" secondAttribute="leading" id="QfN-9W-dai"/>
+                            <constraint firstItem="16o-tU-t5J" firstAttribute="top" secondItem="wvI-ue-rG3" secondAttribute="bottom" constant="1.5" id="Ruk-9f-RzK"/>
                             <constraint firstItem="RSt-Jc-ern" firstAttribute="height" secondItem="avU-pJ-lfG" secondAttribute="height" multiplier="0.4" id="S2c-AZ-QIY"/>
                             <constraint firstItem="RSt-Jc-ern" firstAttribute="leading" secondItem="avU-pJ-lfG" secondAttribute="leading" id="SdZ-FA-B8v"/>
                             <constraint firstItem="TXm-TR-tFC" firstAttribute="height" secondItem="wvI-ue-rG3" secondAttribute="height" multiplier="1.18419" id="YIK-AA-HoF"/>
                             <constraint firstItem="ha2-EJ-IbE" firstAttribute="leading" secondItem="G1B-63-jat" secondAttribute="leading" constant="20" id="YJj-gL-Jlh"/>
                             <constraint firstItem="ha2-EJ-IbE" firstAttribute="top" secondItem="G1B-63-jat" secondAttribute="top" constant="39" id="aIs-2J-S51"/>
                             <constraint firstItem="avU-pJ-lfG" firstAttribute="trailing" secondItem="TXm-TR-tFC" secondAttribute="trailing" id="hgh-Da-lev"/>
+                            <constraint firstItem="16o-tU-t5J" firstAttribute="leading" secondItem="avU-pJ-lfG" secondAttribute="leading" constant="20" id="hi6-Qi-cv5"/>
                             <constraint firstItem="wvI-ue-rG3" firstAttribute="height" secondItem="G1B-63-jat" secondAttribute="height" multiplier="0.6" id="ocG-2N-GeN"/>
                             <constraint firstItem="uNt-xX-013" firstAttribute="leading" secondItem="avU-pJ-lfG" secondAttribute="leading" id="ogd-ud-5iM"/>
                             <constraint firstItem="uNt-xX-013" firstAttribute="top" secondItem="G1B-63-jat" secondAttribute="top" id="qLy-5e-ZF3"/>
@@ -468,6 +483,7 @@
                         <outlet property="buttonStackView" destination="RSt-Jc-ern" id="bzk-ft-zpW"/>
                         <outlet property="lineWriting" destination="wvI-ue-rG3" id="ezF-cr-XYl"/>
                         <outlet property="questionLabel" destination="EiD-0q-Gdt" id="IXf-kt-KSj"/>
+                        <outlet property="speechDoneButton" destination="16o-tU-t5J" id="4Tp-PC-6tb"/>
                         <outlet property="writeButtonOutlet" destination="WlH-TB-NjK" id="CVf-Q7-XR3"/>
                     </connections>
                 </viewController>
