@@ -49,16 +49,16 @@ class ReflectController: UIViewController {
         
         backgroundImage.image = UIImage(named: "animazione-onde1")
         
-        move = getImageNames(for: "animazione-onde", frames: 75, loop: false)
+        move = getImageNames(for: "animazione-onde", frames: 116, loop: false)
         
         backgroundImage.animationImages = move
         backgroundImage.animationDuration = 6
         
         buttonToPress.setImage(UIImage(named: "Animazione-piuma1"), for: .normal)
         
-        moveB = getImageNames(for: "Animazione-piuma", frames: 11, loop: false)
+        moveB = getImageNames(for: "Animazione-piuma", frames: 123, loop: false)
         
-        buttonToPress.imageView?.animationDuration = 2.2
+        buttonToPress.imageView?.animationDuration = 4
         buttonToPress.imageView?.animationImages = moveB
         
         DispatchQueue.main.asyncAfter(deadline:DispatchTime.now()+0.5){
