@@ -30,6 +30,11 @@ class HistoricalViewController: UIViewController {
         historicalDelegate.onReflectPress()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        historicalCarousel.deviceRotated()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +42,7 @@ class HistoricalViewController: UIViewController {
         historicalCarousel.dataSource = self
         
         historicalCarousel.backgroundColor = .none
-        historicalCarousel.inset = self.view.bounds.width / 4.3
+        historicalCarousel.inset = self.view.bounds.width / 4
         
         if reflections.count > 7 {
             reflections = Array(self.reflections[0..<7]).reversed()
@@ -47,14 +52,16 @@ class HistoricalViewController: UIViewController {
             reflectionDate.text = "\(reflections[0].date!.text)"
             reflectionReward.text = reflections[0].reward ?? ""
             
-            historicalCarousel.inset = self.view.bounds.width / 3.8
-            
             historicalCarousel.reloadData()
         } else {
             reflectionDate.isHidden = true
             reflectionReward.isHidden = true
             historicalCarousel.isHidden = true
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        historicalCarousel.inset = (UIScreen.main.bounds.width + 75) / 4
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -114,7 +121,6 @@ extension HistoricalViewController: UICollectionViewDelegate, UICollectionViewDa
         if segue.identifier == "reflectionDetails" {
             if let destinationVC = segue.destination as? ReflectionDetailsViewController {
                 destinationVC.reflection = reflections[selectedReflection]
-                destinationVC.modalPresentationStyle = .fullScreen
             }
         }
     }
