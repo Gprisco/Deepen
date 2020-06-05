@@ -16,6 +16,9 @@ class ReflectionDetailsViewController: UIViewController {
     @IBOutlet weak var firstAnswer: UITextView!
     @IBOutlet weak var secondAnswer: UITextView!
     
+    @IBOutlet weak var iconDetails: UIImageView!
+    @IBOutlet weak var dateDetails: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
