@@ -27,6 +27,9 @@ class ReflectionDetailsViewController: UIViewController {
         
         secondQuestion.text = NSLocalizedString(reflection.secondQuestion!, comment: "Second Question")
         secondAnswer.text = reflection.secondAnswer ?? ""
+        
+        dateDetails.text = reflection.date?.text ?? ""
+        iconDetails.image = UIImage(named: reflection.moodImage ?? "")
     }
     
     @IBAction func onDismiss(_ sender: UIButton) {
