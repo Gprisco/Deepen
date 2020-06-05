@@ -26,6 +26,8 @@ class MoodViewController: UIViewController {
     
     @IBOutlet weak var scalingCarousel: ScalingCarouselView!
     
+    @IBOutlet weak var plumeMoodView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         scalingCarousel.dataSource = self
@@ -45,10 +47,19 @@ class MoodViewController: UIViewController {
         
         //        Add BubbleEmitter
         addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
+        
+        plumeAnimation()
     }
     
     @IBAction func crossButtonPressed(_ sender: UIButton) {
         reflectionDelegate.clearFlow()
+    }
+    
+    func plumeAnimation()  {
+        UIView.animate(withDuration: 4.0, delay: 0.2, options: [.curveEaseInOut], animations: {
+            self.plumeMoodView.frame = CGRect(x: self.view.frame.width / 2 , y: self.view.frame.height , width: 100, height: 200)
+            self.plumeMoodView.alpha = 0
+        })
     }
 }
 
