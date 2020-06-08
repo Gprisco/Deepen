@@ -50,7 +50,6 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //      Create MusicButton
         createButton(xFrame: self.view.frame.size.width, myView: self.view)
         MusicPlayer.sharedPlayer.playMusic()

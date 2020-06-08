@@ -11,3 +11,68 @@
 "What do you want to talk about?" = "Di cosa vuoi parlare?";
 "What would you have changed?" = "Cosa vorresti cambiare?";
 
+
+// MARK: NOTIFICATION
+"Good Morning" = "Buongiorno";
+"Good Evening" = "Buonasera";
+
+// MARK: MORNING NOTIFICATION QUOTES
+"Make the bed and you will be a hero!" = "Fai il letto e sarai un eroe!";
+"Are we going to eat some fruit today?" = "Oggi mangiamo un po’ di frutta?";
+"Spend some time outdoors, would you like some fresh air?" = "Trascorri un po' di tempo all’aperto, ti va una boccata d’aria?";
+"Put your space in order, today I want a nice clean desk" = "Metti in ordine il tuo spazio, oggi voglio una bella scrivania pulita";
+"Shine more every day and it's fantastic, never give up!" = "Splendi ogni giorno di più ed è fantastico, non mollare mai!";
+"Ready to take on your commitments today? Remember: The greater the obstacle, the more glory in overcoming it." = "Buongiorno (nome utente)! Pronto per affrontare i tuoi impegni oggi? Ricorda: Più grande è l’ostacolo più grande sarà la gloria nel superarlo.";
+"Count 10 seconds before making a decision." = "Conta 10 secondi prima di prendere una decisione.";
+"Today take a moment to walk a bit and relax." = "Oggi prenditi un momento per camminare un po’ e rilassati.";
+"Try to remember what has made you full of energy in the past" = "Cerca di ricordarti cosa ti ha reso pieno di energie in passato";
+"During your next meal, detach yourself from the rest and focus on the flavor" = "Durante il tuo prossimo pasto, distaccati dal resto e assapora quello che mangi";
+"Recite an affirmation: “I already have everything I need to be happy”" = "Recita un’affermazione: “Io ho già tutto quello di cui ho bisogno per essere felice”";
+"Just wanted to say: keep working on yourself, you are doing a great job. Don’t give up!" = "Volevo solo dirti: continua a lavorare su te stesso, stai facendo un ottimo lavoro. Non arrenderti!";
+"Try not to say “no”, but to answer with a “Yes, but…”" = "Prova a non dire “no”, ma a rispondere “Si, ma…”";
+"Take 10 minutes today to reflect on where you are in life and where you want to be heading" = "Prenditi 10 minuti oggi per riflettere su dove sei nella vita e dove vuoi andare";
+"Studying without thinking is useless. Reflecting without studying is dangerous." = "Studiare senza riflettere è inutile. Riflettere senza studiare è pericoloso.";
+"Give each day the chance to be the most beautiful of your life." = "Dai a ogni giornata la possibilità di essere la più bella della tua vita.";
+
+// MARK: EVENING NOTIFICATION QUOTES
+"Mind is complicated. The content might be different but the essence is the same. Understand yourself and you will understand the world." = "La mente è complicata. Il contenuto può cambiare ma l’essenza è la stessa. Conosci te stesso e conoscerai il mondo.";
+"It's time to take some time for you ... How was your day? I can't wait to listen to you" = "E’ il momento di prenderti un po’ di tempo per te… Come è andata la tua giornata? Non vedo l’ora di ascoltarti";
+"What’s on your mind? Remember I’m always here to help." = "Che ti passa per la testa? Ricorda che sono sempre qui se hai bisogno di aiuto.";
+"The important thing is to never stop questioning. Start your reflection!" = "La cosa importante è non smettere mai di interrogarsi. Inizia la tua riflessione!";
+"Find 5 minutes to reflect, you won’t regret ;)" = "Trova 5 min per riflettere, non te ne pentirai ;)";
+"How did your day go? Would you like to talk about it?" = "Come è andata la giornata? Ti va di parlarne?";
+"By opening your mind you learn much more than by opening your mouth. Do you want to reflect?" = "Aprendo gli la mente si impara molto di più che aprendo la bocca. Ti va di riflettere?";
+"Success in life is not given by exceptional events, but by daily dedication." = "Il successo nella vita non è dato da eventi eccezionali, ma da dedizione quotidiana.";
+
+// MARK: REWARDS
+"The thing about meditation is… you become more and more you." = "La cosa bella della meditazione è.. Che diventi sempre di più te stesso.";
+"It does not matter how slowly you go as long as you do not stop." = "Non importa quanto vai piano, l’importante è non fermarsi.";
+"Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time." = "La nostra più grande debolezza sta nel rinunciare. Il modo più sicuro per riuscire è sempre provarci ancora una volta.";
+"Don’t fear difficult moments. The best comes from them." = "Non temete i momenti difficili. Il meglio viene da lì.";
+"Difficulties break some men, but make others." = "Le difficoltà spezzano alcuni uomini, ma ne rafforzano altri.";
+"Change your life today. Don’t gamble on the future, act now, without delay." = "Cambia la tua vita oggi. Non scommettere sul futuro, agisci subito, senza indugio.";
+"The future belongs to those who believe in the beauty of their dreams." = "Il futuro appartiene a coloro che credono nella bellezza dei propri sogni.";
+"You never know how strong you are, until being strong is your only choice." = "Non saprai mai quanto sei forte, finché essere forte è l’unica scelta che hai.";
+"Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better." = "Ho sempre tentato. Ho sempre fallito. Non discutere. Prova ancora. Fallisci ancora. Fallisci meglio.";
+"There will always be rocks in the road ahead of us. They will be stumbling blocks or stepping stones; it all depends on how you use them." = "Ci saranno sempre pietre sulla strada davanti a noi. Saranno ostacoli o trampolini di lancio; tutto dipende da come le usiamo.";
+"Life is 10% what happens to you and 90% how you react to it." = "La vita è per il 10% cosa ti accade e per il 90% come reagisci.";
+"To succeed, work hard, never give up and above all cherish a magnificent obsession." = "Per avere successo, lavora sodo, non mollare mai e soprattutto coltiva una magnifica ossessione.";
+"Just make sure you never do less than your best." = "Assicurati di non fare mai meno del tuo meglio.";
+"It always seems impossible until it’s done." = "Sembra sempre impossibile, finché non viene fatto.";
+"Fall down seven times, stand up eight." = "Cadi sette volte, rialzati otto.";
+"Only those who dare to fail greatly can ever achieve greatly." = "Solo chi osa fallire molto può ottenere grandi risultati.";
+"For the past 33 years, I have looked in the mirror every morning and asked myself: “If today were the last day of my life, would I want to do what I am about to do today?” And whenever the answer has been “No” for too many days in a row, I know I need to change something." = "Negli ultimi 33 anni, mi sono guardato allo specchio ogni mattina e mi sono chiesto: “Se oggi fosse l’ultimo giorno della mia vita, vorrei fare ciò che sto per fare oggi?” E ogni volta che la risposta è stata “No” per troppi giorni di fila, ho capito che bisognava cambiare qualcosa.";
+"Ones best success comes after their greatest disappointments." = "I successi migliori arrivano dopo le più grandi delusioni.";
+"Failure is simply the opportunity to begin again, this time more intelligently." = "Ogni fallimento è semplicemente un’opportunità per ricominciare in modo più intelligente.";
+"I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times, I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed." = "Nella mia vita ho sbagliato più di novemila tiri, ho perso quasi trecento partite, ventisei volte i miei compagni mi hanno affidato il tiro decisivo e l’ho sbagliato. Ho fallito molte volte. Ed è per questo che alla fine ho vinto tutto.";
+"Never confuse a single defeat with a final defeat." = "Mai confondere una singola sconfitta con una sconfitta definitiva.";
+"Don’t wait for extraordinary opportunities. Seize common occasions and make them great. Weak men wait for opportunities; strong men make them." = "Non aspettare grandi opportunità. Cogli le occasioni comuni e rendile grandi. Le persone deboli aspettano le opportunità; le persone forti se le creano.";
+"There is a driving force more powerful than steam, electricity and nuclear power: the will." = "C’è una forza motrice più forte del vapore, dell’elettricità e dell’energia atomica: la volontà.";
+"If you’re not making mistakes, you’re not trying." = "Se non stai facendo errori, non ci stai provando.";
+"It’s better to light a candle than curse the darkness." = "È meglio accendere una candela che maledire il buio.";
+"It is not enough that we do our best; sometimes we must do what is required." = "A volte fare del proprio meglio non è abbastanza. Bisogna fare ciò che è necessario.";
+"The difference between a successful person and others is not a lack of strength, not a lack of knowledge, but rather a lack of will." = "La differenza tra una persona di successo e un’altra non è una mancanza di forza, non una mancanza di conoscenza, ma piuttosto una mancanza di volontà.";
+"It is hard to fail, but it is worse never to have tried to succeed." = "È duro fallire, ma è ancor peggio non aver mai provato ad avere successo.";
+"Only those who dare may fly." = "Vola solo chi osa farlo.";
+"Before you react, think. Before you spend, earn. Before you criticize, wait. Before you quit, try. Prima di agire, ascolta." = "Prima di reagire, pensa. Prima di spendere, guadagna. Prima di criticare, aspetta. Prima di pregare, perdona. Prima di mollare, prova.";
+"In the middle of every difficulty lies an opportunity." = "Nel mezzo delle difficoltà nascono le opportunità.";

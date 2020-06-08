@@ -50,8 +50,11 @@ func scheduleNotifications() {
         scheduledQuestions!.append(newFirstQuestion)
         write(firstQuestion: scheduledQuestions!, in: "first_question")
         
-        schedule(title: "Buongiorno utente!", body: morningQuote.text, at: 9, 30, for: today.day+1)
-        schedule(title: "Buonasera utente!", body: eveningQuote.text, at: 19, 30, for: today.day+1)
+        schedule(title: "\(NSLocalizedString("Good Morning", comment: "Morning title notification")) \(NSUserName())!", body: morningQuote.text, at: 9, 30, for: today.day+1)
+        schedule(title: "\(NSLocalizedString("Good Evening", comment: "Evening title notification")) \(NSUserName())!", body: eveningQuote.text, at: 19, 30, for: today.day+1)
+        
+        
+        
     }
 }
 
