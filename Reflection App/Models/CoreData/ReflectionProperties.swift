@@ -61,6 +61,7 @@ extension Reflection {
     // Read
     func getReflections() -> Reflections? {
         let request = Reflection.getFetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
         
         do {
             let fetchedResult = try AppDelegate.viewContext.fetch(request)
@@ -72,7 +73,7 @@ extension Reflection {
         
         return nil
     }
-        
+    
     // Update
     func updateReflection(_ reflection: Reflection, mood: String, moodImage: String, firstQuestion: String, firstAnswer: String, secondQuestion: String, secondAnswer: String) -> Reflection? {
         reflection.mood = mood

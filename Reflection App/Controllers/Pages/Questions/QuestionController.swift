@@ -52,6 +52,8 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         writeButtonOutlet.backgroundColor = .none
         writeButtonOutlet.layer.cornerRadius = 10
         
+        speechDoneButton.isHidden = true
+        
         //        Add BubbleEmitter
         addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
     }
@@ -60,7 +62,8 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         buttonStackView.isHidden = false
         answerTextView.isHidden = true
         lineWriting.isHidden = true
-        
+        speechDoneButton.isHidden = true
+
         deregisterFromKeyboardNotifications()
     }
     
@@ -75,9 +78,9 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
     }
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {
+        speechDoneButton.isHidden = true
         doneButtonAction()
     }
-    
     
     func setupTextView() {
         let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: self.view.frame.size.width, height: 30)))
@@ -124,6 +127,7 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         buttonStackView.isHidden = true
         answerTextView.isHidden = false
         lineWriting.isHidden = false
+        speechDoneButton.isHidden = false
         self.recordAndRecognizeSpeech()
     }
     
