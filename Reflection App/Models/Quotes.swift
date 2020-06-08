@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias SecondQuestions = [SecondQuestion]
+
 struct Morning {
     let id: Int
     let text: String
@@ -16,6 +18,11 @@ struct Morning {
 
 struct Evening: Codable {
     let morningId: Int?
+    let text: String
+}
+
+struct SecondQuestion {
+    let category: String
     let text: String
 }
 
@@ -46,8 +53,11 @@ let eveningQuotes: [Evening] = [
     Evening(morningId: nil, text: localizableString("Scommetto che hai grandi piani per domani, inizia a scrivere quelli che hai completato oggi"))
 ]
 
+// MARK: Categories (work, health, relationship, study)
+let secondQuestions: SecondQuestions = [
+    SecondQuestion(category: "", text: "")
+]
+
 func localizableString(_ text: String) -> String {
     return NSLocalizedString(text, comment: "Quotes")
 }
-
-

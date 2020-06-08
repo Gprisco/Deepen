@@ -539,7 +539,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Reflection App/Deepen.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_TEAM = MS97L59777;
+				DEVELOPMENT_TEAM = 6GCHYY4YGP;
 				INFOPLIST_FILE = "Reflection App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -561,7 +561,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Reflection App/Deepen.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_TEAM = MS97L59777;
+				DEVELOPMENT_TEAM = 6GCHYY4YGP;
 				INFOPLIST_FILE = "Reflection App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

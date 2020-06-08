@@ -44,6 +44,8 @@ class HistoricalViewController: UIViewController {
         historicalCarousel.backgroundColor = .none
         historicalCarousel.inset = self.view.bounds.width / 4
         
+        reflections = reflections.reversed()
+        
         if reflections.count > 7 {
             reflections = Array(self.reflections[0..<7])
         }

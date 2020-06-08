@@ -30,6 +30,7 @@ extension Date {
 
 func scheduleNotifications() {
     var scheduledQuestions = getData(for: "first_question") ?? nil
+    // Randomizing content
     
     if (scheduledQuestions == nil) || scheduledQuestions!.last!.scheduledAt.day != Date().day {
         let today = Date()
@@ -52,9 +53,6 @@ func scheduleNotifications() {
         
         schedule(title: "\(NSLocalizedString("Good Morning", comment: "Morning title notification")) \(NSUserName())!", body: morningQuote.text, at: 9, 30, for: today.day+1)
         schedule(title: "\(NSLocalizedString("Good Evening", comment: "Evening title notification")) \(NSUserName())!", body: eveningQuote.text, at: 19, 30, for: today.day+1)
-        
-        
-        
     }
 }
 

@@ -33,6 +33,11 @@ class RewardController: UIViewController {
         self.textViewReward.text = rewardText
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.plumeImage.frame.origin.y = self.labelReward.frame.origin.y
+        self.plumeImage.alpha = 1.0
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,7 +54,7 @@ class RewardController: UIViewController {
     
     func plumeAnimation()  {
         UIView.animate(withDuration: 4.0, delay: 0.2, options: [.curveEaseInOut], animations: {
-            self.plumeImage.frame = CGRect(x: self.view.frame.width / 2 , y: self.perlaImage.frame.origin.y , width: 100, height: 200)
+            self.plumeImage.frame = CGRect(x: self.view.frame.width / 2 , y: self.perlaImage.frame.origin.y, width: 100, height: 200)
             self.plumeImage.alpha = 0
         })
     }

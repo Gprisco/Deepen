@@ -61,7 +61,7 @@ class ReflectController: UIViewController {
         buttonToPress.imageView?.animationDuration = 4
         buttonToPress.imageView?.animationImages = moveB
         
-        DispatchQueue.main.asyncAfter(deadline:DispatchTime.now()+0.5){
+        DispatchQueue.main.asyncAfter(deadline:DispatchTime.now()){
             self.backgroundImage.startAnimating()
             self.buttonToPress.imageView?.startAnimating()
         }

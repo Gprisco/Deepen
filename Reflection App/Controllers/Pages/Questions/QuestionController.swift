@@ -112,6 +112,7 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         answerTextView.isHidden = true
         lineWriting.isHidden = true
         buttonStackView.isHidden = false
+        audioEngine.inputNode.removeTap(onBus: 0)
         audioEngine.stop()
         reflectionDelegate.nextStep()
     }

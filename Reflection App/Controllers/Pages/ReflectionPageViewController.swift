@@ -92,7 +92,7 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
             
             categoryQuestionPage.backgroundImageName = self.pageBackgrounds[2]
             categoryQuestionPage.moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confuso", "benedetto", "arrabbiato"]
-            categoryQuestionPage.moods = ["Stressed", "Scared", "Lucky", "Happy", "Energic", "Depressed", "Confused", "Blessed", "Angry"]
+            categoryQuestionPage.moods = ["Work", "Health", "Relationship", "Study", "Choose for me"]
             categoryQuestionPage.type = "category"
             categoryQuestionPage.sectionTitleString = NSLocalizedString("What do you want to talk about?", comment: "Second mood")
             categoryQuestionPage.reflectionDelegate = self
