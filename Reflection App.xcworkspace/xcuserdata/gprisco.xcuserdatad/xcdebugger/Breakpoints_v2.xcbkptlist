@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "DB5C788B-705D-4B43-A201-8079EAD30E38"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD5ED5C0-E95C-46AB-9374-A6D5A89CF2E1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reflection App/Controllers/Pages/Questions/QuestionController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "recordAndRecognizeSpeech()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2298F50-C09B-4D38-A95C-3A6F7A2209D7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reflection App/Controllers/Pages/Questions/QuestionController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "recordAndRecognizeSpeech()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "632057F2-910D-4A53-A452-85B7B2C33E53"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reflection App/Controllers/Pages/Questions/QuestionController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "recordAndRecognizeSpeech()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "692E978C-317F-40AA-B57E-822AB242FF85"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reflection App/Controllers/Pages/Questions/QuestionController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "recordAndRecognizeSpeech()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "692E978C-317F-40AA-B57E-822AB242FF85 - 7fc6253d9ace55c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in closure #1 () -&gt; () in closure #1 (__C.SFSpeechRecognizerAuthorizationStatus) -&gt; () in Deepen.QuestionController.recordAndRecognizeSpeech() -&gt; ()"
+                  moduleName = "Deepen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gprisco/Desktop/workspace/Swift/Reflection%20App/Reflection%20App/Controllers/Pages/Questions/QuestionController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159"
+                  offsetFromSymbolStart = "548">
+               </Location>
+               <Location
+                  uuid = "692E978C-317F-40AA-B57E-822AB242FF85 - bc66a76234780a10"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.AVAudioPCMBuffer, __C.AVAudioTime) -&gt; () in closure #1 (Swift.Bool) -&gt; () in closure #1 () -&gt; () in closure #1 (__C.SFSpeechRecognizerAuthorizationStatus) -&gt; () in Deepen.QuestionController.recordAndRecognizeSpeech() -&gt; ()"
+                  moduleName = "Deepen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gprisco/Desktop/workspace/Swift/Reflection%20App/Reflection%20App/Controllers/Pages/Questions/QuestionController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA7B5EBC-6BD3-4F56-BF75-7FAB6FAB3478"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reflection App/Controllers/Pages/Questions/QuestionController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "recordAndRecognizeSpeech()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "851AE49F-7888-4BF3-AE9D-2E40F17B307F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reflection App/Controllers/Pages/Questions/QuestionController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "recordAndRecognizeSpeech()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
