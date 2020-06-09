@@ -30,7 +30,7 @@ class RewardController: UIViewController {
         
         plumeAnimation()
         self.perlaImage.startAnimating()
-        self.textViewReward.text = rewardText
+        self.textViewReward.text = rewardQuotes[Int.random(in: 0..<firstQuestions.count)].text
     }
     
     override func viewWillDisappear(_ animated: Bool) {
