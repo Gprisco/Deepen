@@ -21,6 +21,8 @@ class MoodViewController: UIViewController {
     
     var moodImages: [String]!
     var moods: [String]!
+    var categories: [String]!
+    
     var icons = [UIImage]()
     var type: String!
     
@@ -88,7 +90,7 @@ extension MoodViewController: UICollectionViewDataSource, UICollectionViewDelega
         if type == "mood" {
             reflectionDelegate.onMoodChoice(mood: moods[indexPath.item], moodImage: moodImages[indexPath.item])
         } else if type == "category" {
-            reflectionDelegate.onCategoryChoice(category: moods[indexPath.item], categoryImage: moodImages[indexPath.item])
+            reflectionDelegate.onCategoryChoice(category: categories[indexPath.item], categoryImage: moodImages[indexPath.item])
         }
         reflectionDelegate.nextStep()
     }

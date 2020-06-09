@@ -6,7 +6,14 @@
   Copyright © 2020 Giovanni Prisco. All rights reserved.
 */
 
-"How did it go today?" = "Come è andata oggi?";
+//MARK: First Questions
+"How did it go today?" = "Com'è andata oggi?";
+"Wanna write something about your day?" = "Ti va di dire qualcosa sulla tua giornata?";
+"How about your day?" = "Descrivi la tua giornata";
+"Write something" = "Scrivi qualcosa";
+"My day was..." = "Oggi è stato...";
+"I achieved..." = "Oggi sono riuscito a...";
+
 "How do you feel today?" = "Come ti senti oggi?";
 "What do you want to talk about?" = "Di cosa vuoi parlare?";
 "What would you have changed?" = "Cosa vorresti cambiare?";
@@ -100,3 +107,42 @@
 "Don’t find fault, find a remedy." = "Non trovare il difetto. Trova il rimedio.";
 "It isn’t where you came from. It’s where you’re going that counts." = "Non è da dove vieni. È dove stai andando ciò che conta.";
 "When one door closes another door opens; but we so often look so long and so regretfully upon the closed door, that we do not see the ones which open for us." = "Quando una porta si chiude, un’altra porta si apre; ma tante volte guardiamo così a lungo quella chiusa, che non vediamo quell’altra che si è appena aperta per noi.";
+
+// MARK: Second Questions
+"Do you struggle with procrastination?" = "Hai problemi con la procrastinazione?";
+"Are you spending time on things really important to you?" = "Stai spendendo tempo sulle cose davvero importanti per te?";
+"Where do you see yourself in 5 or 10 years?" = "Dove ti vedi tra 5 o 10 anni?";
+"List 3 work experiences you would like to have in your life but you have not yet done" = "Elenca 3 esperienze lavorative che vorresti fare nella tua vita ma che ancora non hai fatto";
+"What is preventing you from finding the ideal job?" = "Che cosa ti sta impedendo di trovare il lavoro ideale?";
+"What are the things you should spend most time on?" = "Quali sono le cose a cui dovresti dedicare più tempo?";
+"Are you spending your time with the right people?" = "Stai trascorrendo il tuo tempo con le persone giuste?";
+"If you moved to the other side of the world, what would you miss most of what you have today?" = "Se ti trasferissi dall’altra parte del mondo, cosa ti mancherebbe di più di ciò che hai oggi ?";
+"Who are the people who make you feel comfortable?" = "Quali sono le persone che ti fanno sentire a tuo agio?";
+"What are the features you are looking for in a friend?" = "Quali sono le caratteristiche che cerchi in un amico?";
+"What is the main flaw that others recognize in you?" = "Qual è il principale difetto che gli altri riconoscono in te?";
+"What are your healthy and changing habits?" = "Quali sono le tue abitudini sane e quali quelle da cambiare?";
+"Which word would best describe the way you spent the last month of your life?" = "Quale parola descriverebbe meglio il modo in cui hai trascorso l’ultimo mese della tua vita?";
+"What do you do when you don't feel happy?" = "Cosa fai quando non ti senti felice?";
+"What is the main change you need to make in your life?" = "Qual è il principale cambiamento che hai bisogno di realizzare nella tua vita?";
+"What are you able to do today that you didn't know how to do a year ago?" = "Cosa sei in grado di fare oggi che non sapevi fare un anno fa?";
+"What have you recently learned about yourself again?" = "Cos'è che recentemente hai imparato di nuovo su te stesso?";
+"What are the activities that attract your attention?" = "Quali sono le attività che attirano la tua attenzione?";
+"What is the most satisfying thing for you?" = "Qual è la cosa più soddisfacente per te?";
+"What would you like to improve about yourself?" = "Cosa vorresti migliorare di te stesso?";
+"Make a list of your flaws. Include all the criticisms they have addressed you and that you have absorbed" = "Fai una lista dei tuoi difetti. Includi tutte le critiche che ti hanno rivolto e che hai assorbito";
+"Make a list of your positives aspects" = " Fai una lista dei tuoi aspetti positivi";
+"If you had the ability to choose something you can do all day, what would you choose?" = "Se avessi facoltà di scegliere una cosa che puoi fare tutto il giorno, che cosa sceglieresti?";
+"What was your childhood dream?" = "Qual era il tuo sogno da bambina/o?";
+"What's the most important thing for you that you've done so far?" = "Qual è la cosa più importante per te che hai fatto finora?";
+"What's the stupidest thing you've ever done in life?" = "Qual è la cosa più stupida che hai fatto nella vita?";
+"What's the best thing that could happen to you now?" = "Qual è la cosa migliore che ti potrebbe capitare ora?";
+"Do you have any regrets?" = "Hai qualche rimpianto?";
+"What do you usually think before falling asleep?" = "Che cosa pensi, di solito, prima di addormentarti?";
+"If you had the chance to change one thing in your life right now, what would you change?" = "Se avessi la possibilità di cambiare una cosa nella tua vita, proprio ora, che cosa cambieresti?";
+"In one sentence, who are you?" = "In un a sola frase: chi sei tu?";
+"What do you want to be appreciated for?" = "Per cosa vuoi essere apprezzato?";
+"What fear of making mistakes prevented you from doing?" = "La paura di sbagliare cosa ti ha impedito di compiere?";
+"What are the problems you keep refusing to face?" = "Quali sono i problemi che continui a rifiutarti di affrontare?";
+"What is the thing you've done that you're most proud of?" = "Qual è la cosa che hai fatto di cui sei maggiormente orgoglioso?";
+"What have you changed your opinion in recent times?" = "Riguardo a cosa hai cambiato opinione negli ultimi tempi?";
+"If you could go back in time and give yourself advice as a young person, what advice would you give yourself?" = "Se potessi tornare indietro nel tempo e dare un consiglio a te stesso da giovane, quale consiglio ti daresti?";

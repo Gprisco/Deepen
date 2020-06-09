@@ -60,11 +60,14 @@ let eveningQuotes: [Evening] = [
     Evening(morningId: nil, text: localizableString("Success in life is not given by exceptional events, but by daily dedication."))
 ]
 
-
-let firstQuestion: [String] = [
-    "",
-    
-]
+let firstQuestions: [String] = localizableStrings([
+    "How did it go today?",
+    "Wanna write something about your day?",
+    "How about your day?",
+    "Write something",
+    "My day was...",
+    "I achieved..."
+])
 
 let rewardQuotes: [Reward] = [
     Reward(text: localizableString("The thing about meditation is… you become more and more you.")),
@@ -104,13 +107,47 @@ let rewardQuotes: [Reward] = [
     Reward(text: localizableString("Don’t find fault, find a remedy.")),
     Reward(text: localizableString("It isn’t where you came from. It’s where you’re going that counts.")),
     Reward(text: localizableString("When one door closes another door opens; but we so often look so long and so regretfully upon the closed door, that we do not see the ones which open for us."))
-    
 ]
 
 // MARK: Categories (work, health, relationship, study)
 let secondQuestions: SecondQuestions = [
-    SecondQuestion(category: "", text: "")
-]
+    SecondQuestion(category: "work", text: localizableString("Do you struggle with procrastination?")),
+    SecondQuestion(category: "work", text: localizableString("Are you spending time on things really important to you?")),
+    SecondQuestion(category: "work", text: localizableString("Where do you see yourself in 5 or 10 years?")),
+    SecondQuestion(category: "work", text: localizableString("List 3 work experiences you would like to have in your life but you have not yet done")),
+    SecondQuestion(category: "work", text: localizableString("What is preventing you from finding the ideal job?")),
+    SecondQuestion(category: "work", text: localizableString("What are the things you should spend most time on?")),
+    SecondQuestion(category: "relationship", text: localizableString("Are you spending your time with the right people?")),
+    SecondQuestion(category: "relationship", text: localizableString("If you moved to the other side of the world, what would you miss most of what you have today?")),
+    SecondQuestion(category: "relationship", text: localizableString("Who are the people who make you feel comfortable?")),
+    SecondQuestion(category: "relationship", text: localizableString("What are the features you are looking for in a friend?")),
+    SecondQuestion(category: "relationship", text: localizableString("What is the main flaw that others recognize in you?")),
+    SecondQuestion(category: "health", text: localizableString("What are your healthy and changing habits?")),
+    SecondQuestion(category: "health", text: localizableString("Which word would best describe the way you spent the last month of your life?")),
+    SecondQuestion(category: "health", text: localizableString("What do you do when you don't feel happy?")),
+    SecondQuestion(category: "health", text: localizableString("What is the main change you need to make in your life?")),
+    SecondQuestion(category: "study", text: localizableString("What are you able to do today that you didn't know how to do a year ago?")),
+    SecondQuestion(category: "study", text: localizableString("What have you recently learned about yourself again?")),
+    SecondQuestion(category: "study", text: localizableString("What are the activities that attract your attention?")),
+    SecondQuestion(category: "choose for me", text: localizableString("What is the most satisfying thing for you?")),
+    SecondQuestion(category: "choose for me", text: localizableString("What would you like to improve about yourself?")),
+    SecondQuestion(category: "choose for me", text: localizableString("Make a list of your flaws. Include all the criticisms they have addressed you and that you have absorbed")),
+    SecondQuestion(category: "choose for me", text: localizableString("Make a list of your positives aspects")),
+    SecondQuestion(category: "choose for me", text: localizableString("If you had the ability to choose something you can do all day, what would you choose?")),
+    SecondQuestion(category: "choose for me", text: localizableString("What was your childhood dream?")),
+    SecondQuestion(category: "choose for me", text: localizableString("What's the most important thing for you that you've done so far?")),
+    SecondQuestion(category: "choose for me", text: localizableString("What's the stupidest thing you've ever done in life?")),
+    SecondQuestion(category: "choose for me", text: localizableString("What's the best thing that could happen to you now?")),
+    SecondQuestion(category: "choose for me", text: localizableString("Do you have any regrets?")),
+    SecondQuestion(category: "choose for me", text: localizableString("What do you usually think before falling asleep?")),
+    SecondQuestion(category: "choose for me", text: localizableString("If you had the chance to change one thing in your life right now, what would you change?")),
+    SecondQuestion(category: "choose for me", text: localizableString("In one sentence, who are you?")),
+    SecondQuestion(category: "choose for me", text: localizableString("What do you want to be appreciated for?")),
+    SecondQuestion(category: "choose for me", text: localizableString("What fear of making mistakes prevented you from doing?")),
+    SecondQuestion(category: "choose for me", text: localizableString("What are the problems you keep refusing to face?")),
+    SecondQuestion(category: "choose for me", text: localizableString("What is the thing you've done that you're most proud of?")),
+    SecondQuestion(category: "choose for me", text: localizableString("What have you changed your opinion in recent times?")),
+    SecondQuestion(category: "choose for me", text: localizableString("If you could go back in time and give yourself advice as a young person, what advice would you give yourself?")),]
 
 func localizableString(_ text: String) -> String {
     return NSLocalizedString(text, comment: "Quotes")
@@ -120,7 +157,7 @@ func localizableStrings(_ texts: [String]) -> [String] {
     var output = [String]()
     
     for text in texts {
-        output.append(text)
+        output.append(NSLocalizedString(text, comment: "Mood/Emotion"))
     }
     
     return output

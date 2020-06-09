@@ -33,11 +33,16 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
     @IBOutlet weak var speechDoneButton: UIButton!
     
     var audioEngine = AVAudioEngine()
-        
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.backgroundImage.image = UIImage(named: self.imageName)
+        
+        if step == 2 {
+            let categoryQuestions = secondQuestions.filter({ $0.category == category.lowercased() })
+            questionLabel.text = categoryQuestions[Int.random(in: 0..<categoryQuestions.count)].text
+        }
         
         speechDoneButton.layer.cornerRadius = 10
         speechDoneButton.clipsToBounds = true
@@ -48,13 +53,17 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        questionLabel.text = question
         answerTextView.text = answer
         
-        if step == 2 {
-            questionLabel.text = "Seconda Domanda"
+        if step == 1 {
+            questionLabel.text = firstQuestions[Int.random(in: 0..<firstQuestions.count)]
         }
-                
+        
+        if step == 2 {
+            let categoryQuestions = secondQuestions.filter({ $0.category == category.lowercased() })
+            questionLabel.text = categoryQuestions[Int.random(in: 0..<categoryQuestions.count)].text
+        }
+        
         writeButtonOutlet.backgroundColor = .none
         writeButtonOutlet.layer.cornerRadius = 10
         
@@ -63,7 +72,7 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         //        Add BubbleEmitter
         addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
     }
-    
+        
     override func viewWillDisappear(_ animated: Bool) {
         buttonStackView.isHidden = false
         answerTextView.isHidden = true

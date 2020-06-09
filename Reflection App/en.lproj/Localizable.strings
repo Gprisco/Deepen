@@ -6,7 +6,14 @@
   Copyright © 2020 Giovanni Prisco. All rights reserved.
 */
 
+//MARK: First Questions
 "How did it go today?" = "How did it go today?";
+"Wanna write something about your day?" = "Wanna write something about your day?";
+"How about your day?" = "How about your day?";
+"Write something" = "Write something";
+"My day was..." = "My day was...";
+"I achieved..." = "I achieved...";
+
 "How do you feel today?" = "How do you feel today?";
 "What do you want to talk about?" = "What do you want to talk about?";
 "What would you have changed?" = "What would you have changed?";
@@ -100,3 +107,42 @@
 "Don’t find fault, find a remedy." = "Don’t find fault, find a remedy.";
 "It isn’t where you came from. It’s where you’re going that counts." = "It isn’t where you came from. It’s where you’re going that counts.";
 "When one door closes another door opens; but we so often look so long and so regretfully upon the closed door, that we do not see the ones which open for us." = "When one door closes another door opens; but we so often look so long and so regretfully upon the closed door, that we do not see the ones which open for us.";
+
+// MARK: Second Questions
+"Do you struggle with procrastination?" = "Do you struggle with procrastination?";
+"Are you spending time on things really important to you?" = "Are you spending time on things really important to you?";
+"Where do you see yourself in 5 or 10 years?" = "Where do you see yourself in 5 or 10 years?";
+"List 3 work experiences you would like to have in your life but you have not yet done" = "List 3 work experiences you would like to have in your life but you have not yet done";
+"What is preventing you from finding the ideal job?" = "What is preventing you from finding the ideal job?";
+"What are the things you should spend most time on?" = "What are the things you should spend most time on?";
+"Are you spending your time with the right people?" = "Are you spending your time with the right people?";
+"If you moved to the other side of the world, what would you miss most of what you have today?" = "If you moved to the other side of the world, what would you miss most of what you have today?";
+"Who are the people who make you feel comfortable?" = "Who are the people who make you feel comfortable?";
+"What are the features you are looking for in a friend?" = "What are the features you are looking for in a friend?";
+"What is the main flaw that others recognize in you?" = "What is the main flaw that others recognize in you?";
+"What are your healthy and changing habits?" = "What are your healthy and changing habits?";
+"Which word would best describe the way you spent the last month of your life?" = "Which word would best describe the way you spent the last month of your life?";
+"What do you do when you don't feel happy?" = "What do you do when you don't feel happy?";
+"What is the main change you need to make in your life?" = "What is the main change you need to make in your life?";
+"What are you able to do today that you didn't know how to do a year ago?" = "What are you able to do today that you didn't know how to do a year ago?";
+"What have you recently learned about yourself again?" = "What have you recently learned about yourself again?";
+"What are the activities that attract your attention?" = "What are the activities that attract your attention?";
+"What is the most satisfying thing for you?" = "What is the most satisfying thing for you?";
+"What would you like to improve about yourself?" = "What would you like to improve about yourself?";
+"Make a list of your flaws. Include all the criticisms they have addressed you and that you have absorbed" = "Make a list of your flaws. Include all the criticisms they have addressed you and that you have absorbed";
+"Make a list of your positives aspects" = "Make a list of your positives aspects";
+"If you had the ability to choose something you can do all day, what would you choose?" = "If you had the ability to choose something you can do all day, what would you choose?";
+"What was your childhood dream?" = "What was your childhood dream?";
+"What's the most important thing for you that you've done so far?" = "What's the most important thing for you that you've done so far?";
+"What's the stupidest thing you've ever done in life?" = "What's the stupidest thing you've ever done in life?";
+"What's the best thing that could happen to you now?" = "What's the best thing that could happen to you now?";
+"Do you have any regrets?" = "Do you have any regrets?";
+"What do you usually think before falling asleep?" = "What do you usually think before falling asleep?";
+"If you had the chance to change one thing in your life right now, what would you change?" = "If you had the chance to change one thing in your life right now, what would you change?";
+"In one sentence, who are you?" = "In one sentence, who are you?";
+"What do you want to be appreciated for?" = "What do you want to be appreciated for?";
+"What fear of making mistakes prevented you from doing?" = "What fear of making mistakes prevented you from doing?";
+"What are the problems you keep refusing to face?" = "What are the problems you keep refusing to face?";
+"What is the thing you've done that you're most proud of?" = "What is the thing you've done that you're most proud of?";
+"What have you changed your opinion in recent times?" = "What have you changed your opinion in recent times?";
+"If you could go back in time and give yourself advice as a young person, what advice would you give yourself?" = "If you could go back in time and give yourself advice as a young person, what advice would you give yourself?";
