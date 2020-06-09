@@ -25,7 +25,11 @@ class HistoricalPageViewController: UIPageViewController, UIPageViewControllerDe
             reflectView.historicalDelegate = self
             
             historicalView.historicalDelegate = self
-            historicalView.reflections = Array(self.reflections[0..<7])
+            if self.reflections.count > 7 {
+                historicalView.reflections = Array(self.reflections[0..<7])
+            } else {
+                historicalView.reflections = self.reflections
+            }
         }
         
         pages = [historicalView, reflectView]
