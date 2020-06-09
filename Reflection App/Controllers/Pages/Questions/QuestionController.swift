@@ -15,6 +15,8 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
     var reflectionDelegate: ReflectionDelegate!
     var step: Int!
     
+    var category: String!
+    
     @IBOutlet var backgroundImage: UIImageView!
     var imageName: String!
     
@@ -49,6 +51,10 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         questionLabel.text = question
         answerTextView.text = answer
         
+        if step == 2 {
+            questionLabel.text = "Seconda Domanda"
+        }
+                
         writeButtonOutlet.backgroundColor = .none
         writeButtonOutlet.layer.cornerRadius = 10
         

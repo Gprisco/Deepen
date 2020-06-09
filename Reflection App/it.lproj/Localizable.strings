@@ -11,6 +11,24 @@
 "What do you want to talk about?" = "Di cosa vuoi parlare?";
 "What would you have changed?" = "Cosa vorresti cambiare?";
 
+// MARK: CATEGORIE
+"Work" = "Lavoro";
+"Health" = "Salute";
+"Relationship" = "Relazioni";
+"Study" = "Studio";
+"Choose for me" = "Scegli per me";
+
+// MARK: EMOZIONI
+"Stressed" = "Stressato";
+"Scared" = "Spaventato";
+"Lucky" = "Fortunato";
+"Happy" = "Felice";
+"Energic" = "Energico";
+"Depressed" = "Depresso";
+"Confused" = "Confuso";
+"Blessed" = "Benedetto";
+"Angry" = "Arrabbiato";
+"Sad" = "Triste";
 
 // MARK: NOTIFICATION
 "Good Morning" = "Buongiorno";

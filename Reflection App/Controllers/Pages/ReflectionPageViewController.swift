@@ -84,15 +84,15 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
             firstQuestionPage.step = 1
             
             moodQuestionPage.backgroundImageName = self.pageBackgrounds[2]
-            moodQuestionPage.moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confuso", "benedetto", "arrabbiato"]
-            moodQuestionPage.moods = ["Stressed", "Scared", "Lucky", "Happy", "Energic", "Depressed", "Confused", "Blessed", "Angry"]
+            moodQuestionPage.moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confuso", "benedetto", "arrabbiato", "triste"]
+            moodQuestionPage.moods = localizableStrings(["Stressed", "Scared", "Lucky", "Happy", "Energic", "Depressed", "Confused", "Blessed", "Angry", "Sad"])
             moodQuestionPage.type = "mood"
             moodQuestionPage.sectionTitleString = NSLocalizedString("How do you feel today?", comment: "First mood")
             moodQuestionPage.reflectionDelegate = self
             
             categoryQuestionPage.backgroundImageName = self.pageBackgrounds[2]
             categoryQuestionPage.moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confuso", "benedetto", "arrabbiato"]
-            categoryQuestionPage.moods = ["Work", "Health", "Relationship", "Study", "Choose for me"]
+            categoryQuestionPage.moods = localizableStrings(["Work", "Health", "Relationship", "Study", "Choose for me"])
             categoryQuestionPage.type = "category"
             categoryQuestionPage.sectionTitleString = NSLocalizedString("What do you want to talk about?", comment: "Second mood")
             categoryQuestionPage.reflectionDelegate = self
@@ -136,6 +136,10 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
 extension ReflectionPageViewController: ReflectionDelegate {
     func nextStep() {
         currentPage = currentPage < maxPage ? currentPage + 1 : currentPage
+        
+        if let destinationVC = pages[currentPage] as? QuestionController {
+            destinationVC.category = category
+        }
         
         self.setViewControllers([pages[currentPage]], direction: .forward, animated: true, completion: { success in
             if let transiton = self.transitionCoordinator {

@@ -61,3 +61,13 @@ let secondQuestions: SecondQuestions = [
 func localizableString(_ text: String) -> String {
     return NSLocalizedString(text, comment: "Quotes")
 }
+
+func localizableStrings(_ texts: [String]) -> [String] {
+    var output = [String]()
+    
+    for text in texts {
+        output.append(text)
+    }
+    
+    return output
+}

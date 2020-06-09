@@ -11,6 +11,25 @@
 "What do you want to talk about?" = "What do you want to talk about?";
 "What would you have changed?" = "What would you have changed?";
 
+// MARK: CATEGORIE
+"Work" = "Work";
+"Health" = "Health";
+"Relationship" = "Relationship";
+"Study" = "Study";
+"Choose for me" = "Choose for me";
+
+// MARK: EMOZIONI
+"Stressed" = "Stressed";
+"Scared" = "Scared";
+"Lucky" = "Lucky";
+"Happy" = "Happy";
+"Energic" = "Energic";
+"Depressed" = "Depressed";
+"Confused" = "Confused";
+"Blessed" = "Blessed";
+"Angry" = "Angry";
+"Sad" = "Sad";
+
 // MARK: NOTIFICATION
 "Good Morning" = "Good Morning";
 "Good Evening" = "Good Evening";
