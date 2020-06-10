@@ -17,6 +17,8 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
     
     var category: String!
     
+    @IBOutlet weak var plumeQuestionView: UIImageView!
+    
     @IBOutlet var backgroundImage: UIImageView!
     var imageName: String!
     
@@ -44,11 +46,16 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
             questionLabel.text = categoryQuestions[Int.random(in: 0..<categoryQuestions.count)].text
         }
         
+        
+        plumeAnimation()
+        
         speechDoneButton.layer.cornerRadius = 10
         speechDoneButton.clipsToBounds = true
         setupTextView()
         registerForKeyboardNotifications()
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,11 +64,13 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         
         if step == 1 {
             questionLabel.text = firstQuestions[Int.random(in: 0..<firstQuestions.count)]
+            self.plumeQuestionView.alpha = 0.8
         }
         
         if step == 2 {
             let categoryQuestions = secondQuestions.filter({ $0.category == category.lowercased() })
             questionLabel.text = categoryQuestions[Int.random(in: 0..<categoryQuestions.count)].text
+            self.plumeQuestionView.alpha = 0
         }
         
         writeButtonOutlet.backgroundColor = .none
@@ -72,14 +81,21 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         //        Add BubbleEmitter
         addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
     }
-        
+    
     override func viewWillDisappear(_ animated: Bool) {
         buttonStackView.isHidden = false
         answerTextView.isHidden = true
         lineWriting.isHidden = true
         speechDoneButton.isHidden = true
-
+        
         deregisterFromKeyboardNotifications()
+        self.plumeQuestionView.alpha = 0.8
+        self.plumeQuestionView.frame.origin.y = self.view.frame.origin.y - 30
+        
+        if step == 2 {
+            
+            self.plumeQuestionView.alpha = 0
+        }
     }
     
     @IBAction func crossButtonPressed(_ sender: UIButton) {
@@ -259,5 +275,12 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         self.answerTextView.scrollIndicatorInsets = contentInsets
         self.view.endEditing(true)
         self.answerTextView.isScrollEnabled = false
+    }
+    
+    func plumeAnimation()  {
+        UIView.animate(withDuration: 5.0, delay: 0.2, options: [.curveEaseIn], animations: {
+            self.plumeQuestionView.frame = CGRect(x: self.view.frame.width / 2 , y: self.view.frame.maxY/3.5 , width: 100, height: 200)
+            self.plumeQuestionView.alpha = 0
+        })
     }
 }

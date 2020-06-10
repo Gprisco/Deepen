@@ -23,19 +23,22 @@ class RewardController: UIViewController {
     
     var imageName: String!
     
+    let labelRewardArray = localizableStrings(["Well Done!", "Awesome!", "Cool!", "Nice Job!", "Fantastic!", "Fabulous!", "Great!" ])
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.backgroundImage.image = UIImage(named: self.imageName)
-        
+        self.plumeImage.alpha = 0.2
         plumeAnimation()
         self.perlaImage.startAnimating()
-        self.textViewReward.text = rewardQuotes[Int.random(in: 0..<firstQuestions.count)].text
+        self.textViewReward.text = rewardQuotes[Int.random(in: 0..<rewardQuotes.count)].text
+        self.labelReward.text = labelRewardArray[Int.random(in: 0..<labelRewardArray.count)]
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.plumeImage.frame.origin.y = self.labelReward.frame.origin.y
-        self.plumeImage.alpha = 1.0
+        self.plumeImage.alpha = 0.2
     }
     
     override func viewDidLoad() {
