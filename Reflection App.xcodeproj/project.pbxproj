@@ -25,6 +25,7 @@
 		01D667F6247560680024634C /* MoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D667F5247560680024634C /* MoodCell.swift */; };
 		01D667F8247576470024634C /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D667F7247576470024634C /* HistoricalViewController.swift */; };
 		01D667FA247579400024634C /* HistoricalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D667F9247579400024634C /* HistoricalCell.swift */; };
+		34E23A19249125050035574C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E23A18249125050035574C /* OnboardingViewController.swift */; };
 		881DD7BE246D748500DB895F /* BubbleEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DD7BD246D748500DB895F /* BubbleEmitter.swift */; };
 		881DD7C0246D764300DB895F /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DD7BF246D764300DB895F /* MusicPlayer.swift */; };
 		885F632B247FE83F00CE3E95 /* relax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 885F632A247FE83E00CE3E95 /* relax.mp3 */; };
@@ -60,6 +61,7 @@
 		01D667F7247576470024634C /* HistoricalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewController.swift; sourceTree = "<group>"; };
 		01D667F9247579400024634C /* HistoricalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalCell.swift; sourceTree = "<group>"; };
 		033B49802D587245CAC155A4 /* Pods-Reflection App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reflection App.debug.xcconfig"; path = "Target Support Files/Pods-Reflection App/Pods-Reflection App.debug.xcconfig"; sourceTree = "<group>"; };
+		34E23A18249125050035574C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		881DD7BD246D748500DB895F /* BubbleEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleEmitter.swift; sourceTree = "<group>"; };
 		881DD7BF246D764300DB895F /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		885F632A247FE83E00CE3E95 /* relax.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = relax.mp3; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				01D667C62465A59F0024634C /* Info.plist */,
 				885F632A247FE83E00CE3E95 /* relax.mp3 */,
 				88C75E3924741BCD00A8E46C /* Piuma.pdf */,
+				34E23A18249125050035574C /* OnboardingViewController.swift */,
 			);
 			path = "Reflection App";
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				01D667E7246D99C30024634C /* Reflection.swift in Sources */,
 				01D667FA247579400024634C /* HistoricalCell.swift in Sources */,
 				881DD7C0246D764300DB895F /* MusicPlayer.swift in Sources */,
+				34E23A19249125050035574C /* OnboardingViewController.swift in Sources */,
 				8868580E24892D1200FABC5E /* ReflectionDetailsViewController.swift in Sources */,
 				01D667CD24697D6B0024634C /* Notifications.swift in Sources */,
 				88A6944B246ED3E200A64C52 /* MoodViewController.swift in Sources */,
