@@ -30,7 +30,7 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     
     func createButton(xFrame: CGFloat, myView: UIView) {        
         musicButton.frame = CGRect(x: xFrame - 50, y: 60, width: 50, height: 50)
-        musicButton.setImage(UIImage(systemName: "music.note")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal)
+        musicButton.setImage(UIImage(named: "musica-on")?.withTintColor(.white, renderingMode: .alwaysOriginal)
             , for: UIControl.State.normal)
         musicButton.addTarget(self, action: #selector(musicButtonPressed), for: .touchUpInside)
         myView.addSubview(musicButton)
@@ -38,12 +38,12 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     
     @objc func musicButtonPressed(sender: UIButton!) {
         if sender.tag == 0 {
-            sender.setImage(UIImage(systemName: "speaker.slash.fill")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal), for: UIControl.State.normal)
+            sender.setImage(UIImage(named: "musica-off")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: UIControl.State.normal)
             MusicPlayer.sharedPlayer.stopMusic()
             sender.tag = 1
         } else {
             MusicPlayer.sharedPlayer.playMusic()
-            sender.setImage(UIImage(systemName: "music.note")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal), for: UIControl.State.normal)
+            sender.setImage(UIImage(named: "musica-on")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: UIControl.State.normal)
             sender.tag = 0
         }
     }
@@ -53,7 +53,7 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
         //      Create MusicButton
         createButton(xFrame: self.view.frame.size.width, myView: self.view)
         MusicPlayer.sharedPlayer.playMusic()
-        
+        musicButton.imageView?.layer.transform = CATransform3DMakeScale(0.2, 0.25, 0.2)
         //        Constraint MusicButton
         musicButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: musicButton, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1, constant: 20).isActive = true

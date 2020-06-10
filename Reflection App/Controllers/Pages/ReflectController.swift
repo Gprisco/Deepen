@@ -37,9 +37,9 @@ class ReflectController: UIViewController {
             DispatchQueue.main.async {
                 self.historicalButtonOutlet.translatesAutoresizingMaskIntoConstraints = false
                 
-                NSLayoutConstraint(item: self.historicalButtonOutlet!, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: -10).isActive = true
+                NSLayoutConstraint(item: self.historicalButtonOutlet!, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: 20).isActive = true
                 
-                NSLayoutConstraint(item: self.historicalButtonOutlet!, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: 0).isActive = true
+                NSLayoutConstraint(item: self.historicalButtonOutlet!, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: 35).isActive = true
                 
                 NSLayoutConstraint(item: self.historicalButtonOutlet!, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 100).isActive = true
                 
