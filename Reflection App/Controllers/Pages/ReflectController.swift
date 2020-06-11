@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 class ReflectController: UIViewController {
-    
+
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet weak var buttonToPress: UIButton!
     
@@ -21,8 +21,10 @@ class ReflectController: UIViewController {
     var reflectionDelegate: ReflectionDelegate!
     @IBOutlet weak var historicalButtonOutlet: UIButton!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
+   
         // Do any additional setup after loading the view.
         UNUserNotificationCenter.current().getNotificationSettings { (settings) in
             let status = settings.authorizationStatus

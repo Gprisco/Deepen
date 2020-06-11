@@ -1,16 +1,20 @@
 PODS:
+  - paper-onboarding (6.1.5)
   - ScalingCarousel (3.0.1)
 
 DEPENDENCIES:
+  - paper-onboarding
   - ScalingCarousel
 
 SPEC REPOS:
   trunk:
+    - paper-onboarding
     - ScalingCarousel
 
 SPEC CHECKSUMS:
+  paper-onboarding: fede1799b1da6988f3788e3b71654583c6f3bce1
   ScalingCarousel: da1046447c9ac2d4a0db3f778fdda81cae16de4f
 
-PODFILE CHECKSUM: a299b78f94d859abeec357bedb2f1c4c4fee4853
+PODFILE CHECKSUM: 3593855ee06afa98e4c2ebf49e6e27d4b9c910d0
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

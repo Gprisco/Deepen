@@ -9,13 +9,14 @@
 import UIKit
 
 class HistoricalPageViewController: UIPageViewController, UIPageViewControllerDelegate {
-    
+ 
     var pages = [UIViewController]()
     var reflections = Reflections()
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         let reflectView: ReflectionPageViewController = getViewController("reflectionPageViewController")
         let historicalView: HistoricalViewController = getViewController("historical")
         

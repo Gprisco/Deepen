@@ -91,6 +91,7 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         deregisterFromKeyboardNotifications()
         self.plumeQuestionView.alpha = 0.8
         self.plumeQuestionView.frame.origin.y = self.view.frame.origin.y - 30
+        self.plumeQuestionView.frame.origin.x = self.view.frame.width/2
         
         if step == 2 {
             
