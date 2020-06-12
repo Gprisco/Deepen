@@ -1,0 +1,157 @@
+/* 
+  Localization.strings
+  Reflection App
+
+  Created by Lorenzo on 01/06/2020.
+  Copyright © 2020 Giovanni Prisco. All rights reserved.
+*/
+
+//MARK: First Questions
+"How did it go today?" = "How did it go today?";
+"Wanna write something about your day?" = "Wanna write something about your day?";
+"How about your day?" = "How about your day?";
+"Write something" = "Write something";
+"My day was..." = "My day was...";
+"I achieved..." = "I achieved...";
+
+"How do you feel today?" = "How do you feel today?";
+"What do you want to talk about?" = "What do you want to talk about?";
+"What would you have changed?" = "What would you have changed?";
+
+// MARK: CATEGORIE
+"Work" = "Work";
+"Health" = "Health";
+"Relationship" = "Relationship";
+"Study" = "Study";
+"Choose for me" = "Choose for me";
+
+// MARK: EMOZIONI
+"Stressed" = "Stressed";
+"Scared" = "Scared";
+"Lucky" = "Lucky";
+"Happy" = "Happy";
+"Energic" = "Energic";
+"Depressed" = "Depressed";
+"Confused" = "Confused";
+"Blessed" = "Blessed";
+"Angry" = "Angry";
+"Sad" = "Sad";
+
+// MARK: NOTIFICATION
+"Good Morning" = "Good Morning";
+"Good Evening" = "Good Evening";
+
+// MARK: MORNING NOTIFICATION QUOTES
+"Make the bed and you will be a hero!" = "Make the bed and you will be a hero!";
+"Are we going to eat some fruit today?" = "Are we going to eat some fruit today?";
+"Spend some time outdoors, would you like some fresh air?" = "Spend some time outdoors, would you like some fresh air?";
+"Put your space in order, today I want a nice clean desk" = "Put your space in order, today I want a nice clean desk";
+"Shine more every day and it's fantastic, never give up!" = "Shine more every day and it's fantastic, never give up!";
+"Ready to take on your commitments today? Remember: The greater the obstacle, the more glory in overcoming it." = "Ready to take on your commitments today? Remember: The greater the obstacle, the more glory in overcoming it.";
+"Count 10 seconds before making a decision." = "Count 10 seconds before making a decision.";
+"Today take a moment to walk a bit and relax." = "Today take a moment to walk a bit and relax.";
+"Try to remember what has made you full of energy in the past" = "Try to remember what has made you full of energy in the past";
+"During your next meal, detach yourself from the rest and focus on the flavor" = "During your next meal, detach yourself from the rest and focus on the flavor";
+"Recite an affirmation: “I already have everything I need to be happy”" = "Recite an affirmation: “I already have everything I need to be happy”";
+"Just wanted to say: keep working on yourself, you are doing a great job. Don’t give up!" = "Just wanted to say: keep working on yourself, you are doing a great job. Don’t give up!";
+"Try not to say “no”, but to answer with a “Yes, but…”" = "Try not to say “no”, but to answer with a “Yes, but…”";
+"Take 10 minutes today to reflect on where you are in life and where you want to be heading" = "Take 10 minutes today to reflect on where you are in life and where you want to be heading";
+"Studying without thinking is useless. Reflecting without studying is dangerous." = "Studying without thinking is useless. Reflecting without studying is dangerous.";
+"Give each day the chance to be the most beautiful of your life." = "Give each day the chance to be the most beautiful of your life.";
+
+// MARK: EVENING NOTIFICATION QUOTES
+"Mind is complicated. The content might be different but the essence is the same. Understand yourself and you will understand the world." = "Mind is complicated. The content might be different but the essence is the same. Understand yourself and you will understand the world.";
+"It's time to take some time for you ... How was your day? I can't wait to listen to you" = "It's time to take some time for you ... How was your day? I can't wait to listen to you";
+"What’s on your mind? Remember I’m always here to help." = "What’s on your mind? Remember I’m always here to help.";
+"The important thing is to never stop questioning. Start your reflection!" = "The important thing is to never stop questioning. Start your reflection!";
+"Find 5 minutes to reflect, you won’t regret ;)" = "Find 5 minutes to reflect, you won’t regret ;)";
+"How did your day go? Would you like to talk about it?" = "How did your day go? Would you like to talk about it?";
+"By opening your mind you learn much more than by opening your mouth. Do you want to reflect?" = "By opening your mind you learn much more than by opening your mouth. Do you want to reflect?";
+"Success in life is not given by exceptional events, but by daily dedication." = "Success in life is not given by exceptional events, but by daily dedication.";
+
+// MARK: REWARDS
+"The thing about meditation is… you become more and more you." = "The thing about meditation is… you become more and more you.";
+"It does not matter how slowly you go as long as you do not stop." = "It does not matter how slowly you go as long as you do not stop.";
+"Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time." = "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.";
+"Don’t fear difficult moments. The best comes from them." = "Don’t fear difficult moments. The best comes from them.";
+"Difficulties break some men, but make others." = "Difficulties break some men, but make others.";
+"Change your life today. Don’t gamble on the future, act now, without delay." = "Change your life today. Don’t gamble on the future, act now, without delay.";
+"The future belongs to those who believe in the beauty of their dreams." = "The future belongs to those who believe in the beauty of their dreams.";
+"You never know how strong you are, until being strong is your only choice." = "You never know how strong you are, until being strong is your only choice.";
+"Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better." = "Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better.";
+"There will always be rocks in the road ahead of us. They will be stumbling blocks or stepping stones; it all depends on how you use them." = "There will always be rocks in the road ahead of us. They will be stumbling blocks or stepping stones; it all depends on how you use them.";
+"Life is 10% what happens to you and 90% how you react to it." = "Life is 10% what happens to you and 90% how you react to it.";
+"To succeed, work hard, never give up and above all cherish a magnificent obsession." = "To succeed, work hard, never give up and above all cherish a magnificent obsession.";
+"Just make sure you never do less than your best." = "Just make sure you never do less than your best.";
+"It always seems impossible until it’s done." = "It always seems impossible until it’s done.";
+"Fall down seven times, stand up eight." = "Fall down seven times, stand up eight.";
+"Only those who dare to fail greatly can ever achieve greatly." = "Only those who dare to fail greatly can ever achieve greatly.";
+"For the past 33 years, I have looked in the mirror every morning and asked myself: “If today were the last day of my life, would I want to do what I am about to do today?” And whenever the answer has been “No” for too many days in a row, I know I need to change something." = "For the past 33 years, I have looked in the mirror every morning and asked myself: “If today were the last day of my life, would I want to do what I am about to do today?” And whenever the answer has been “No” for too many days in a row, I know I need to change something.";
+"Ones best success comes after their greatest disappointments." = "Ones best success comes after their greatest disappointments.";
+"Failure is simply the opportunity to begin again, this time more intelligently." = "Failure is simply the opportunity to begin again, this time more intelligently.";
+"I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times, I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed." = "I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times, I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed.";
+"Never confuse a single defeat with a final defeat." = "Never confuse a single defeat with a final defeat.";
+"Don’t wait for extraordinary opportunities. Seize common occasions and make them great. Weak men wait for opportunities; strong men make them." = "Don’t wait for extraordinary opportunities. Seize common occasions and make them great. Weak men wait for opportunities; strong men make them.";
+"There is a driving force more powerful than steam, electricity and nuclear power: the will." = "There is a driving force more powerful than steam, electricity and nuclear power: the will.";
+"If you’re not making mistakes, you’re not trying." = "If you’re not making mistakes, you’re not trying.";
+"It’s better to light a candle than curse the darkness." = "It’s better to light a candle than curse the darkness.";
+"It is not enough that we do our best; sometimes we must do what is required." = "It is not enough that we do our best; sometimes we must do what is required.";
+"The difference between a successful person and others is not a lack of strength, not a lack of knowledge, but rather a lack of will." = "The difference between a successful person and others is not a lack of strength, not a lack of knowledge, but rather a lack of will.";
+"It is hard to fail, but it is worse never to have tried to succeed." = "It is hard to fail, but it is worse never to have tried to succeed.";
+"Only those who dare may fly." = "Only those who dare may fly.";
+"Before you react, think. Before you spend, earn. Before you criticize, wait. Before you quit, try." = "Before you react, think. Before you spend, earn. Before you criticize, wait. Before you quit, try.";
+"In the middle of every difficulty lies an opportunity." = "In the middle of every difficulty lies an opportunity.";
+"The man who moves a mountain begins by carrying away small stones." = "The man who moves a mountain begins by carrying away small stones.";
+"Don’t wait. The time will never be just right." = "Don’t wait. The time will never be just right.";
+"A bend in the road is not the end of the road, unless you fail to make the turn." = "A bend in the road is not the end of the road, unless you fail to make the turn.";
+"Don’t find fault, find a remedy." = "Don’t find fault, find a remedy.";
+"It isn’t where you came from. It’s where you’re going that counts." = "It isn’t where you came from. It’s where you’re going that counts.";
+"When one door closes another door opens; but we so often look so long and so regretfully upon the closed door, that we do not see the ones which open for us." = "When one door closes another door opens; but we so often look so long and so regretfully upon the closed door, that we do not see the ones which open for us.";
+
+// MARK: Second Questions
+"Do you struggle with procrastination?" = "Do you struggle with procrastination?";
+"Are you spending time on things really important to you?" = "Are you spending time on things really important to you?";
+"Where do you see yourself in 5 or 10 years?" = "Where do you see yourself in 5 or 10 years?";
+"List 3 work experiences you would like to have in your life but you have not yet done" = "List 3 work experiences you would like to have in your life but you have not yet done";
+"What is preventing you from finding the ideal job?" = "What is preventing you from finding the ideal job?";
+"What are the things you should spend most time on?" = "What are the things you should spend most time on?";
+"Are you spending your time with the right people?" = "Are you spending your time with the right people?";
+"If you moved to the other side of the world, what would you miss most of what you have today?" = "If you moved to the other side of the world, what would you miss most of what you have today?";
+"Who are the people who make you feel comfortable?" = "Who are the people who make you feel comfortable?";
+"What are the features you are looking for in a friend?" = "What are the features you are looking for in a friend?";
+"What is the main flaw that others recognize in you?" = "What is the main flaw that others recognize in you?";
+"What are your healthy and changing habits?" = "What are your healthy and changing habits?";
+"Which word would best describe the way you spent the last month of your life?" = "Which word would best describe the way you spent the last month of your life?";
+"What do you do when you don't feel happy?" = "What do you do when you don't feel happy?";
+"What is the main change you need to make in your life?" = "What is the main change you need to make in your life?";
+"What are you able to do today that you didn't know how to do a year ago?" = "What are you able to do today that you didn't know how to do a year ago?";
+"What have you recently learned about yourself again?" = "What have you recently learned about yourself again?";
+"What are the activities that attract your attention?" = "What are the activities that attract your attention?";
+"What is the most satisfying thing for you?" = "What is the most satisfying thing for you?";
+"What would you like to improve about yourself?" = "What would you like to improve about yourself?";
+"Make a list of your flaws. Include all the criticisms they have addressed you and that you have absorbed" = "Make a list of your flaws. Include all the criticisms they have addressed you and that you have absorbed";
+"Make a list of your positives aspects" = "Make a list of your positives aspects";
+"If you had the ability to choose something you can do all day, what would you choose?" = "If you had the ability to choose something you can do all day, what would you choose?";
+"What was your childhood dream?" = "What was your childhood dream?";
+"What's the most important thing for you that you've done so far?" = "What's the most important thing for you that you've done so far?";
+"What's the stupidest thing you've ever done in life?" = "What's the stupidest thing you've ever done in life?";
+"What's the best thing that could happen to you now?" = "What's the best thing that could happen to you now?";
+"Do you have any regrets?" = "Do you have any regrets?";
+"What do you usually think before falling asleep?" = "What do you usually think before falling asleep?";
+"If you had the chance to change one thing in your life right now, what would you change?" = "If you had the chance to change one thing in your life right now, what would you change?";
+"In one sentence, who are you?" = "In one sentence, who are you?";
+"What do you want to be appreciated for?" = "What do you want to be appreciated for?";
+"What fear of making mistakes prevented you from doing?" = "What fear of making mistakes prevented you from doing?";
+"What are the problems you keep refusing to face?" = "What are the problems you keep refusing to face?";
+"What is the thing you've done that you're most proud of?" = "What is the thing you've done that you're most proud of?";
+"What have you changed your opinion in recent times?" = "What have you changed your opinion in recent times?";
+"If you could go back in time and give yourself advice as a young person, what advice would you give yourself?" = "If you could go back in time and give yourself advice as a young person, what advice would you give yourself?";
+
+// MARK: Label Reward
+"Well Done!" = "Well Done!";
+"Awesome!" = "Awesome!";
+"Cool!" = "Cool!";
+"Nice Job!" = "Nice Job!";
+"Fantastic!" = "Fantastic!";
+"Fabulous!" = "Fabulous!";
+"Great!" = "Great!";
