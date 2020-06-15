@@ -52,6 +52,20 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //UNUserNotification to manage and use Notification - Requesting User Authorization
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound]) { (success, error) in
+            if success {
+                print("User authorize Notification")
+                
+                scheduleNotifications()
+            } else {
+                print("User DON'T authorize Notification")
+                
+                accessDeniedAlert(self)
+            }
+        }
+
         //      Create MusicButton
         createButton(xFrame: self.view.frame.size.width, myView: self.view)
         MusicPlayer.sharedPlayer.playMusic()
@@ -190,11 +204,11 @@ extension ReflectionPageViewController: ReflectionDelegate {
         self.secondAnswer = answer
     }
     
-    func onReflectionFinished() {
+    func onReflectionFinished(_ reward: String) {
         currentPage = 0
         self.setViewControllers([pages[0]], direction: .reverse, animated: true, completion: nil)
         
-        let reflection = Reflection.shared.addReflection(mood: mood ?? "", moodImage: moodImage ?? "", category: category ?? "", categoryImage: categoryImage!, firstQuestion: firstQuestion ?? "", firstAnswer: firstAnswer ?? "", secondQuestion: secondQuestion ?? "", secondAnswer: secondAnswer ?? "", reward: reward ?? "")
+        let reflection = Reflection.shared.addReflection(mood: mood ?? "", moodImage: moodImage ?? "", category: category ?? "", categoryImage: categoryImage!, firstQuestion: firstQuestion ?? "", firstAnswer: firstAnswer ?? "", secondQuestion: secondQuestion ?? "", secondAnswer: secondAnswer ?? "", reward: reward)
         
         historicalDelegate.saveReflection(reflection ?? nil)
     }

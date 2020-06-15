@@ -63,6 +63,6 @@ class RewardController: UIViewController {
     }
     
     @IBAction func onReflectionFinished(_ sender: UIButton) {
-        reflectionDelegate.onReflectionFinished()
+        reflectionDelegate.onReflectionFinished(textViewReward.text!)
     }
 }

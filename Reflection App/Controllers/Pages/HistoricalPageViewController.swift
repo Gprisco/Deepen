@@ -16,7 +16,6 @@ class HistoricalPageViewController: UIPageViewController, UIPageViewControllerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         let reflectView: ReflectionPageViewController = getViewController("reflectionPageViewController")
         let historicalView: HistoricalViewController = getViewController("historical")
         

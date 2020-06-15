@@ -22,7 +22,7 @@ protocol ReflectionDelegate {
     func onCategoryChoice(category: String, categoryImage: String)
     func onFirstAnswer(_ question: String, _ answer: String)
     func onSecondAnswer(_ question: String, _ answer: String)
-    func onReflectionFinished()
+    func onReflectionFinished(_ reward: String)
 }
 
 func getViewController<T>(_ identifier: String) -> T {

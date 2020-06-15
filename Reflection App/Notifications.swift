@@ -51,8 +51,8 @@ func scheduleNotifications() {
         scheduledQuestions!.append(newFirstQuestion)
         write(firstQuestion: scheduledQuestions!, in: "first_question")
         
-        schedule(title: "\(NSLocalizedString("Good Morning", comment: "Morning title notification")) \(NSUserName())!", body: morningQuote.text, at: 9, 30, for: today.day+1)
-        schedule(title: "\(NSLocalizedString("Good Evening", comment: "Evening title notification")) \(NSUserName())!", body: eveningQuote.text, at: 19, 30, for: today.day+1)
+        schedule(title: "\(NSLocalizedString("Good Morning", comment: "Morning title notification"))!", body: morningQuote.text, at: 9, 30, for: today.day+1)
+        schedule(title: "\(NSLocalizedString("Good Evening", comment: "Evening title notification"))!", body: eveningQuote.text, at: 19, 30, for: today.day+1)
     }
 }
 
@@ -73,6 +73,27 @@ func schedule(title: String, body: String, at hour: Int, _ minute: Int, for day:
     
     UNUserNotificationCenter.current().add(request)
 }
+
+//    Nel caso di Notifiche disattivate viene presentato un alert che informa l'utente
+func accessDeniedAlert(_ view: UIViewController) {
+    let alert = UIAlertController(title: "Deepen", message: "Deepen ha bisogno delle notifiche per funzionare al meglio. Attivale nelle impostazioni.", preferredStyle: .alert)
+    
+    let okayAction = UIAlertAction(title: "Annulla", style: .default, handler: nil)
+    
+    let settingsAction = UIAlertAction(title: "Settings", style: .default) { (action) in
+        if let appSettings = URL(string: UIApplication.openSettingsURLString) {
+            UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
+        }
+    }
+    
+    alert.addAction(okayAction)
+    alert.addAction(settingsAction)
+    
+    DispatchQueue.main.async {
+        view.present(alert, animated: true)
+    }
+}
+
 
 /*
  MARK: PList handler (for FirstQuestion)
