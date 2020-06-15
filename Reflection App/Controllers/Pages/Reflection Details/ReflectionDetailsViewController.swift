@@ -23,10 +23,10 @@ class ReflectionDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firstQuestion.text = NSLocalizedString(reflection.firstQuestion!, comment: "First Question")
+        firstQuestion.text = NSLocalizedString(reflection.firstQuestion ?? "", comment: "First Question")
         firstAnswer.text = reflection.firstAnswer ?? ""
         
-        secondQuestion.text = NSLocalizedString(reflection.secondQuestion!, comment: "Second Question")
+        secondQuestion.text = NSLocalizedString(reflection.secondQuestion ?? "", comment: "Second Question")
         secondAnswer.text = reflection.secondAnswer ?? ""
         
         dateDetails.text = reflection.date?.text ?? ""

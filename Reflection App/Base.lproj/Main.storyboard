@@ -122,27 +122,6 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nD7-V4-Qcx">
-                                <rect key="frame" x="20" y="465" width="335" height="127.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconda Domanda" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjV-9N-qKo">
-                                        <rect key="frame" x="0.0" y="0.0" width="173.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gAI-YM-7py">
-                                        <rect key="frame" x="0.0" y="32" width="335" height="95.5"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="gAI-YM-7py" firstAttribute="top" secondItem="zjV-9N-qKo" secondAttribute="bottom" constant="8" id="JwK-Zl-Oxy"/>
-                                </constraints>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sz0-vL-o5M">
                                 <rect key="frame" x="20" y="177" width="335" height="127.5"/>
                                 <subviews>
@@ -165,11 +144,32 @@
                                     <constraint firstItem="8O0-eA-z4C" firstAttribute="top" secondItem="4T9-Si-m86" secondAttribute="bottom" constant="8" id="vKB-dS-5pJ"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nD7-V4-Qcx">
+                                <rect key="frame" x="20" y="374" width="335" height="127.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconda Domanda" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjV-9N-qKo">
+                                        <rect key="frame" x="0.0" y="0.0" width="173.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gAI-YM-7py">
+                                        <rect key="frame" x="0.0" y="32" width="335" height="95.5"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gAI-YM-7py" firstAttribute="top" secondItem="zjV-9N-qKo" secondAttribute="bottom" constant="8" id="JwK-Zl-Oxy"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="1c7-Da-WVu" firstAttribute="bottom" secondItem="sz0-vL-o5M" secondAttribute="bottom" constant="342.5" id="2EF-l2-Mpz"/>
-                            <constraint firstItem="nD7-V4-Qcx" firstAttribute="top" secondItem="Zhp-Al-mA0" secondAttribute="top" constant="465" id="7dS-j9-rC3"/>
+                            <constraint firstItem="nD7-V4-Qcx" firstAttribute="top" secondItem="Zhp-Al-mA0" secondAttribute="top" constant="374" id="7dS-j9-rC3"/>
                             <constraint firstItem="Hhp-3I-Ffa" firstAttribute="leading" secondItem="1c7-Da-WVu" secondAttribute="leading" constant="20" id="9k8-ur-Mer"/>
                             <constraint firstItem="sz0-vL-o5M" firstAttribute="trailing" secondItem="nD7-V4-Qcx" secondAttribute="trailing" id="A5A-Gy-3Pc"/>
                             <constraint firstItem="QfL-OS-zN4" firstAttribute="leading" secondItem="Zhp-Al-mA0" secondAttribute="leading" id="AZp-sO-rvX"/>
@@ -179,11 +179,12 @@
                             <constraint firstItem="sz0-vL-o5M" firstAttribute="trailing" secondItem="Hhp-3I-Ffa" secondAttribute="trailing" id="U2h-la-0TV"/>
                             <constraint firstItem="QfL-OS-zN4" firstAttribute="top" secondItem="Zhp-Al-mA0" secondAttribute="top" id="WKp-jw-omM"/>
                             <constraint firstItem="sz0-vL-o5M" firstAttribute="leading" secondItem="nD7-V4-Qcx" secondAttribute="leading" id="YGz-Kv-qud"/>
+                            <constraint firstItem="nD7-V4-Qcx" firstAttribute="trailing" secondItem="gAI-YM-7py" secondAttribute="trailing" id="aSa-nw-hyc"/>
                             <constraint firstAttribute="trailing" secondItem="QfL-OS-zN4" secondAttribute="trailing" id="fNq-th-qed"/>
                             <constraint firstItem="sz0-vL-o5M" firstAttribute="top" secondItem="Hhp-3I-Ffa" secondAttribute="bottom" constant="30" id="imB-Ut-e5L"/>
                             <constraint firstItem="1c7-Da-WVu" firstAttribute="trailing" secondItem="Hhp-3I-Ffa" secondAttribute="trailing" constant="20" id="sr4-mE-OG9"/>
                             <constraint firstItem="pRh-R3-Cnr" firstAttribute="top" secondItem="1c7-Da-WVu" secondAttribute="top" constant="20" id="tdU-ua-6FI"/>
-                            <constraint firstItem="1c7-Da-WVu" firstAttribute="bottom" secondItem="nD7-V4-Qcx" secondAttribute="bottom" constant="54.5" id="v61-DS-v37"/>
+                            <constraint firstItem="1c7-Da-WVu" firstAttribute="bottom" secondItem="nD7-V4-Qcx" secondAttribute="bottom" constant="145.5" id="v61-DS-v37"/>
                             <constraint firstItem="Hhp-3I-Ffa" firstAttribute="top" secondItem="pRh-R3-Cnr" secondAttribute="bottom" constant="25" id="yEX-bv-FLM"/>
                             <constraint firstAttribute="bottom" secondItem="QfL-OS-zN4" secondAttribute="bottom" id="yVt-IN-Cir"/>
                         </constraints>
@@ -194,7 +195,7 @@
                         <outlet property="firstAnswer" destination="8O0-eA-z4C" id="5J9-EB-VJK"/>
                         <outlet property="firstQuestion" destination="4T9-Si-m86" id="8VF-av-ftj"/>
                         <outlet property="iconDetails" destination="krD-ax-b1R" id="wgm-2G-NdW"/>
-                        <outlet property="secondAnswer" destination="gAI-YM-7py" id="8Hd-1L-xUd"/>
+                        <outlet property="secondAnswer" destination="gAI-YM-7py" id="aag-Sx-nOe"/>
                         <outlet property="secondQuestion" destination="zjV-9N-qKo" id="CBR-8T-9vd"/>
                     </connections>
                 </viewController>

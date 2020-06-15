@@ -208,7 +208,7 @@ extension ReflectionPageViewController: ReflectionDelegate {
         currentPage = 0
         self.setViewControllers([pages[0]], direction: .reverse, animated: true, completion: nil)
         
-        let reflection = Reflection.shared.addReflection(mood: mood ?? "", moodImage: moodImage ?? "", category: category ?? "", categoryImage: categoryImage!, firstQuestion: firstQuestion ?? "", firstAnswer: firstAnswer ?? "", secondQuestion: secondQuestion ?? "", secondAnswer: secondAnswer ?? "", reward: reward)
+        let reflection = Reflection.shared.addReflection(mood: mood ?? "", moodImage: moodImage ?? "", category: category ?? "", categoryImage: categoryImage ?? "", firstQuestion: firstQuestion ?? "", firstAnswer: firstAnswer ?? "", secondQuestion: secondQuestion ?? "", secondAnswer: secondAnswer ?? "", reward: reward)
         
         historicalDelegate.saveReflection(reflection ?? nil)
     }
