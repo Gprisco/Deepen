@@ -13,6 +13,7 @@ class ReflectionDetailsViewController: UIViewController {
     
     @IBOutlet weak var firstQuestion: UILabel!
     @IBOutlet weak var secondQuestion: UILabel!
+    
     @IBOutlet weak var firstAnswer: UITextView!
     @IBOutlet weak var secondAnswer: UITextView!
     

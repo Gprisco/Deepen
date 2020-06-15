@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -357,7 +357,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pF6-bo-MUd" customClass="OnBoardingView" customModule="Deepen" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="N4s-AH-oCH" id="8xC-d5-f5K"/>
                                     <outlet property="delegate" destination="N4s-AH-oCH" id="rJo-sN-YfI"/>
@@ -396,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wax-RF-mkj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196" y="-647"/>
+            <point key="canvasLocation" x="1196" y="-647.22638680659679"/>
         </scene>
         <!--Historical Page View Controller-->
         <scene sceneID="iGM-Ch-j9Y">
@@ -471,9 +471,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3U-bw-Dog">
-                                        <rect key="frame" x="174.5" y="245" width="26" height="22"/>
+                                        <rect key="frame" x="162.5" y="235" width="50" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="cs7-NE-f6T"/>
+                                            <constraint firstAttribute="height" constant="32" id="skX-80-x1R"/>
+                                        </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="arrowshape.turn.up.right.fill" catalog="system">
+                                        <state key="normal" image="skip">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                         </state>
@@ -776,12 +780,12 @@
         <image name="FifthBackground" width="828" height="1792"/>
         <image name="FirstBackground" width="828" height="1792"/>
         <image name="Piuma" width="228" height="103"/>
-        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="back" width="169" height="244"/>
         <image name="close" width="207" height="207"/>
         <image name="flame" catalog="system" width="109" height="128"/>
         <image name="historicalBackgound" width="829" height="1791"/>
         <image name="scrivi" width="320" height="308"/>
+        <image name="skip" width="258" height="200"/>
         <image name="storico" width="258" height="262"/>
         <image name="vocale" width="103" height="267"/>
         <image name="xmark" catalog="system" width="128" height="113"/>

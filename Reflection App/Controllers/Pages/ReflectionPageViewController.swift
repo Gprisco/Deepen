@@ -100,14 +100,14 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
             firstQuestionPage.step = 1
             
             moodQuestionPage.backgroundImageName = self.pageBackgrounds[2]
-            moodQuestionPage.moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confuso", "benedetto", "arrabbiato", "triste"]
+            moodQuestionPage.moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confused", "benedetto", "arrabbiato", "triste"]
             moodQuestionPage.moods = localizableStrings(["Stressed", "Scared", "Lucky", "Happy", "Energic", "Depressed", "Confused", "Blessed", "Angry", "Sad"])
             moodQuestionPage.type = "mood"
             moodQuestionPage.sectionTitleString = NSLocalizedString("How do you feel today?", comment: "First mood")
             moodQuestionPage.reflectionDelegate = self
             
             categoryQuestionPage.backgroundImageName = self.pageBackgrounds[2]
-            categoryQuestionPage.moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confuso", "benedetto", "arrabbiato"]
+            categoryQuestionPage.moodImages = ["work", "health", "relationship", "study", "general"]
             categoryQuestionPage.moods = localizableStrings(["Work", "Health", "Relationship", "Study", "Choose for me"])
             categoryQuestionPage.categories = ["Work", "Health", "Relationship", "Study", "Choose for me"]
             categoryQuestionPage.type = "category"

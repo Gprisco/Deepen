@@ -47,8 +47,7 @@ class OnBoardingViewController: UIViewController, PaperOnboardingDataSource, Pap
         return 4
     }
     
-    
-    func onboardingConfigurationItem(_: OnboardingContentViewItem, index _: Int) {
+    func onboardingConfigurationItem(_ item: OnboardingContentViewItem, _ index: Int) {
         
     }
     

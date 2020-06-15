@@ -41,5 +41,4 @@
 /* Class = "UILabel"; text = "How do you feel today?"; ObjectID = "vCe-Bx-5h0"; */
 "vCe-Bx-5h0.text" = "Come ti senti oggi?";
 
-//Button onBoarding
-"bdP-Fe-qaT.text" = "INIZIA"
+"bdP-Fe-qaT.normalTitle" = "INIZIA";

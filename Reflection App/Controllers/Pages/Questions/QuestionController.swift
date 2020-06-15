@@ -54,8 +54,6 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         registerForKeyboardNotifications()
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
