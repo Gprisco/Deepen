@@ -61,7 +61,8 @@ extension Reflection {
     // Read
     func getReflections() -> Reflections? {
         let request = Reflection.getFetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+        request.fetchLimit = 7
         
         do {
             let fetchedResult = try AppDelegate.viewContext.fetch(request)

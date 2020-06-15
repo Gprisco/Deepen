@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Reflection App/Pods-Reflection App-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework
+${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework

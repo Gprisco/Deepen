@@ -151,7 +151,22 @@
 "Well Done!" = "Ben Fatto!";
 "Awesome!" = "Incredibile!";
 "Cool!" = "Sei il numero 1!";
-"Nice Job!" = "Bel Lavoro!";
+"Nice Job!" = "Bel lavoro!";
 "Fantastic!" = "Fantastico!";
 "Fabulous!" = "Favoloso!";
 "Great!" = "Grande!";
+
+// MARK: ONBOARDING
+"Reflect" = "Rifletti";
+"Reflecting helps you to know yourself better and to face life in a better way" = "Riflettere ti aiuta a conoscere meglio te stesso e ad affrontare la vita in maniera migliore";
+
+"Improve yourself" = "Migliora te stesso";
+"Successful people practice reflection on a daily basis to be able to achieve their goals" = "Le persone di successo praticano la riflessione quotidianamente per riuscire a raggiungere gli obiettivi che si prefissano";
+
+"Never stop wondering" = "Mai smettere di interrogarsi";
+"Start the reflection by clicking on the feather and answer short questions about how the day went and how you feel" = "Comincia la riflessione cliccando sulla piuma e rispondi a brevi domande riguardo a come è andata la giornata e a come ti senti";
+
+"Go Depeen" = "Vai in profondità";
+"At the end of each reflection you will receive advice on what you have written. Make it a habit!" = "Alla fine di ogni riflessione riceverai un consiglio riguardo a quello che hai scritto. Falla diventare un'abitudine!";
+
+"START" = "INIZIA";

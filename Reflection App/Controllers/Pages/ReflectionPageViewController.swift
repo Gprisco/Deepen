@@ -17,11 +17,13 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     var pages = [UIViewController]()
     var pageBackgrounds = [String]()
     
+    var firstQuestion: String?
     var firstAnswer: String?
     var mood: String?
     var moodImage: String?
     var category: String?
     var categoryImage: String?
+    var secondQuestion: String?
     var secondAnswer: String?
     var reward: String?
     
@@ -30,7 +32,7 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     
     func createButton(xFrame: CGFloat, myView: UIView) {        
         musicButton.frame = CGRect(x: xFrame - 50, y: 60, width: 50, height: 50)
-        musicButton.setImage(UIImage(systemName: "music.note")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal)
+        musicButton.setImage(UIImage(named: "musica-on")?.withTintColor(.white, renderingMode: .alwaysOriginal)
             , for: UIControl.State.normal)
         musicButton.addTarget(self, action: #selector(musicButtonPressed), for: .touchUpInside)
         myView.addSubview(musicButton)
@@ -38,22 +40,36 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     
     @objc func musicButtonPressed(sender: UIButton!) {
         if sender.tag == 0 {
-            sender.setImage(UIImage(systemName: "speaker.slash.fill")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal), for: UIControl.State.normal)
+            sender.setImage(UIImage(named: "musica-off")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: UIControl.State.normal)
             MusicPlayer.sharedPlayer.stopMusic()
             sender.tag = 1
         } else {
             MusicPlayer.sharedPlayer.playMusic()
-            sender.setImage(UIImage(systemName: "music.note")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal), for: UIControl.State.normal)
+            sender.setImage(UIImage(named: "musica-on")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: UIControl.State.normal)
             sender.tag = 0
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //UNUserNotification to manage and use Notification - Requesting User Authorization
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound]) { (success, error) in
+            if success {
+                print("User authorize Notification")
+                
+                scheduleNotifications()
+            } else {
+                print("User DON'T authorize Notification")
+                
+                accessDeniedAlert(self)
+            }
+        }
+
         //      Create MusicButton
         createButton(xFrame: self.view.frame.size.width, myView: self.view)
         MusicPlayer.sharedPlayer.playMusic()
-        
+        musicButton.imageView?.layer.transform = CATransform3DMakeScale(0.2, 0.25, 0.2)
         //        Constraint MusicButton
         musicButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: musicButton, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1, constant: 20).isActive = true
@@ -84,14 +100,14 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
             firstQuestionPage.step = 1
             
             moodQuestionPage.backgroundImageName = self.pageBackgrounds[2]
-            moodQuestionPage.moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confuso", "benedetto", "arrabbiato", "triste"]
+            moodQuestionPage.moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confused", "benedetto", "arrabbiato", "triste"]
             moodQuestionPage.moods = localizableStrings(["Stressed", "Scared", "Lucky", "Happy", "Energic", "Depressed", "Confused", "Blessed", "Angry", "Sad"])
             moodQuestionPage.type = "mood"
             moodQuestionPage.sectionTitleString = NSLocalizedString("How do you feel today?", comment: "First mood")
             moodQuestionPage.reflectionDelegate = self
             
             categoryQuestionPage.backgroundImageName = self.pageBackgrounds[2]
-            categoryQuestionPage.moodImages = ["stressato", "impaurito", "fortunato", "felice", "energico", "depresso", "confuso", "benedetto", "arrabbiato"]
+            categoryQuestionPage.moodImages = ["work", "health", "relationship", "study", "general"]
             categoryQuestionPage.moods = localizableStrings(["Work", "Health", "Relationship", "Study", "Choose for me"])
             categoryQuestionPage.categories = ["Work", "Health", "Relationship", "Study", "Choose for me"]
             categoryQuestionPage.type = "category"
@@ -178,19 +194,21 @@ extension ReflectionPageViewController: ReflectionDelegate {
         self.categoryImage = categoryImage
     }
     
-    func onFirstAnswer(_ answer: String) {
+    func onFirstAnswer(_ question: String, _ answer: String) {
+        self.firstQuestion = question
         self.firstAnswer = answer
     }
     
-    func onSecondAnswer(_ answer: String) {
+    func onSecondAnswer(_ question: String, _ answer: String) {
+        self.secondQuestion = question
         self.secondAnswer = answer
     }
     
-    func onReflectionFinished() {
+    func onReflectionFinished(_ reward: String) {
         currentPage = 0
         self.setViewControllers([pages[0]], direction: .reverse, animated: true, completion: nil)
         
-        let reflection = Reflection.shared.addReflection(mood: mood ?? "", moodImage: moodImage ?? "", category: category ?? "", categoryImage: categoryImage!, firstQuestion: "How did it go today?", firstAnswer: firstAnswer ?? "", secondQuestion: "What would you have changed?", secondAnswer: secondAnswer ?? "", reward: reward ?? "")
+        let reflection = Reflection.shared.addReflection(mood: mood ?? "", moodImage: moodImage ?? "", category: category ?? "", categoryImage: categoryImage!, firstQuestion: firstQuestion ?? "", firstAnswer: firstAnswer ?? "", secondQuestion: secondQuestion ?? "", secondAnswer: secondAnswer ?? "", reward: reward)
         
         historicalDelegate.saveReflection(reflection ?? nil)
     }

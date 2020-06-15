@@ -9,10 +9,10 @@
 import UIKit
 
 class HistoricalPageViewController: UIPageViewController, UIPageViewControllerDelegate {
-    
+ 
     var pages = [UIViewController]()
     var reflections = Reflections()
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         

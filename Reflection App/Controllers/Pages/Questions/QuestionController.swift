@@ -46,7 +46,6 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
             questionLabel.text = categoryQuestions[Int.random(in: 0..<categoryQuestions.count)].text
         }
         
-        
         plumeAnimation()
         
         speechDoneButton.layer.cornerRadius = 10
@@ -54,8 +53,6 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         setupTextView()
         registerForKeyboardNotifications()
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,9 +88,9 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         deregisterFromKeyboardNotifications()
         self.plumeQuestionView.alpha = 0.8
         self.plumeQuestionView.frame.origin.y = self.view.frame.origin.y - 30
+        self.plumeQuestionView.frame.origin.x = self.view.frame.width/2
         
         if step == 2 {
-            
             self.plumeQuestionView.alpha = 0
         }
     }
@@ -135,9 +132,9 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
         self.view.endEditing(true)
         
         if step == 1 {
-            reflectionDelegate.onFirstAnswer(answerTextView.text)
+            reflectionDelegate.onFirstAnswer(questionLabel.text!, answerTextView.text)
         } else if step == 2 {
-            reflectionDelegate.onSecondAnswer(answerTextView.text)
+            reflectionDelegate.onSecondAnswer(questionLabel.text!, answerTextView.text)
         }
         
         answerTextView.isHidden = true
@@ -164,6 +161,12 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
     }
     
     @IBAction func onSkipTap(_ sender: UIButton) {
+        if step == 1 {
+            reflectionDelegate.onFirstAnswer(questionLabel.text!, answerTextView.text)
+        } else if step == 2 {
+            reflectionDelegate.onSecondAnswer(questionLabel.text!, answerTextView.text)
+        }
+
         reflectionDelegate.nextStep()
     }
     
@@ -216,7 +219,7 @@ class QuestionController: UIViewController, UITextViewDelegate, SFSpeechRecogniz
                                     print (error)
                                 }
                             })
-                            
+                        
                         } else {
                             print("Transcription permission was declined.")
                             self.buttonStackView.isHidden = false

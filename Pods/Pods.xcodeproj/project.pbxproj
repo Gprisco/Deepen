@@ -3,62 +3,103 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E242DF87BC96DB7607E78CC3114E676 /* Pods-Reflection App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1405B5F95B9CD5550FEE501293AEB28A /* Pods-Reflection App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07F30B15B1E9FD878007C41ED8B8CCFA /* OnboardingContantViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE20EA0E99E32D90DEC110B97C3B42 /* OnboardingContantViewItem.swift */; };
+		1D8BE755A684FC132E1C0D62AD35A56A /* FillAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842640041FC6FAFA7EAD2FBD5B0F06A /* FillAnimationView.swift */; };
+		1E43AD13C988387C35D65D341FA2A8C8 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA315741664A7B23D308EF2C628D5BFC /* PageView.swift */; };
+		223F3449974BEA68231F1EA9C6E1FE8D /* paper-onboarding-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A88F6988B637B24900C75D14FEAE8C9D /* paper-onboarding-dummy.m */; };
+		2389208835126ADD6B969F7031EBFDCB /* PaperOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6E7A95DFEDA2F5F1A31B7492A91F50 /* PaperOnboarding.swift */; };
+		342607275DABA8DA2A32D101196496EB /* paper-onboarding-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92CE564DC79D156200FAA5B4D7FEB358 /* paper-onboarding-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3936C89D20F377DC53759E1A17A35CFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		701FD32E541A576B60F48C5AA3C4D6FA /* ScalingCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058E0C14A309C8F39E8C3288E36EC766 /* ScalingCarouselView.swift */; };
-		7258E6C195A28FC1379BF0E9A61E4F14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		853FDAE19636BBDFA505E3E88C45F473 /* ScalingCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BF900ABA75CE90076EDA1C68EFBCE9 /* ScalingCarouselCell.swift */; };
-		904EFCAE255D3D02DA37BAE56CE94912 /* ScalingCarousel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF003C7F8B7CB91727CA8E3CB46942DF /* ScalingCarousel-dummy.m */; };
-		BE7971A59AAEC621AF96AEADBD698850 /* ScalingCarousel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E469C7733D97BC18515F0A5EF7BC359 /* ScalingCarousel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE8886096DE73E7F6992F07D44FFE4ED /* Pods-Reflection App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D643F5E2029E9D5880F703C3349CFF /* Pods-Reflection App-dummy.m */; };
-		FBA1EE1DA92E81090F16249F3878996F /* ScalingCarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676F3C6A17677F88BA46E339B528F32 /* ScalingCarouselLayout.swift */; };
+		3B970F50B6565183DF0FD689A68C7CF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		3C190308098D9AC84AA6EF15142E8B2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		4C615F57B763AA6170BBE5251567F140 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC1C60657FDDC65389519F51792C82 /* OnboardingContentView.swift */; };
+		4F17055D20B820F265F0C174C67CA94B /* PageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4742AED4BD7ADF02405F80654CC4ABD /* PageContainer.swift */; };
+		5BE1E5239066075FA6142227C4924D04 /* Pods-Reflection App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1405B5F95B9CD5550FEE501293AEB28A /* Pods-Reflection App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		701FD32E541A576B60F48C5AA3C4D6FA /* ScalingCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B056995C854C58EE8EFE2C0FA1FA86 /* ScalingCarouselView.swift */; };
+		77F112403440A7419C4880CABD38A962 /* PageViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ACA0BC4DC0734D5A1F635205998337 /* PageViewItem.swift */; };
+		7D669CE134F23BB348238F83F58F94D5 /* PaperOnboardingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566DB72E7C81A83408E89D9CCE890543 /* PaperOnboardingDelegate.swift */; };
+		853FDAE19636BBDFA505E3E88C45F473 /* ScalingCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2CB14547F5B639A54B3905995B6622 /* ScalingCarouselCell.swift */; };
+		8E4E8665231216670E0DD1DE32224812 /* Configuring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A38EAAF99B95D9EECEC0C75F36DDA1 /* Configuring.swift */; };
+		904EFCAE255D3D02DA37BAE56CE94912 /* ScalingCarousel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C41B382D6D5CD040D32E6CF6BFB15694 /* ScalingCarousel-dummy.m */; };
+		A4745CBC36599573ED0204AB77EE2650 /* Pods-Reflection App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D643F5E2029E9D5880F703C3349CFF /* Pods-Reflection App-dummy.m */; };
+		B2CE4FC5C310FC8F7FF6B91362C6D513 /* GestureControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC30A82B8D39A178E9A21D7DA38ACBD1 /* GestureControl.swift */; };
+		BE7971A59AAEC621AF96AEADBD698850 /* ScalingCarousel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D50E2CEFAFF318A21FAD55345CC1E822 /* ScalingCarousel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBA796C399BD028C7BDE122FD28B24FE /* ConstraintsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78F730CD823D6F7FA4B3CDE3608045A /* ConstraintsHelper.swift */; };
+		F3513898978812B5DB65771F46CF7707 /* PaperOnboardingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9B8C0199991111B97EA291A847F5F4 /* PaperOnboardingDataSource.swift */; };
+		FBA1EE1DA92E81090F16249F3878996F /* ScalingCarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B526C1C72F91C9FDFB2053F6AE4B2EA /* ScalingCarouselLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A78B2CFF3DBE640DC7C1CF90E043F628 /* PBXContainerItemProxy */ = {
+		345ACC63C00BCA3F97DDD75BB7F8AEFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7050FECE58DF970CF84F4FE403CA67D9;
 			remoteInfo = ScalingCarousel;
 		};
+		DF619016FD47ED4482ED77CCFD35C409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 092BBAE106FF2FFA56F415EFB1EDBC41;
+			remoteInfo = "paper-onboarding";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		058E0C14A309C8F39E8C3288E36EC766 /* ScalingCarouselView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselView.swift; path = ScalingCarousel/Classes/ScalingCarouselView.swift; sourceTree = "<group>"; };
 		09D643F5E2029E9D5880F703C3349CFF /* Pods-Reflection App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Reflection App-dummy.m"; sourceTree = "<group>"; };
-		11BF900ABA75CE90076EDA1C68EFBCE9 /* ScalingCarouselCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselCell.swift; path = ScalingCarousel/Classes/ScalingCarouselCell.swift; sourceTree = "<group>"; };
+		12ACA0BC4DC0734D5A1F635205998337 /* PageViewItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageViewItem.swift; path = Source/PageView/Item/PageViewItem.swift; sourceTree = "<group>"; };
 		1405B5F95B9CD5550FEE501293AEB28A /* Pods-Reflection App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Reflection App-umbrella.h"; sourceTree = "<group>"; };
+		15B056995C854C58EE8EFE2C0FA1FA86 /* ScalingCarouselView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselView.swift; path = ScalingCarousel/Classes/ScalingCarouselView.swift; sourceTree = "<group>"; };
 		180975E78D7040A8353AE63BDF46B815 /* Pods-Reflection App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Reflection App-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1842640041FC6FAFA7EAD2FBD5B0F06A /* FillAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillAnimationView.swift; path = Source/FillAnimationView/FillAnimationView.swift; sourceTree = "<group>"; };
+		1AFE20EA0E99E32D90DEC110B97C3B42 /* OnboardingContantViewItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OnboardingContantViewItem.swift; path = Source/OnboardingContentView/Item/OnboardingContantViewItem.swift; sourceTree = "<group>"; };
+		1B526C1C72F91C9FDFB2053F6AE4B2EA /* ScalingCarouselLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselLayout.swift; path = ScalingCarousel/Classes/ScalingCarouselLayout.swift; sourceTree = "<group>"; };
 		24E96286E41476A4E7F4D8742B9B16D7 /* ScalingCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ScalingCarousel.framework; path = ScalingCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E469C7733D97BC18515F0A5EF7BC359 /* ScalingCarousel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScalingCarousel-umbrella.h"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3C285CD7C96B264FF80566581AFA8AC8 /* ScalingCarousel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScalingCarousel.xcconfig; sourceTree = "<group>"; };
 		41BACC51C3ADC512A7B582A672F9D273 /* Pods-Reflection App-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Reflection App-Info.plist"; sourceTree = "<group>"; };
 		5020CDE831BA1AFE1AACDD523DDD41D6 /* Pods-Reflection App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Reflection App-acknowledgements.plist"; sourceTree = "<group>"; };
+		566DB72E7C81A83408E89D9CCE890543 /* PaperOnboardingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaperOnboardingDelegate.swift; path = Source/PaperOnboardingDelegate.swift; sourceTree = "<group>"; };
+		61DC1C60657FDDC65389519F51792C82 /* OnboardingContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OnboardingContentView.swift; path = Source/OnboardingContentView/OnboardingContentView.swift; sourceTree = "<group>"; };
 		68CED3C2DF05AD8D918EB5BA188D7F39 /* Pods_Reflection_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Reflection_App.framework; path = "Pods-Reflection App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7676F3C6A17677F88BA46E339B528F32 /* ScalingCarouselLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselLayout.swift; path = ScalingCarousel/Classes/ScalingCarouselLayout.swift; sourceTree = "<group>"; };
+		71D62C4C4948F1222B49739D0A43D6F6 /* paper-onboarding-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "paper-onboarding-prefix.pch"; sourceTree = "<group>"; };
+		77DC708D89B55DA2B731027089C76572 /* ScalingCarousel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ScalingCarousel-Info.plist"; sourceTree = "<group>"; };
 		79AF3F23E586CDEC4934F32733C4EAE4 /* Pods-Reflection App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Reflection App.debug.xcconfig"; sourceTree = "<group>"; };
-		8AF238932711A75FE3D87E91A2475107 /* ScalingCarousel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ScalingCarousel-Info.plist"; sourceTree = "<group>"; };
+		7C6E7A95DFEDA2F5F1A31B7492A91F50 /* PaperOnboarding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaperOnboarding.swift; path = Source/PaperOnboarding.swift; sourceTree = "<group>"; };
+		8E2CB14547F5B639A54B3905995B6622 /* ScalingCarouselCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselCell.swift; path = ScalingCarousel/Classes/ScalingCarouselCell.swift; sourceTree = "<group>"; };
+		90A38EAAF99B95D9EECEC0C75F36DDA1 /* Configuring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuring.swift; path = Source/Helpers/Configuring.swift; sourceTree = "<group>"; };
+		92CE564DC79D156200FAA5B4D7FEB358 /* paper-onboarding-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "paper-onboarding-umbrella.h"; sourceTree = "<group>"; };
 		98C699E560EAE21F8DA2AD9F0203D320 /* Pods-Reflection App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Reflection App.modulemap"; sourceTree = "<group>"; };
 		996EC9AE820B0C6635B78CD656D8B85C /* Pods-Reflection App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Reflection App.release.xcconfig"; sourceTree = "<group>"; };
+		9AFE71A261C6F6D0CCFFD8F5471F61DC /* paper-onboarding.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "paper-onboarding.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A78F730CD823D6F7FA4B3CDE3608045A /* ConstraintsHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintsHelper.swift; path = Source/Helpers/ConstraintsHelper.swift; sourceTree = "<group>"; };
+		A88F6988B637B24900C75D14FEAE8C9D /* paper-onboarding-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "paper-onboarding-dummy.m"; sourceTree = "<group>"; };
+		ACC5E4FBE17FD698B789169CCD721C7F /* ScalingCarousel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ScalingCarousel.modulemap; sourceTree = "<group>"; };
+		B1A21BF8F5AA6606CBEFFA68B9A817C8 /* paper-onboarding-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "paper-onboarding-Info.plist"; sourceTree = "<group>"; };
 		B6ED51BC9A76BAC098E25F4AA4AF1FF9 /* Pods-Reflection App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Reflection App-frameworks.sh"; sourceTree = "<group>"; };
-		BF003C7F8B7CB91727CA8E3CB46942DF /* ScalingCarousel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScalingCarousel-dummy.m"; sourceTree = "<group>"; };
-		C33CE855B54ADBA7E78EB49B0A1123A2 /* ScalingCarousel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScalingCarousel-prefix.pch"; sourceTree = "<group>"; };
-		E9CD5BDCAA5F9B1FBF2F8A3DD7CBF33E /* ScalingCarousel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ScalingCarousel.modulemap; sourceTree = "<group>"; };
-		EADC76E61B6495C826A06EF48004A702 /* ScalingCarousel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScalingCarousel.xcconfig; sourceTree = "<group>"; };
+		BFF2591415F9E11048ACCC10A3D52E86 /* paper_onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = paper_onboarding.framework; path = "paper-onboarding.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C41B382D6D5CD040D32E6CF6BFB15694 /* ScalingCarousel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScalingCarousel-dummy.m"; sourceTree = "<group>"; };
+		CA315741664A7B23D308EF2C628D5BFC /* PageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageView.swift; path = Source/PageView/PageView.swift; sourceTree = "<group>"; };
+		D50E2CEFAFF318A21FAD55345CC1E822 /* ScalingCarousel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScalingCarousel-umbrella.h"; sourceTree = "<group>"; };
+		DB9B8C0199991111B97EA291A847F5F4 /* PaperOnboardingDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaperOnboardingDataSource.swift; path = Source/PaperOnboardingDataSource.swift; sourceTree = "<group>"; };
+		E39210428E4CD87FD58DEFEBBA1E30AA /* ScalingCarousel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScalingCarousel-prefix.pch"; sourceTree = "<group>"; };
+		E4742AED4BD7ADF02405F80654CC4ABD /* PageContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageContainer.swift; path = Source/PageView/PageContainerView/PageContainer.swift; sourceTree = "<group>"; };
+		F577B5F0F25C9157E697560D59D69B8A /* paper-onboarding.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "paper-onboarding.modulemap"; sourceTree = "<group>"; };
+		FC30A82B8D39A178E9A21D7DA38ACBD1 /* GestureControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GestureControl.swift; path = Source/GestureControl/GestureControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7177C9A096C7209F7EE70CE52A3DF765 /* Frameworks */ = {
+		0995386CC00378FB8BC461EAAD6AC26F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7258E6C195A28FC1379BF0E9A61E4F14 /* Foundation.framework in Frameworks */,
+				3B970F50B6565183DF0FD689A68C7CF8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,50 +111,95 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EDF7DFBF12DBEE73F86DF49BDEBF0DAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C190308098D9AC84AA6EF15142E8B2C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		58143E6D307E524F547E3A02E3269DA3 /* Products */ = {
+		1BB620B643C3AC88E433B18F2B93B0B6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				68CED3C2DF05AD8D918EB5BA188D7F39 /* Pods_Reflection_App.framework */,
-				24E96286E41476A4E7F4D8742B9B16D7 /* ScalingCarousel.framework */,
+				91AAC50FC64C4C9FE0E70DB3ECA76B97 /* paper-onboarding */,
+				6FEE2CBA256D75702E1AB34BD9DEE284 /* ScalingCarousel */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		8021B9946FCDA6EB781B35A085C8F7F9 /* Support Files */ = {
+		5337750E03DE30907EAFB7E4126D7394 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E9CD5BDCAA5F9B1FBF2F8A3DD7CBF33E /* ScalingCarousel.modulemap */,
-				EADC76E61B6495C826A06EF48004A702 /* ScalingCarousel.xcconfig */,
-				BF003C7F8B7CB91727CA8E3CB46942DF /* ScalingCarousel-dummy.m */,
-				8AF238932711A75FE3D87E91A2475107 /* ScalingCarousel-Info.plist */,
-				C33CE855B54ADBA7E78EB49B0A1123A2 /* ScalingCarousel-prefix.pch */,
-				2E469C7733D97BC18515F0A5EF7BC359 /* ScalingCarousel-umbrella.h */,
+				F577B5F0F25C9157E697560D59D69B8A /* paper-onboarding.modulemap */,
+				9AFE71A261C6F6D0CCFFD8F5471F61DC /* paper-onboarding.xcconfig */,
+				A88F6988B637B24900C75D14FEAE8C9D /* paper-onboarding-dummy.m */,
+				B1A21BF8F5AA6606CBEFFA68B9A817C8 /* paper-onboarding-Info.plist */,
+				71D62C4C4948F1222B49739D0A43D6F6 /* paper-onboarding-prefix.pch */,
+				92CE564DC79D156200FAA5B4D7FEB358 /* paper-onboarding-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/paper-onboarding";
+			sourceTree = "<group>";
+		};
+		650FC45487F98E78ED60A4AED7DCE934 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACC5E4FBE17FD698B789169CCD721C7F /* ScalingCarousel.modulemap */,
+				3C285CD7C96B264FF80566581AFA8AC8 /* ScalingCarousel.xcconfig */,
+				C41B382D6D5CD040D32E6CF6BFB15694 /* ScalingCarousel-dummy.m */,
+				77DC708D89B55DA2B731027089C76572 /* ScalingCarousel-Info.plist */,
+				E39210428E4CD87FD58DEFEBBA1E30AA /* ScalingCarousel-prefix.pch */,
+				D50E2CEFAFF318A21FAD55345CC1E822 /* ScalingCarousel-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/ScalingCarousel";
 			sourceTree = "<group>";
 		};
-		9F830DEDBF405B826D85E1C31064B329 /* ScalingCarousel */ = {
+		6FEE2CBA256D75702E1AB34BD9DEE284 /* ScalingCarousel */ = {
 			isa = PBXGroup;
 			children = (
-				11BF900ABA75CE90076EDA1C68EFBCE9 /* ScalingCarouselCell.swift */,
-				7676F3C6A17677F88BA46E339B528F32 /* ScalingCarouselLayout.swift */,
-				058E0C14A309C8F39E8C3288E36EC766 /* ScalingCarouselView.swift */,
-				8021B9946FCDA6EB781B35A085C8F7F9 /* Support Files */,
+				8E2CB14547F5B639A54B3905995B6622 /* ScalingCarouselCell.swift */,
+				1B526C1C72F91C9FDFB2053F6AE4B2EA /* ScalingCarouselLayout.swift */,
+				15B056995C854C58EE8EFE2C0FA1FA86 /* ScalingCarouselView.swift */,
+				650FC45487F98E78ED60A4AED7DCE934 /* Support Files */,
 			);
 			name = ScalingCarousel;
 			path = ScalingCarousel;
 			sourceTree = "<group>";
 		};
-		A055C015B654501AF5996ED0C7C60588 /* Pods */ = {
+		91AAC50FC64C4C9FE0E70DB3ECA76B97 /* paper-onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				9F830DEDBF405B826D85E1C31064B329 /* ScalingCarousel */,
+				90A38EAAF99B95D9EECEC0C75F36DDA1 /* Configuring.swift */,
+				A78F730CD823D6F7FA4B3CDE3608045A /* ConstraintsHelper.swift */,
+				1842640041FC6FAFA7EAD2FBD5B0F06A /* FillAnimationView.swift */,
+				FC30A82B8D39A178E9A21D7DA38ACBD1 /* GestureControl.swift */,
+				1AFE20EA0E99E32D90DEC110B97C3B42 /* OnboardingContantViewItem.swift */,
+				61DC1C60657FDDC65389519F51792C82 /* OnboardingContentView.swift */,
+				E4742AED4BD7ADF02405F80654CC4ABD /* PageContainer.swift */,
+				CA315741664A7B23D308EF2C628D5BFC /* PageView.swift */,
+				12ACA0BC4DC0734D5A1F635205998337 /* PageViewItem.swift */,
+				7C6E7A95DFEDA2F5F1A31B7492A91F50 /* PaperOnboarding.swift */,
+				DB9B8C0199991111B97EA291A847F5F4 /* PaperOnboardingDataSource.swift */,
+				566DB72E7C81A83408E89D9CCE890543 /* PaperOnboardingDelegate.swift */,
+				5337750E03DE30907EAFB7E4126D7394 /* Support Files */,
 			);
-			name = Pods;
+			name = "paper-onboarding";
+			path = "paper-onboarding";
+			sourceTree = "<group>";
+		};
+		A55CBDCD728C29F478C01E28CD46A76A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFF2591415F9E11048ACCC10A3D52E86 /* paper_onboarding.framework */,
+				68CED3C2DF05AD8D918EB5BA188D7F39 /* Pods_Reflection_App.framework */,
+				24E96286E41476A4E7F4D8742B9B16D7 /* ScalingCarousel.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		A80B8A204118E0A181B3F1E1A9332B6B /* Targets Support Files */ = {
@@ -154,8 +240,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				A055C015B654501AF5996ED0C7C60588 /* Pods */,
-				58143E6D307E524F547E3A02E3269DA3 /* Products */,
+				1BB620B643C3AC88E433B18F2B93B0B6 /* Pods */,
+				A55CBDCD728C29F478C01E28CD46A76A /* Products */,
 				A80B8A204118E0A181B3F1E1A9332B6B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -179,17 +265,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8820794A8A0DA53439BC23556E7D2559 /* Headers */ = {
+		6D37B5C2555F4F5ACBD41A881AF50797 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E242DF87BC96DB7607E78CC3114E676 /* Pods-Reflection App-umbrella.h in Headers */,
+				342607275DABA8DA2A32D101196496EB /* paper-onboarding-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C885EADF7A266ECF8882EFBF526B6315 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BE1E5239066075FA6142227C4924D04 /* Pods-Reflection App-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		092BBAE106FF2FFA56F415EFB1EDBC41 /* paper-onboarding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFFF71E528A02CBD2D7497ADC845C057 /* Build configuration list for PBXNativeTarget "paper-onboarding" */;
+			buildPhases = (
+				6D37B5C2555F4F5ACBD41A881AF50797 /* Headers */,
+				28B14E019345581A4A106E50E54F7A35 /* Sources */,
+				0995386CC00378FB8BC461EAAD6AC26F /* Frameworks */,
+				9F304C62837AB904FCB12E99521A80D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "paper-onboarding";
+			productName = "paper-onboarding";
+			productReference = BFF2591415F9E11048ACCC10A3D52E86 /* paper_onboarding.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		7050FECE58DF970CF84F4FE403CA67D9 /* ScalingCarousel */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F8EFF8386604440E2C802707D7DE417 /* Build configuration list for PBXNativeTarget "ScalingCarousel" */;
@@ -210,17 +322,18 @@
 		};
 		E2C44DC59A78ACD5F9C9627C78433615 /* Pods-Reflection App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B13FCF42546DE26B72C03BED3DBC8C3D /* Build configuration list for PBXNativeTarget "Pods-Reflection App" */;
+			buildConfigurationList = 55E32AD0E47C041789E9A3ED9479CD83 /* Build configuration list for PBXNativeTarget "Pods-Reflection App" */;
 			buildPhases = (
-				8820794A8A0DA53439BC23556E7D2559 /* Headers */,
-				D15A8E735B6A0D48808A77C881D2D595 /* Sources */,
-				7177C9A096C7209F7EE70CE52A3DF765 /* Frameworks */,
-				C387BD0226FD20FFB5F677B5A5607A13 /* Resources */,
+				C885EADF7A266ECF8882EFBF526B6315 /* Headers */,
+				7CA672036FF3B1AD3C1A6DC73AEFE7BE /* Sources */,
+				EDF7DFBF12DBEE73F86DF49BDEBF0DAE /* Frameworks */,
+				21EDEF873E0B3DEF50E4CB15B3D177B5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C7B9058FD23357D3071686BD4D9D875F /* PBXTargetDependency */,
+				FA1FF39AEC85557D8E910F0892AEFF50 /* PBXTargetDependency */,
+				CC913013903C86FD44A77D1CCC5501FA /* PBXTargetDependency */,
 			);
 			name = "Pods-Reflection App";
 			productName = "Pods-Reflection App";
@@ -237,7 +350,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -245,10 +358,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 58143E6D307E524F547E3A02E3269DA3 /* Products */;
+			productRefGroup = A55CBDCD728C29F478C01E28CD46A76A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				092BBAE106FF2FFA56F415EFB1EDBC41 /* paper-onboarding */,
 				E2C44DC59A78ACD5F9C9627C78433615 /* Pods-Reflection App */,
 				7050FECE58DF970CF84F4FE403CA67D9 /* ScalingCarousel */,
 			);
@@ -256,6 +370,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		21EDEF873E0B3DEF50E4CB15B3D177B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A1FAB16849279EC59298D88CDADDD0A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,7 +384,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C387BD0226FD20FFB5F677B5A5607A13 /* Resources */ = {
+		9F304C62837AB904FCB12E99521A80D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -273,6 +394,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		28B14E019345581A4A106E50E54F7A35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E4E8665231216670E0DD1DE32224812 /* Configuring.swift in Sources */,
+				EBA796C399BD028C7BDE122FD28B24FE /* ConstraintsHelper.swift in Sources */,
+				1D8BE755A684FC132E1C0D62AD35A56A /* FillAnimationView.swift in Sources */,
+				B2CE4FC5C310FC8F7FF6B91362C6D513 /* GestureControl.swift in Sources */,
+				07F30B15B1E9FD878007C41ED8B8CCFA /* OnboardingContantViewItem.swift in Sources */,
+				4C615F57B763AA6170BBE5251567F140 /* OnboardingContentView.swift in Sources */,
+				4F17055D20B820F265F0C174C67CA94B /* PageContainer.swift in Sources */,
+				1E43AD13C988387C35D65D341FA2A8C8 /* PageView.swift in Sources */,
+				77F112403440A7419C4880CABD38A962 /* PageViewItem.swift in Sources */,
+				223F3449974BEA68231F1EA9C6E1FE8D /* paper-onboarding-dummy.m in Sources */,
+				2389208835126ADD6B969F7031EBFDCB /* PaperOnboarding.swift in Sources */,
+				F3513898978812B5DB65771F46CF7707 /* PaperOnboardingDataSource.swift in Sources */,
+				7D669CE134F23BB348238F83F58F94D5 /* PaperOnboardingDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CFD1C8707894C045A41052731E8B340 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,29 +425,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D15A8E735B6A0D48808A77C881D2D595 /* Sources */ = {
+		7CA672036FF3B1AD3C1A6DC73AEFE7BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE8886096DE73E7F6992F07D44FFE4ED /* Pods-Reflection App-dummy.m in Sources */,
+				A4745CBC36599573ED0204AB77EE2650 /* Pods-Reflection App-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C7B9058FD23357D3071686BD4D9D875F /* PBXTargetDependency */ = {
+		CC913013903C86FD44A77D1CCC5501FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "paper-onboarding";
+			target = 092BBAE106FF2FFA56F415EFB1EDBC41 /* paper-onboarding */;
+			targetProxy = DF619016FD47ED4482ED77CCFD35C409 /* PBXContainerItemProxy */;
+		};
+		FA1FF39AEC85557D8E910F0892AEFF50 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ScalingCarousel;
 			target = 7050FECE58DF970CF84F4FE403CA67D9 /* ScalingCarousel */;
-			targetProxy = A78B2CFF3DBE640DC7C1CF90E043F628 /* PBXContainerItemProxy */;
+			targetProxy = 345ACC63C00BCA3F97DDD75BB7F8AEFB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0EE7F2B1C63CBF8BE3D60A25308B5033 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EADC76E61B6495C826A06EF48004A702 /* ScalingCarousel.xcconfig */;
+			baseConfigurationReference = 3C285CD7C96B264FF80566581AFA8AC8 /* ScalingCarousel.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -339,6 +486,81 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		11112A5F0C1977972DA20F08785A6227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AFE71A261C6F6D0CCFFD8F5471F61DC /* paper-onboarding.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/paper-onboarding/paper-onboarding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/paper-onboarding/paper-onboarding-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/paper-onboarding/paper-onboarding.modulemap";
+				PRODUCT_MODULE_NAME = paper_onboarding;
+				PRODUCT_NAME = paper_onboarding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5C761F1D769C01C132AAD9A70F68EEDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 996EC9AE820B0C6635B78CD656D8B85C /* Pods-Reflection App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Reflection App/Pods-Reflection App-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Reflection App/Pods-Reflection App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		6C61D818ACD3C2C116FED6A9C67E91B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -404,44 +626,6 @@
 			};
 			name = Debug;
 		};
-		7B7B15209710912EA4EACA85D25C13C9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79AF3F23E586CDEC4934F32733C4EAE4 /* Pods-Reflection App.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Reflection App/Pods-Reflection App-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Reflection App/Pods-Reflection App.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		7DC5F11AFBEAE473E8D3C24A2D11338D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -504,7 +688,7 @@
 		};
 		91D43BCEB16F006E6C23708682BD7C48 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EADC76E61B6495C826A06EF48004A702 /* ScalingCarousel.xcconfig */;
+			baseConfigurationReference = 3C285CD7C96B264FF80566581AFA8AC8 /* ScalingCarousel.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -539,9 +723,44 @@
 			};
 			name = Release;
 		};
-		B3AD198BF13BF12B9E309C9BFFB0E8F4 /* Release */ = {
+		ADB88CB23582D7BEF198DCA1831C882F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 996EC9AE820B0C6635B78CD656D8B85C /* Pods-Reflection App.release.xcconfig */;
+			baseConfigurationReference = 9AFE71A261C6F6D0CCFFD8F5471F61DC /* paper-onboarding.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/paper-onboarding/paper-onboarding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/paper-onboarding/paper-onboarding-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/paper-onboarding/paper-onboarding.modulemap";
+				PRODUCT_MODULE_NAME = paper_onboarding;
+				PRODUCT_NAME = paper_onboarding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BE48857D79BE0FDF630B0FA4D22451D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79AF3F23E586CDEC4934F32733C4EAE4 /* Pods-Reflection App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -572,11 +791,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -599,11 +817,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B13FCF42546DE26B72C03BED3DBC8C3D /* Build configuration list for PBXNativeTarget "Pods-Reflection App" */ = {
+		55E32AD0E47C041789E9A3ED9479CD83 /* Build configuration list for PBXNativeTarget "Pods-Reflection App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7B7B15209710912EA4EACA85D25C13C9 /* Debug */,
-				B3AD198BF13BF12B9E309C9BFFB0E8F4 /* Release */,
+				BE48857D79BE0FDF630B0FA4D22451D9 /* Debug */,
+				5C761F1D769C01C132AAD9A70F68EEDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFFF71E528A02CBD2D7497ADC845C057 /* Build configuration list for PBXNativeTarget "paper-onboarding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADB88CB23582D7BEF198DCA1831C882F /* Debug */,
+				11112A5F0C1977972DA20F08785A6227 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

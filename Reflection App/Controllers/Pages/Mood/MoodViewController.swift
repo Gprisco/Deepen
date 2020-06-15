@@ -49,8 +49,6 @@ class MoodViewController: UIViewController {
         //        Add BubbleEmitter
         addBubblesAnimation(x: view.bounds.width, y: view.bounds.height, myView: self.view)
         
-        
-        
     }
     
 
@@ -58,8 +56,7 @@ class MoodViewController: UIViewController {
         reflectionDelegate.clearFlow()
     }
     
-    
-    
+ 
 }
 
 extension MoodViewController: UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {

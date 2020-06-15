@@ -7,4 +7,5 @@ target 'Reflection App' do
 
   # Pods for Reflection App
   pod "ScalingCarousel"
+  pod 'paper-onboarding'
 end
