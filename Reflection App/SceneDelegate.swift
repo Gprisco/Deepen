@@ -26,7 +26,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let userDefaults = UserDefaults.standard
         if userDefaults.bool(forKey: "onBoardingComplete") {
             initialViewController = storyboard.instantiateViewController(withIdentifier: "historicalPageViewController") as! HistoricalPageViewController
-
         }
 
         window.rootViewController = initialViewController

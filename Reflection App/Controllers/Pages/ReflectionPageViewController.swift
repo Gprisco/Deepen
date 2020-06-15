@@ -17,11 +17,13 @@ class ReflectionPageViewController: UIPageViewController, UIPageViewControllerDe
     var pages = [UIViewController]()
     var pageBackgrounds = [String]()
     
+    var firstQuestion: String?
     var firstAnswer: String?
     var mood: String?
     var moodImage: String?
     var category: String?
     var categoryImage: String?
+    var secondQuestion: String?
     var secondAnswer: String?
     var reward: String?
     
@@ -178,11 +180,13 @@ extension ReflectionPageViewController: ReflectionDelegate {
         self.categoryImage = categoryImage
     }
     
-    func onFirstAnswer(_ answer: String) {
+    func onFirstAnswer(_ question: String, _ answer: String) {
+        self.firstQuestion = question
         self.firstAnswer = answer
     }
     
-    func onSecondAnswer(_ answer: String) {
+    func onSecondAnswer(_ question: String, _ answer: String) {
+        self.secondQuestion = question
         self.secondAnswer = answer
     }
     
@@ -190,7 +194,7 @@ extension ReflectionPageViewController: ReflectionDelegate {
         currentPage = 0
         self.setViewControllers([pages[0]], direction: .reverse, animated: true, completion: nil)
         
-        let reflection = Reflection.shared.addReflection(mood: mood ?? "", moodImage: moodImage ?? "", category: category ?? "", categoryImage: categoryImage!, firstQuestion: "How did it go today?", firstAnswer: firstAnswer ?? "", secondQuestion: "What would you have changed?", secondAnswer: secondAnswer ?? "", reward: reward ?? "")
+        let reflection = Reflection.shared.addReflection(mood: mood ?? "", moodImage: moodImage ?? "", category: category ?? "", categoryImage: categoryImage!, firstQuestion: firstQuestion ?? "", firstAnswer: firstAnswer ?? "", secondQuestion: secondQuestion ?? "", secondAnswer: secondAnswer ?? "", reward: reward ?? "")
         
         historicalDelegate.saveReflection(reflection ?? nil)
     }

@@ -20,8 +20,8 @@ protocol ReflectionDelegate {
     func prevStep()
     func onMoodChoice(mood: String, moodImage: String)
     func onCategoryChoice(category: String, categoryImage: String)
-    func onFirstAnswer(_ answer: String)
-    func onSecondAnswer(_ answer: String)
+    func onFirstAnswer(_ question: String, _ answer: String)
+    func onSecondAnswer(_ question: String, _ answer: String)
     func onReflectionFinished()
 }
 
